@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        .form-container{
+            width:500px;
+            height:470px;
+            background-color=white;
+            padding:10px;
+            background-color:white;
+            margin:auto;
+        }
+        .form-container input[type="text"]
+        .form-container input[type="phone"]
+        {
+            width:470px;
+            padding:7px;
+        }
+        .parent-div{
+            display:flex;
+            gap:10px;
+        }
+        .day-div{
+            padding:2px;
+        }
+        .month-div{
+            padding: 2px;
+            flex:1;
+        }
+        .year-div{
+            padding:2px;
+        }
+        .day-div input,
+        .year-div input {
+          width:40px;
+        }
+        .month-div input{
+            width:100%;
+        }
+        h1{
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contact form</h1>
+        <form>
+            <label for="first-name">First-name:</label>
+            <br>
+            <input id="first-name" type="text">
+            <br><br>
+            <label for="last-name">Last-name:</label>
+            <br>
+            <input id="last-name" type="text">
+            <br><br>
+            <label for="Phone">Phone:</label>
+            <br>
+            <input id="Phone" type="phone">
+            <br><br>
+
+            <label>Date and Time</label><br>
+
+            <div class="parent-div">
+
+            <div class="day-div">
+            <label for="day">Day</label><br>
+            <input id="day" type="text">
+            </div>
+
+            <div class="month-div">
+            <label for="month">Month</label><br>
+            <input id="month" type="number">
+            </div>
+            
+            <div class="year-div">
+            <label for="year">Year</label><br>
+            <input id="year" type="number">
+            </div>
+
+            </div>
+            <br>
+            <label for="ar">Additional requests</label><br>
+            <input id="ar" type="text" style="width:480px;height:100px">
+
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
