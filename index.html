@@ -1,77 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            box-sizing: border-box;
-            margin:0;
-            padding:0;
+        @media screen and (max-width:767px) {
+            .container {
+                display: flex;
+            }
         }
-        .navigation{
-            background-color: thistle;
-            padding:10px;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 300px;
+            height: 380px;
+            border-radius: 6%;
+            background-color: white;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .beginning {
             display: flex;
             justify-content: space-between;
         }
-        .menu{
-            display: flex;
-            gap: 20px;
-            list-style-type: none;
-        }
-        li > a{
-            text-decoration: none;
-            color:black;
-        }
-        .dropdown-menu{
-            list-style-type: none;
-            background-color: antiquewhite;
-            width: 120px;
-            position: absolute;
+
+        .price {
+            width: 85px;
+            background-color: #eef2ff;
+            height: 50px;
+            border-radius: 7%;
+            margin-top: 20px;
+            margin-right: 20px;
             text-align: center;
-            padding: 10px;
-           
-            display: none;
+            align-content: center;
+            color: #7966ec;
+            font-size: x-large;
         }
-        .Dropdown{
-            position:relative;
+
+        .Basic {
+            margin-left: 20px;
         }
-        .Dropdown:hover>.dropdown-menu{
-            
-             display:flex;
+
+        .pro {
+            margin-left: 20px;
+        }
+
+        .advanced {
+            margin-left: 20px;
+        }
+
+        .ul- {
+            display: flex;
             flex-direction: column;
-            gap:10px;
+            gap: 15px;
         }
-        
 
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
 
+        button {
+            width: 240px;
+            height: 40px;
+            border-radius: 9999px;
+            border: 1px solid white;
+        }
+        hr{
+            width:250px;
+        }
     </style>
 </head>
+
 <body>
-    <dv>
-        <nav class="navigation">
-            <div class="logo">logo</div>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About-Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="price-card.html">Pricing</a></li>
-                <li class="Dropdown"><a href="#">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li>Dropdown 1</li>
-                        <li>Dropdown 2</li>
-                        <li>Dropdown 3</li>
-                        <li>Dropdown 4</li>
-                        <li>Dropdown 5</li>
-                    </ul>
-                </li>
-            </ul>
-            <button>Sign-in</button>
-        </nav>
+
+    <h1 style="text-align: center;">Our pricing is simple with no hidden fees</h1>
+    <p style="text-align: center; color:#b2b7be ;">7 days free trial.no credit card required</p>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="beginning">
+                <div class="Basic">
+                    <h2 style="color: black;">Basic</h2>
+                    <p style="color:#19202e;">per month</p>
+                </div>
+                <div class="price">
+                    $80
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#3e4348;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#4f46e5;color:white;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
+
+        <div class="card" style="background-color:  #4f46e5;">
+
+            <div class="beginning">
+                <div class="pro">
+                    <h2 style="color: #ededfc;">Pro</h2>
+                    <p style="color:#ededfc;">per month</p>
+                </div>
+                <div class="price">
+                    $150
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#ededfc;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#ffffff;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="beginning">
+                <div class="advanced">
+                    <h2 style="color:black;">Advanced</h2>
+                    <p style="color:#19202e;">per month</p>
+                </div>
+                <div class="price">
+                    $180
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#3e4348;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#4f46e5;color:white;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
     </div>
-    
 </body>
+
 </html>
