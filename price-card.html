@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width:768px) {
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color:#ececfa;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width:100%;
+        }
+
+        .card {
+            width: 300px;
+            height: 380px;
+            border-radius: 6%;
+            background-color: white;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .beginning {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .price {
+            width: 85px;
+            background-color: #eef2ff;
+            height: 50px;
+            border-radius: 7%;
+            margin-top: 20px;
+            margin-right: 20px;
+            text-align: center;
+            align-content: center;
+            color: #7966ec;
+            font-size: x-large;
+        }
+
+        .Basic {
+            margin-left: 20px;
+        }
+
+        .pro {
+            margin-left: 20px;
+        }
+
+        .advanced {
+            margin-left: 20px;
+        }
+
+        .ul- {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            width: 240px;
+            height: 40px;
+            border-radius: 9999px;
+            border: 1px solid white;
+        }
+        hr{
+            width:250px;
+            border-color:rgba(243, 244, 246,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;margin-top: 60px;">Our pricing is simple with no hidden fees</h1>
+    <p style="text-align: center; color:#b2b7be ;">7 days free trial.no credit card required</p>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="beginning">
+                <div class="Basic">
+                    <h2 style="color: black;">Basic</h2>
+                    <p style="color:#19202e;">per month</p>
+                </div>
+                <div class="price">
+                    $80
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#3e4348;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#4f46e5;color:white;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
+
+        <div class="card" style="background-color:  #4f46e5;">
+
+            <div class="beginning">
+                <div class="pro">
+                    <h2 style="color: #ededfc;">Pro</h2>
+                    <p style="color:#ededfc;">per month</p>
+                </div>
+                <div class="price">
+                    $150
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#ededfc;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#ffffff;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="beginning">
+                <div class="advanced">
+                    <h2 style="color:black;">Advanced</h2>
+                    <p style="color:#19202e;">per month</p>
+                </div>
+                <div class="price">
+                    $180
+                </div>
+            </div>
+            <hr>
+            <div class="points">
+                <ul class="ul-" style="color:#3e4348;">
+                    <li>AI Advisor</li>
+                    <li>Unlimited auto tracking</li>
+                    <li>1 Day transaction clearing</li>
+                    <li>Priority customer support</li>
+                    <li>All widget Access</li>
+                </ul>
+            </div>
+
+            <div class="btn">
+                <button type="submit" style="background-color:#4f46e5;color:white;">
+                    Purchase plan
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
