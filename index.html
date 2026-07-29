@@ -18,7 +18,8 @@
             font-size: 20px;
             color: #797b7e;
             /* border: 1px solid black; */
-            margin: 25px;
+            /* margin: 25px; */
+            padding: 25px;
             width: 100%;
         }
 
@@ -54,11 +55,12 @@
 
         .Dropdown-menu {
             width: 180px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             position: absolute;
             display: none;
             color: #797b7e;
             padding: 10px;
+            background-color: white;
         }
 
         .drop:hover>.Dropdown-menu {
@@ -69,7 +71,7 @@
 
         .deep-dropdown-menu {
             width: 180px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             position: absolute;
             right: 100%;
             display: none;
@@ -77,6 +79,7 @@
             background-color: white;
             top: 0%;
             padding: 10px;
+            background-color: white;
 
         }
 
@@ -88,11 +91,12 @@
 
         .Extended-dropdown {
             position: absolute;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 430px;
             gap: 30px;
             padding: 25px;
             display: none;
+            background-color: white;
         }
 
         .drop:hover>.Extended-dropdown {
@@ -118,7 +122,7 @@
             display: flex;
             flex-direction: column;
             margin-left: 10px;
-            gap: 5px;
+            gap: 10px;
         }
 
         .icon {
@@ -136,20 +140,26 @@
 
         .megamenu {
             width: 90%;
-            height: 470px;
+            height: 500px;
             /* border: 1px solid black; */
             position: absolute;
             top: 8%;
-            left: 5%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            left: 6%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display:none;
+        }
+        .megamenu-li:hover>.megamenu{
             display: flex;
         }
 
         .megamenu-section1 {
             width: 300px;
-            border: 1px solid yellow;
-            height: 470px;
+            /* border: 1px solid yellow; */
+            height: 500px;
             padding: 40px;
+            color: #FaFcFe;
+            border-right: 1px solid #eef0f3;
         }
 
         .megamenu-ul {
@@ -157,6 +167,7 @@
             flex-direction: column;
             gap: 40px;
             margin-left: 2%;
+            color: #6f7884;
         }
 
         .megamenu-section1-icon {
@@ -165,22 +176,22 @@
         }
 
         .megamenu-section2 {
-            border: 1px solid lightsalmon;
-            width: 1200px;
-            height: 470px;
+            /* border: 1px solid lightsalmon; */
+            width: 82%;
+            height: 500px;
         }
 
         .megamenu-section2-div1 {
-            border: 1px solid lightseagreen;
+            /* border: 1px solid lightseagreen; */
             width: 50%;
-            height: 65%;
+            height: 320px;
             padding: 30px;
         }
 
         .megamenu-section2-div2 {
-            border: 1px solid lightseagreen;
+            /* border: 1px solid lightseagreen; */
             width: 50%;
-            height: 65%;
+            height: 320px;
             padding: 30px;
         }
 
@@ -199,35 +210,109 @@
         .div-sections {
             display: flex;
         }
+
         .mega-p {
             display: flex;
-            flex-direction:column;
-            gap:6px;
+            flex-direction: column;
+            gap: 6px;
             margin-left: 10px;
         }
-        .secs-parent{
+
+        .secs-parent {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             gap: 30px;
             padding: 25px;
         }
-        .megamenu-sec2-upperdiv{
+
+        .megamenu-sec2-upperdiv {
             display: flex;
         }
-        .megamenu-section2-div3{
-            width:90%;
-            height: 15%;
-            border: 1px solid black;
-            margin-left: 54px;
-            margin-top: 20px;
+
+        .megamenu-section2-div3 {
+            width: 90%;
+            height: 29%;
+            /* border: 1px solid black; */
+            margin-left: 5%;
+            margin-top: 1%;
+            border-radius: 10px;
+            padding: 1.75%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .megamenu-div3-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 2%;
+        }
+
+        .div-img-p {
+            display: flex;
+        }
+
+        .btn-icon>button {
+            background-color: white;
+            color: #619cee;
+            width: 150px;
+            font-size: 21px;
+            margin-left: -2%;
 
         }
 
+        .btn-icon {
+            display: flex;
+            gap: 1px;
+        }
+        .center{
+            display: flex;
+            flex-direction: column;
+            margin-left: 10.5%;
+            margin-top: 15%;
+            gap:35px;
+        }
+        .two-btn{
+            display: flex;
+            gap:50px;
+        }
+        .mainheading-p{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            /* border:1px solid black; */
+            width:650px;
+        }
+        .play-btn{
+            display: flex;
+            gap:15px;
+            align-items: center;
+        }
+        .play-btn>p{
+            font-size: 20px;
+            color:hsl(212, 12%, 30%);
+        }
+        .main{
+            display: flex;
+            gap:100px;
+        }
+        .main>img{
+            width:550px;
+            height:450px;
+            margin-top:7%;
+        }
+        .background{
+            background: linear-gradient(135deg, #f7faff 50%, #ffffff 50%);
+        }
+        .transform-h{
+            display: flex;
+            gap:10px;
+        }
+        /* text-underline-offset */
     </style>
 </head>
 
 <body>
-    <div>
+    <div class="background">
         <nav class="navigation">
             <div class="logo">
                 Devin
@@ -240,7 +325,7 @@
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Team</a></li>
-                    <li class="drop"><a href="#">Dropdown</a>
+                    <li class="drop"><a href="#">Dropdown</i></a>
                         <ul class="Dropdown-menu">
                             <li>Dropdown1</li>
                             <li class="drop"><a href="#">Deep Dropdown</a>
@@ -310,7 +395,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="#">Megamenu</a>
+                    <li class="megamenu-li"><a href="#">Megamenu</a>
                         <div class="megamenu">
                             <div class="megamenu-section1">
                                 <ul class="megamenu-ul">
@@ -324,65 +409,77 @@
                             </div>
                             <div class="megamenu-section2">
                                 <div class="megamenu-sec2-upperdiv">
-                                <div class="megamenu-section2-div1">
-                                    <h3>Core Solution</h3>
-                                    <hr>
-                                    <div class="secs-parent">
-                                        <div class="div-sections">
-                                            <i data-lucide="users"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">CRM Solutions</p>
-                                                <p style="font-size:15px">Manage customer relationships effectively</p>
+                                    <div class="megamenu-section2-div1">
+                                        <h3>Core Solution</h3>
+                                        <hr>
+                                        <div class="secs-parent">
+                                            <div class="div-sections">
+                                                <i data-lucide="users"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:550;">CRM Solutions</p>
+                                                    <p style="font-size:16px">Manage customer relationships effectively
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="div-sections">
-                                            <i data-lucide="circle-pile"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">ERP Systems</p>
-                                                <p style="font-size:15px">Integrate all buisness processes</p>
+                                            <div class="div-sections">
+                                                <i data-lucide="circle-pile"></i>
+                                                <div class="mega-p">
+                                                    <p style="font: size 20px;font-weight:900;">ERP Systems</p>
+                                                    <p style="font-size:16px">Integrate all buisness processes</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="div-sections">
-                                            <i data-lucide="settings"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">Workflow Automations</p>
-                                                <p style="font-size:15px">Streamline repititive tasks</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="megamenu-section2-div2">
-                                    <h3>Data & Analytics</h3>
-                                    <hr>
-                                    <div class="secs-parent">
-                                        <div class="div-sections">
-                                            <i data-lucide="file-text"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">Document Management</p>
-                                                <p style="font-size:15px">Organize and secure documents</p>
-                                            </div>
-                                        </div>
-                                        <div class="div-sections">
-                                            <i data-lucide="chart-column"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">Buisness Intelligence</p>
-                                                <p style="font-size:15px">Make data-driven decisions</p>
-                                            </div>
-                                        </div>
-                                        <div class="div-sections">
-                                            <i data-lucide="share-2"></i>
-                                            <div class="mega-p">
-                                                <p style="font-size:17px;font-weight:900;">Integration Platform</p>
-                                                <p style="font-size:15px">Connect all your systems</p>
+                                            <div class="div-sections">
+                                                <i data-lucide="settings"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Workflow Automations</p>
+                                                    <p style="font-size:16px">Streamline repititive tasks</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="megamenu-section2-div2">
+                                        <h3>Data & Analytics</h3>
+                                        <hr>
+                                        <div class="secs-parent">
+                                            <div class="div-sections">
+                                                <i data-lucide="file-text"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Document Management</p>
+                                                    <p style="font-size:16px">Organize and secure documents</p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="chart-column"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Buisness Intelligence</p>
+                                                    <p style="font-size:16px">Make data-driven decisions</p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="share-2"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Integration Platform</p>
+                                                    <p style="font-size:16px">Connect all your systems</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                </div>
+                                    </div>
                                 </div>
                                 <div class="megamenu-section2-div3">
-
-
+                                    <div class="div-img-p">
+                                        <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/misc/misc-7.webp"
+                                            style="width: 110px;height:100px;border-radius: 10px;">
+                                        <div class="megamenu-div3-sec">
+                                            <p style="font-size: 24px;font-weight:900;">Enterprise Package</p>
+                                            <p style="font-size: 18px;">Comprehensive business management solution with
+                                                advanced features and 24/7 support.</p>
+                                            <div class="btn-icon">
+                                                <button>Get started</button>
+                                                <i data-lucide="move-right" style="color:#619cee"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -390,9 +487,26 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-
-
         </nav>
+    <div class="main">
+    <div class="center">
+        <div class="mainheading-p">
+            <div class="transform-h">
+        <p style="font-size: 50px;color:#344761">Transform Your<p style="color:#5c99ee;font-size: 50px;">Digital Future</p></p>
+            </div>
+        <p style="font-size: 23px;color:#7c8590">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+             accusantium doloremque laudantium totam rem aperiam.</p>
+        </div>
+        <div class="two-btn">
+            <button style="width:225px;height:60px;border-radius:10px;font-size:20px;background-color: #5c99ee;color:white;">Start Journey</button>
+            <div class="play-btn">
+            <i data-lucide="circle-play" style="width: 60px;height:60px;color:#5c99ee" ></i>
+            <p>watch Demo</p>
+            </div>
+        </div>
+    </div class="main-img">
+    <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/illustration/illustration-28.webp">
+    </div>
     </div>
 
 
