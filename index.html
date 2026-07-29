@@ -98,14 +98,21 @@
             background-color:lightblue;
             color:blue;
         }
+        .my-class{
+            color: aqua;
+        }
     </style>
 </head>
 <body>
     <div>
         <nav class="navigation">
             <div class="logo">
-                Devin
+                Devin 
             </div>
+
+             <i data-lucide="search" class="my-class"></i>
+  
+
             <div class="menu">
                 <ul class="menu">
                     <li><a href="#">Home</a></li>
@@ -165,5 +172,10 @@
         </nav>
     </div>
     
+
+     <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
