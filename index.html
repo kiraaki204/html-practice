@@ -28,30 +28,43 @@
                 font-size: 20px;
                 text-align: center;
             }
-            .center {
+            .two-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           }
+            .main {
+            display: flex;
+            gap: 100px;
+            flex-direction: column-reverse;
+        }
+          .center {
             display: flex;
             flex-direction: column;
             gap: 30px;
             justify-content: center;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items: center;
+            }
+          .main>img {
+            width: 100%;
+            height:auto;
+            margin-top: 7%;
+            padding-left: 1px;
+            padding-right: 1px;
         }
-        .two-btn {
+        .play-btn{
             display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
-         .mainheading-p {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            gap: 28px;
-            border:1px solid black;
-            width: 650px;
-            
-         }
+         .play-btn>p {
+            font-size: 22px;
+            color: hsl(212, 12%, 30%);
+            padding:15px;
+        }
+
     }
+    
 
         @media screen and (min-width:577px) {
             .menu-icon {
@@ -87,7 +100,30 @@
             /* border:1px solid black; */
             width: 650px;
          }
+          .main {
+            display: flex;
+            gap: 0px;
+            flex-direction: row-reverse;
+        }
+        
+        .play-btn {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+          .main>img {
+            width: 40%;
+            height:auto;
+            margin-top: 7%;
+            padding-left: 40px;
+            padding-right: 5px;
+        }
+         .play-btn>p {
+            font-size: 20px;
+            color: hsl(212, 12%, 30%);
+        }
 
+                 
         }
 
         .navigation {
@@ -337,37 +373,8 @@
             display: flex;
             gap: 1px;
         }
-
-        .play-btn {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .play-btn>p {
-            font-size: 20px;
-            color: hsl(212, 12%, 30%);
-        }
-
-        .main {
-            display: flex;
-            gap: 100px;
-            flex-direction: row-reverse;
-        }
-
-        .main>img {
-            width: 550px;
-            height: 450px;
-            margin-top: 7%;
-        }
-
         .background {
             background: linear-gradient(135deg, #f7faff 50%, #ffffff 50%);
-        }
-
-        .transform-h {
-            display: flex;
-            gap: 10px;
         }
     </style>
 </head>
@@ -553,17 +560,11 @@
             </div>
         </nav>
         <div class="main">
-            <div class="center">
-                <div class="mainheading-p">
-                    <div class="transform-h">
-                        <p class="transform-p">Transform Your
-                        <p style="color: #5c99ee;" class="transform-p">Digital Future</p>
-                        </p>
-                    </div>
+            <div class="center">                           
+                    <p class="transform-p">Transform Your<span style="color: #5c99ee;">Digital Future</span></p>
                     <p style="color:#7c8590" class="paragraph-p">Sed ut perspiciatis unde omnis iste natus error sit
                         voluptatem
                         accusantium doloremque laudantium totam rem aperiam.</p>
-                </div>
                 <div class="two-btn">
                     <button
                         style="width:225px;height:60px;border-radius:10px;font-size:20px;background-color: #5c99ee;color:white;">Start
