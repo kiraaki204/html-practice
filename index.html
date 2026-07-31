@@ -11,26 +11,88 @@
             margin: 0%;
             padding: 0%;
         }
+
         @media screen and (max-width:576px) {
-        .menu-icon{
-            display: block;
+            .menu-icon {
+                display: block;
+            }
+
+            .main-ul {
+                display: none;
+            }
+            .transform-p{
+                font-size: 40px;
+                margin-left:10px;
+            }
+            .paragraph-p{
+                font-size: 20px;
+                text-align: center;
+            }
+            .center {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            padding-left: 50px;
+            padding-right: 50px;
         }
-        .main-ul{
-            display: none;
+        .two-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
+         .mainheading-p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            gap: 28px;
+            border:1px solid black;
+            width: 650px;
+            
+         }
+    }
+
+        @media screen and (min-width:577px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .main-ul {
+                display: block;
+            }
+            .transform-p{
+                font-size: 50px;
+                color:#344761
+            }
+            .paragraph-p{
+                font-size: 23px;
+            }
+            .center {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            justify-content: center;
+            padding-left: 150px;
+            padding-right: 80px;
+            }
+            .two-btn {
+            display: flex;
+            gap: 50px;
         }
-       @media screen and (min-width:577px) {
-        .menu-icon{
-            display: none;
-        }
-        .main-ul{
-            display: block;
-        }
+         .mainheading-p {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            /* border:1px solid black; */
+            width: 650px;
+         }
 
         }
+
         .navigation {
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
             font-size: 20px;
             color: #797b7e;
             /* border: 1px solid black; */
@@ -157,9 +219,10 @@
             left: 6%;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             background-color: white;
-            display:none;
+            display: none;
         }
-        .megamenu-li:hover>.megamenu{
+
+        .megamenu-li:hover>.megamenu {
             display: flex;
         }
 
@@ -274,50 +337,37 @@
             display: flex;
             gap: 1px;
         }
-        .center{
+
+        .play-btn {
             display: flex;
-            flex-direction: column;
-            gap:35px;
-            justify-content: center;
-            padding-left:150px ;
-            padding-right: 80px;
-        }
-        .two-btn{
-            display: flex;
-            gap:50px;
-        }
-        .mainheading-p{
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-            /* border:1px solid black; */
-            width:650px;
-        }
-        .play-btn{
-            display: flex;
-            gap:15px;
+            gap: 15px;
             align-items: center;
         }
-        .play-btn>p{
+
+        .play-btn>p {
             font-size: 20px;
-            color:hsl(212, 12%, 30%);
+            color: hsl(212, 12%, 30%);
         }
-        .main{
+
+        .main {
             display: flex;
-            gap:100px;
+            gap: 100px;
             flex-direction: row-reverse;
         }
-        .main>img{
-            width:550px;
-            height:450px;
-            margin-top:7%;
+
+        .main>img {
+            width: 550px;
+            height: 450px;
+            margin-top: 7%;
         }
-        .background{
+
+        .background {
             background: linear-gradient(135deg, #f7faff 50%, #ffffff 50%);
         }
-        .transform-h{
+
+        .transform-h {
             display: flex;
-            gap:10px;
+            gap: 10px;
         }
     </style>
 </head>
@@ -499,28 +549,33 @@
                 </ul>
             </div>
             <div class="menu-icon">
-            <i data-lucide="text-align-justify"></i>
+                <i data-lucide="text-align-justify"></i>
             </div>
         </nav>
-    <div class="main">
-    <div class="center">
-        <div class="mainheading-p">
-            <div class="transform-h">
-        <p style="font-size: 50px;color:#344761">Transform Your<p style="color:#5c99ee;font-size: 50px;">Digital Future</p></p>
-            </div>
-        <p style="font-size: 23px;color:#7c8590">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-             accusantium doloremque laudantium totam rem aperiam.</p>
+        <div class="main">
+            <div class="center">
+                <div class="mainheading-p">
+                    <div class="transform-h">
+                        <p class="transform-p">Transform Your
+                        <p style="color: #5c99ee;" class="transform-p">Digital Future</p>
+                        </p>
+                    </div>
+                    <p style="color:#7c8590" class="paragraph-p">Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem
+                        accusantium doloremque laudantium totam rem aperiam.</p>
+                </div>
+                <div class="two-btn">
+                    <button
+                        style="width:225px;height:60px;border-radius:10px;font-size:20px;background-color: #5c99ee;color:white;">Start
+                        Journey</button>
+                    <div class="play-btn">
+                        <i data-lucide="circle-play" style="width: 60px;height:60px;color:#5c99ee"></i>
+                        <p>watch Demo</p>
+                    </div>
+                </div>
+            </div class="main-img">
+            <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/illustration/illustration-28.webp">
         </div>
-        <div class="two-btn">
-            <button style="width:225px;height:60px;border-radius:10px;font-size:20px;background-color: #5c99ee;color:white;">Start Journey</button>
-            <div class="play-btn">
-            <i data-lucide="circle-play" style="width: 60px;height:60px;color:#5c99ee" ></i>
-            <p>watch Demo</p>
-            </div>
-        </div>
-    </div class="main-img">
-    <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/illustration/illustration-28.webp">
-    </div>
     </div>
 
 
