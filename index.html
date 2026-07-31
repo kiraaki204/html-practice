@@ -11,14 +11,29 @@
             margin: 0%;
             padding: 0%;
         }
+        @media screen and (max-width:576px) {
+        .menu-icon{
+            display: block;
+        }
+        .main-ul{
+            display: none;
+        }
+        }
+       @media screen and (min-width:577px) {
+        .menu-icon{
+            display: none;
+        }
+        .main-ul{
+            display: block;
+        }
 
+        }
         .navigation {
             display: flex;
-            justify-content: space-between;
+            justify-content:space-between;
             font-size: 20px;
             color: #797b7e;
             /* border: 1px solid black; */
-            /* margin: 25px; */
             padding: 25px;
             width: 100%;
         }
@@ -27,21 +42,16 @@
             display: flex;
             list-style-type: none;
             gap: 40px;
-            margin-right: 50px;
             padding: 15px;
-
         }
 
         ul {
             list-style-type: none;
-            padding: 0%;
         }
 
         .logo {
             color: #2f3946;
-            margin-left: 45px;
             font-size: xx-large;
-            margin-top: 6px;
         }
 
         li>a {
@@ -267,9 +277,10 @@
         .center{
             display: flex;
             flex-direction: column;
-            margin-left: 10.5%;
-            margin-top: 15%;
             gap:35px;
+            justify-content: center;
+            padding-left:150px ;
+            padding-right: 80px;
         }
         .two-btn{
             display: flex;
@@ -294,6 +305,7 @@
         .main{
             display: flex;
             gap:100px;
+            flex-direction: row-reverse;
         }
         .main>img{
             width:550px;
@@ -307,7 +319,6 @@
             display: flex;
             gap:10px;
         }
-        /* text-underline-offset */
     </style>
 </head>
 
@@ -318,7 +329,7 @@
                 Devin
             </div>
             <!-- <i data-lucide="search" class="my-class"></i> -->
-            <div class="menu">
+            <div class="main-ul">
                 <ul class="menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -486,6 +497,9 @@
                     </li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+            </div>
+            <div class="menu-icon">
+            <i data-lucide="text-align-justify"></i>
             </div>
         </nav>
     <div class="main">
