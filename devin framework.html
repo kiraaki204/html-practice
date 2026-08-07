@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        @media screen and (max-width:576px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .main-ul {
+                display: none;
+            }
+            .transform-p{
+                font-size: 40px;
+                margin-left:10px;
+            }
+            .paragraph-p{
+                font-size: 20px;
+                text-align: center;
+            }
+            .two-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           }
+            .main {
+            display: flex;
+            gap: 100px;
+            flex-direction: column-reverse;
+        }
+          .center {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items: center;
+            }
+          .main>img {
+            width: 100%;
+            height:auto;
+            margin-top: 7%;
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+        .play-btn{
+            display: flex;
+        }
+         .play-btn>p {
+            font-size: 22px;
+            color: hsl(212, 12%, 30%);
+            padding:15px;
+        }
+
+    }
+    
+
+        @media screen and (min-width:577px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .main-ul {
+                display: block;
+            }
+            .transform-p{
+                font-size: 50px;
+                color:#344761
+            }
+            .paragraph-p{
+                font-size: 23px;
+            }
+            .center {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            justify-content: center;
+            padding-left: 150px;
+            padding-right: 80px;
+            }
+            .two-btn {
+            display: flex;
+            gap: 50px;
+        }
+         .mainheading-p {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            /* border:1px solid black; */
+            width: 650px;
+         }
+          .main {
+            display: flex;
+            gap: 0px;
+            flex-direction: row-reverse;
+        }
+        
+        .play-btn {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+          .main>img {
+            width: 40%;
+            height:auto;
+            margin-top: 7%;
+            padding-left: 40px;
+            padding-right: 5px;
+        }
+         .play-btn>p {
+            font-size: 20px;
+            color: hsl(212, 12%, 30%);
+        }
+
+                 
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            color: #797b7e;
+            /* border: 1px solid black; */
+            padding: 25px;
+            width: 100%;
+        }
+
+        ul.menu {
+            display: flex;
+            list-style-type: none;
+            gap: 40px;
+            padding: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .logo {
+            color: #2f3946;
+            font-size: xx-large;
+        }
+
+        li>a {
+            text-decoration: none;
+            color: #797b7e;
+        }
+
+        .drop {
+            position: relative;
+        }
+
+        .Dropdown-menu {
+            width: 180px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            display: none;
+            color: #797b7e;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .drop:hover>.Dropdown-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .deep-dropdown-menu {
+            width: 180px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 100%;
+            display: none;
+            color: #797b7e;
+            background-color: white;
+            top: 0%;
+            padding: 10px;
+            background-color: white;
+
+        }
+
+        .drop:hover>.deep-dropdown-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .Extended-dropdown {
+            position: absolute;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 430px;
+            gap: 30px;
+            padding: 25px;
+            display: none;
+            background-color: white;
+        }
+
+        .drop:hover>.Extended-dropdown {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .Extended-dropdown-section {
+            display: flex;
+        }
+
+        button {
+            width: 45px;
+            height: 28px;
+            border-radius: 9999px;
+            background-color: #d0e1fa;
+            color: #619cee;
+            border: #d0e1fa;
+        }
+
+        .p-class {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 45px;
+            border: 1px solid #e2e5fd;
+            background-color: #e2e5fd;
+            padding: 10px;
+            border-radius: 30%;
+        }
+
+        .my-class {
+            color: rgba(94, 145, 217);
+        }
+
+        .megamenu {
+            width: 90%;
+            height: 500px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 8%;
+            left: 6%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: none;
+        }
+
+        .megamenu-li:hover>.megamenu {
+            display: flex;
+        }
+
+        .megamenu-section1 {
+            width: 300px;
+            /* border: 1px solid yellow; */
+            height: 500px;
+            padding: 40px;
+            color: #FaFcFe;
+            border-right: 1px solid #eef0f3;
+        }
+
+        .megamenu-ul {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-left: 2%;
+            color: #6f7884;
+        }
+
+        .megamenu-section1-icon {
+            color: #9199a1;
+            margin-right: 15px;
+        }
+
+        .megamenu-section2 {
+            /* border: 1px solid lightsalmon; */
+            width: 82%;
+            height: 500px;
+        }
+
+        .megamenu-section2-div1 {
+            /* border: 1px solid lightseagreen; */
+            width: 50%;
+            height: 320px;
+            padding: 30px;
+        }
+
+        .megamenu-section2-div2 {
+            /* border: 1px solid lightseagreen; */
+            width: 50%;
+            height: 320px;
+            padding: 30px;
+        }
+
+        .megamenu-section2-div1>hr {
+            border-color: #adccf6;
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        .megamenu-section2-div2>hr {
+            border-color: #adccf6;
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        .div-sections {
+            display: flex;
+        }
+
+        .mega-p {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-left: 10px;
+        }
+
+        .secs-parent {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 25px;
+        }
+
+        .megamenu-sec2-upperdiv {
+            display: flex;
+        }
+
+        .megamenu-section2-div3 {
+            width: 90%;
+            height: 29%;
+            /* border: 1px solid black; */
+            margin-left: 5%;
+            margin-top: 1%;
+            border-radius: 10px;
+            padding: 1.75%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .megamenu-div3-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 2%;
+        }
+
+        .div-img-p {
+            display: flex;
+        }
+
+        .btn-icon>button {
+            background-color: white;
+            color: #619cee;
+            width: 150px;
+            font-size: 21px;
+            margin-left: -2%;
+
+        }
+
+        .btn-icon {
+            display: flex;
+            gap: 1px;
+        }
+        .background {
+            background: linear-gradient(135deg, #f7faff 50%, #ffffff 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <nav class="navigation">
+            <div class="logo">
+                Devin
+            </div>
+            <!-- <i data-lucide="search" class="my-class"></i> -->
+            <div class="main-ul">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li class="drop"><a href="#">Dropdown</i></a>
+                        <ul class="Dropdown-menu">
+                            <li>Dropdown1</li>
+                            <li class="drop"><a href="#">Deep Dropdown</a>
+                                <ul class="deep-dropdown-menu">
+                                    <li>Dropdown 1</li>
+                                    <li>Dropdown 2</li>
+                                    <li>Dropdown 3</li>
+                                    <li>Dropdown 4</li>
+                                    <li>Dropdown 5</li>
+                                </ul>
+                            </li>
+                            <li>Dropdown 2</li>
+                            <li>Dropdown 3</li>
+                            <li>Dropdown 4</li>
+                        </ul>
+                    </li>
+                    <li class="drop"><a href="#">Extended Dropdown</a>
+                        <div class="Extended-dropdown">
+
+                            <div class="Extended-dropdown-section">
+                                <div class="icon">
+                                    <i data-lucide="gauge" class="my-class"></i>
+                                </div>
+                                <div class="p-class">
+                                    <p style="font-size:17px;font-weight:900;">Analytical Dashboard</p>
+                                    <p style="font-size:15px">Track your performance matrics</p>
+                                </div>
+                                <button style="margin-left: 73px;">New</button>
+                            </div>
+
+                            <div class="Extended-dropdown-section">
+                                <div class="icon">
+                                    <i data-lucide="users-round" class="my-class"></i>
+                                </div>
+                                <div class="p-class">
+                                    <p style="font-size:17px;font-weight:900;">Team management</p>
+                                    <p style="font-size:15px">Manage your team members</p>
+                                </div>
+                            </div>
+                            <div class="Extended-dropdown-section">
+                                <div class="icon">
+                                    <i data-lucide="chart-line" class="my-class"></i>
+                                </div>
+                                <div class="p-class">
+                                    <p style="font-size:17px;font-weight:900;">Sales Reports</p>
+                                    <p style="font-size:15px;">Review financial statics</p>
+                                </div>
+                                <button style="margin-left: 125px;">Hot</button>
+                            </div>
+                            <div class="Extended-dropdown-section">
+                                <div class="icon">
+                                    <i data-lucide="shield-keyhole" class="my-class"></i>
+                                </div>
+                                <div class="p-class">
+                                    <p style="font-size:17px;font-weight:900;">Security center</p>
+                                    <p style="font-size:15px;">Manage privacy settings</p>
+                                </div>
+                            </div>
+                            <div class="Extended-dropdown-section">
+                                <div class="icon">
+                                    <i data-lucide="message-circle-more" class="my-class"></i>
+                                </div>
+                                <div class="p-class">
+                                    <p style="font-size:17px;font-weight:900;">Message ceter</p>
+                                    <p style="font-size:15px;">Check your notifications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="megamenu-li"><a href="#">Megamenu</a>
+                        <div class="megamenu">
+                            <div class="megamenu-section1">
+                                <ul class="megamenu-ul">
+                                    <li> <i data-lucide="calculator" class="megamenu-section1-icon"></i>Enterprise
+                                        Software</li>
+                                    <li> <i data-lucide="code-xml" class="megamenu-section1-icon"></i>Developement Tools
+                                    </li>
+                                    <li> <i data-lucide="palette" class="megamenu-section1-icon"></i>Creative Suite</li>
+                                    <li> <i data-lucide="file-text" class="megamenu-section1-icon"></i>Resources</li>
+                                </ul>
+                            </div>
+                            <div class="megamenu-section2">
+                                <div class="megamenu-sec2-upperdiv">
+                                    <div class="megamenu-section2-div1">
+                                        <h3>Core Solution</h3>
+                                        <hr>
+                                        <div class="secs-parent">
+                                            <div class="div-sections">
+                                                <i data-lucide="users"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:550;">CRM Solutions</p>
+                                                    <p style="font-size:16px">Manage customer relationships effectively
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="circle-pile"></i>
+                                                <div class="mega-p">
+                                                    <p style="font: size 20px;font-weight:900;">ERP Systems</p>
+                                                    <p style="font-size:16px">Integrate all buisness processes</p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="settings"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Workflow Automations</p>
+                                                    <p style="font-size:16px">Streamline repititive tasks</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu-section2-div2">
+                                        <h3>Data & Analytics</h3>
+                                        <hr>
+                                        <div class="secs-parent">
+                                            <div class="div-sections">
+                                                <i data-lucide="file-text"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Document Management</p>
+                                                    <p style="font-size:16px">Organize and secure documents</p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="chart-column"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Buisness Intelligence</p>
+                                                    <p style="font-size:16px">Make data-driven decisions</p>
+                                                </div>
+                                            </div>
+                                            <div class="div-sections">
+                                                <i data-lucide="share-2"></i>
+                                                <div class="mega-p">
+                                                    <p style="font-size:20px;font-weight:900;">Integration Platform</p>
+                                                    <p style="font-size:16px">Connect all your systems</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="megamenu-section2-div3">
+                                    <div class="div-img-p">
+                                        <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/misc/misc-7.webp"
+                                            style="width: 110px;height:100px;border-radius: 10px;">
+                                        <div class="megamenu-div3-sec">
+                                            <p style="font-size: 24px;font-weight:900;">Enterprise Package</p>
+                                            <p style="font-size: 18px;">Comprehensive business management solution with
+                                                advanced features and 24/7 support.</p>
+                                            <div class="btn-icon">
+                                                <button>Get started</button>
+                                                <i data-lucide="move-right" style="color:#619cee"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu-icon">
+                <i data-lucide="text-align-justify"></i>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="center">                           
+                    <p class="transform-p">Transform Your<span style="color: #5c99ee;">Digital Future</span></p>
+                    <p style="color:#7c8590" class="paragraph-p">Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem
+                        accusantium doloremque laudantium totam rem aperiam.</p>
+                <div class="two-btn">
+                    <button
+                        style="width:225px;height:60px;border-radius:10px;font-size:20px;background-color: #5c99ee;color:white;">Start
+                        Journey</button>
+                    <div class="play-btn">
+                        <i data-lucide="circle-play" style="width: 60px;height:60px;color:#5c99ee"></i>
+                        <p>watch Demo</p>
+                    </div>
+                </div>
+            </div class="main-img">
+            <img src="https://bootstrapmade.com/content/demo/Devin/assets/img/illustration/illustration-28.webp">
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
