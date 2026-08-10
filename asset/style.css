@@ -1,7 +1,43 @@
-.break-line:{
-   font:20px;
+.break-line{
+   font-size: 17px;
+   color:#b0b0b0;
+   display: block;
+}
+.s-heading{
+    font-size: 30px;
+    font-weight: 600;
+    color:#0b2341;
+}
+.break-line::after{
+    content:"" ;
+    height: 2px;
+    background: orangered;
+    display:inline-block; 
+    width:150px;
+    margin-left: 15px;
+    margin-bottom: 6px;
+}
 
-}
-body{
-    background:red;
-}
+        button {
+            height: 45px;
+            border-radius: 9999px;
+        }
+        .pricing{
+            color:orangered;
+            font-size: 40px;
+        }
+        .ul-{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        @media screen and (min-width:1200px) {
+            .team-img{
+            width:300px;
+            height: 300px;
+        }
+            
+        }
