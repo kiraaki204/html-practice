@@ -1,5 +1,5 @@
 *{
-    bs-gutter:0%;
+    bs-gutter:0%; !important
     margin: 0%;
     padding: 0%;
 }
@@ -38,19 +38,7 @@
             padding-top: 20px;
             padding-bottom: 30px;
         }
-        @media screen and (min-width:1200px) {
-            .team-img{
-            width:300px;
-            height: 300px;
-        }
-        .testimonial-img{
-            height:80px;
-            width:80px;
-            position:absolute;
-            left:-5%;
-            top:30px;
-        }
-        .parallax {
+             .parallax {
   /* The image used */
   background-image: url("https://images.unsplash.com/photo-1553028826-f4804a6dba3b?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHdvbWVuJTIwYnVzaW5lc3N8ZW58MHx8fHwxNjc4MjgzMzUy&ixlib=rb-4.0.3&q=80&w=960");
 
@@ -63,8 +51,23 @@
   background-repeat: no-repeat;
   background-size: cover;
         }
+        @media screen and (min-width:1200px) {
+            .team-img{
+            width:300px;
+            height: 300px;
+        }
+        .testimonial-img{
+            height:80px;
+            width:80px;
+            position:absolute;
+            left:-5%;
+            top:30px;
+        }
+    }
+   
         @media screen and (max-width:577px) {
             .testimonial-img{
             height:90px;
             width:90px;
         }
+    }
