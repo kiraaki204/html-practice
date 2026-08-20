@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./asset/style.css">
+</head>
+
+<body>
+    <div class="h-screen flex">
+        <nav class="bg-[#172032] text-white h-full w-72">
+            <div
+                class="py-3 px-6  flex gap-3 border-b border-gray-700 border-r border-gray-700 bg-gradient-to-r from-[#172032] to-[#202c42]">
+                <div>
+                    <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
+                        class="h-[43px] w-[43px]">
+                </div>
+                <div>
+                    <p class="font-bold text-[#f3f6f9]">AppDashboard</p>
+                    <p class="text-[#9aa8b9] text-[11px] font-bold">ADMIN SUITE</p>
+                </div>
+            </div>
+            <div class="p-6 flex flex-col gap-5 bg-gradient-to-b from-[#161e2f] to-[#0d1119]">
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="layout-dashboard" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Dashboard</p>
+                </div>
+                <div class="flex flex-col">
+                    <input id="Dashboard" type="checkbox" class="peer hidden">
+                    <div class="flex gap-3 items-center ">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="gauge" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Dashboard" class="text-[#f3f6f9] font-bold text-sm">Dashboards</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Sales</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Analytics</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── CRM</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Marketing</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Projects</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Finance</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Users" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="users" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Users" class="text-[#f3f6f9] font-bold text-sm">Users</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Users List</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── User View</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── User Edit</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Profile</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Settings</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Roles & Permissions</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Authentication" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="shield-alert" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Authentication" class="text-[#f3f6f9] font-bold text-sm">Authentication</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Login</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Register</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Forgot Password</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Reset Password</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Email Verification</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Two Factor Auth</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Lock Screen
+                        <p>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <P class="apps-aft">APPS <span style="display: inline-block;height: 1px;width: 180px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="calendar-days" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">calendar</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="file-chart-column-increasing" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Kanban Board</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="message-circle-more" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Chat</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="user-star" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Contacts</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="folder-open" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">File Manager</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="mail-check" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Email</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="square-check-big" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Todo list</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="headset" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Support Center</p>
+                </div>
+                <div class="mt-3">
+                    <P class="apps-aft">UI ELEMENTS  <span style="display: inline-block;height: 1px;width: 130px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Components" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="printer" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Components" class="text-[#f3f6f9] font-bold text-sm">Components</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Alert</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Accordians</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Badges</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Breadcrumbs</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Popovers</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Buttons</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Cards
+                        <p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Carousel</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Dropdowns</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── List Groups</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Modal</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Navs & Tabs</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Offcanvas</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Pagination
+                        <p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Progress</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Spinners</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Toasts</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Tooltips</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Widgets" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="layout-panel-left" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Widgets" class="text-[#f3f6f9] font-bold text-sm">Widgets</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Cards</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Banners</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Charts</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Apps</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Data</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Forms" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="layers" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Forms" class="text-[#f3f6f9] font-bold text-sm">Forms</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Form Elements</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Form Layout</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Validations</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Wizard</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Rich Editors</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Date/Time Pickers</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Advanced Selects</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── File Upload</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Table" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="sheet" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Table" class="text-[#f3f6f9] font-bold text-sm">Tables</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Basic Tables</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Data Tables</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Responsives Tables</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Charts" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="chart-no-axes-combined" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Charts" class="text-[#f3f6f9] font-bold text-sm">Charts</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── ApexCharts</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Chart.js</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── ECharts</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Icons" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="gem" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Icons" class="text-[#f3f6f9] font-bold text-sm">Icons</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Bootstrap Icons</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Remix Icons</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Font Awesome</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Phosphor Icons</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Lucide Icons</p>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <P class="apps-aft">Pages<span style="display: inline-block;height: 1px;width: 160px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                </div>
+                   <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="mail" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Contact</p>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="invoices" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="grid-3x3" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="invoices" class="text-[#f3f6f9] font-bold text-sm">Invoices</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Invoice List</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Invoice View</p>
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="tag" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Pricing</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="shield-question-mark" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">FAQ</p>
+                </div>
+                <div class="flex flex-col">
+                    <input type="checkbox" id="Errors" class="peer hidden">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                            <i data-lucide="circle-x" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                        </div>
+                        <label for="Errors" class="text-[#f3f6f9] font-bold text-sm">Error Pages</label>
+                    </div>
+                    <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── 404 Not Found</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── 403 Forbidden</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── 500 Server Error</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Mainteance</p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Coming Soon</p>
+                    </div>
+                </div>
+                 <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="clock" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Timeline</p>
+                </div>
+                 <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="search" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Search Results</p>
+                </div>
+                 <div class="flex gap-3 items-center">
+                    <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
+                        <i data-lucide="file-check-corner" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
+                    </div>
+                    <p class="text-[#f3f6f9] font-bold text-sm">Blank Page</p>
+                </div>
+            </div>
+        </nav>
+
+        <main class="bg-[#0e1423] h-[2000px] flex-1">
+            <header class=" flex gap-4 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700">
+                <div class="flex gap-3">
+                <div class="bg-[#182235] rounded-xl h-[42px] w-[42px] border border-[#2b3a50]">
+                        <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-[10px]"></i>
+                </div>
+                <div class="h-[45px] bg-[#2b3a50] w-[1px]"></div>
+                <div class="header-heading flex flex-col w-[120px]">
+                <p class="text-[#9aa8b9] text-[11px] font-bold">WORKSPACE</p>
+                <p class="text-[#f3f6f9] text-[13px] font-bold">Command Center</p>
+                </div>
+                </div>
+                <div class="flex gap-10">
+                <div>
+                    <input id="search" type="text" class=" px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[40px] w-[440px]" placeholder="search workspace...">
+                    <!-- <i data-lucide="search" class="h-[18px] w-[18px] text-[#8e9bac] "></i> -->
+                </div>
+                <div class="flex bg-[#141d2e] rounded-full border border-[#1d2739] h-[45px] w-[280px]">
+                    <div class=" flex gap-6 m-3">
+                    <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                    <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                    <i data-lucide="bell-ring" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                    </div>
+                    <div class="m-[3px] p-[2px] flex gap-3 border border-[#202b3d] h-[38px] w-[135px] rounded-full items-center">
+                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp" class="h-[33px] w-[33px] rounded-full">
+                        <div>
+                        <p class="text-[#f3f6f9] font-bold text-[13px]">John Doe</p>
+                        <p class="text-[#818e9f] font-bold text-[11px]">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+            <div class="flex-1 h-[390px] m-10 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-xl border border-[#28365b]">
+                <div class="flex">
+                <div>
+                <p class="text-[#6d88ff] font-extrabold text-[12px]">COMMAND CENTER</p>
+                <div class="flex flex-col gap-4">
+                <h1 class="text-5xl font-bold text-[#eef1f5]">Operating Dashboard</h1>
+                <p class="text-[#9AA8B9] text-[17px] max-w-[600px]">Monitor revenue, orders, customer movement, and priority workflow signals from one focused workspace.</p>
+                </div>
+                </div>
+                <div>
+                    <button class=" text-white bg-[#0E1524] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
+                        <div class="py-2 px-6 flex gap-1 text-[15px]">
+                        <i data-lucide="file-text" class="h-[20px] w-[15px]"></i>
+                        <p class="text-[15px]">Invoices</p>
+                        </div>
+                    </button>
+                    <button class=" text-white bg-[#6D88FF] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
+                        <div class="py-2 px-6 flex gap-1 text-[15px]">
+                        <i data-lucide="user-round" class="h-[20px] w-[15px]"></i>
+                        <p class="text-[15px]">Add user</p>
+                        </div>
+                    </button>
+                </div>
+                </div>
+
+                <div class="flex">
+                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                    <div class="bg-[#222E4E] h-[45px] w-[45px] p-3 rounded-lg">
+                        <i data-lucide="shopping-cart" class="text-[#6D88FF] h-[20px] w-[20px]"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#9AA8B9] font-bold text-[14px]">Total Sales</p>
+                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$12,426</p>
+                      <div class="flex gap-1">
+                        <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                      <p class="text-[#34D399] font-bold text-[13px]">12.5% vs last month</p>  
+                      </div>
+                    </div>
+                </div>
+              <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                    <div class="bg-[#1C3B43] h-[45px] w-[45px] p-3 rounded-lg">
+                        <i data-lucide="dollar-sign" class="text-[#34D399] h-[20px] w-[20px]"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#9AA8B9] font-bold text-[14px]">Revenue</p>
+                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$8,234</p>
+                      <div class="flex gap-1">
+                       <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                      <p class="text-[#34D399] font-bold text-[13px]">8.2% vs last month</p>  
+                     </div>
+                    </div>
+                </div>
+                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                    <div class="bg-[#39393B] h-[45px] w-[45px] p-3 rounded-lg">
+                        <i data-lucide="shopping-cart" class="text-[#E2B15A] h-[20px] w-[20px]"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#9AA8B9] font-bold text-[14px]">Orders</p>
+                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">1,248</p>
+                    <div class="flex gap-1">
+                     <i data-lucide="arrow-up" class="h-[40px] text-[#D73E35]"></i>
+                      <p class="text-[#D73E35] font-bold text-[13px]">3.1% vs last month</p>  
+                    </div>
+                    </div>
+                </div>
+                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                    <div class="bg-[#1A3B4F] h-[45px] w-[45px] p-3 rounded-lg">
+                        <i data-lucide="shopping-cart" class="text-[#22D3EE] h-[20px] w-[20px]"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#9AA8B9] font-bold text-[14px]">Customers</p>
+                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">5,432</p>
+                    <div class="flex gap-1">
+                     <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                      <p class="text-[#34D399] font-bold text-[13px]">5.8% vs last month</p>  
+                    </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            <div class="flex">
+                <div class="mx-10 rounded-xl border border-[#28365b] h-[750px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6">
+                <div>
+                    <p class="text-[#547EFE] font-bold text-[12px]">FINANCIAL PULSE</p>
+                    <p class="text-[#F3F6F9] font-bold text-[17px]">Revenue Overview</p>
+                </div>
+                <div class="flex">
+                    <div class="">
+
+                    </div>
+                </div>
+
+                </div>
+                <div class="rounded-xl border border-[#28365b] h-[750px] w-[350px]">
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
