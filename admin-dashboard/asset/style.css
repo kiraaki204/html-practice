@@ -3,4 +3,10 @@
     font-size: 12px;
     font-weight: 800;
 }
-
+.sidebar-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 10px;
+}

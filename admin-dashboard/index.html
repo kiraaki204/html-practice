@@ -11,7 +11,8 @@
 
 <body>
     <div class="h-screen flex">
-        <nav class="bg-[#172032] text-white h-full w-72">
+        <input id="sidebar-toggle" type="checkbox" class="peer hidden">
+        <nav class="bg-[#172032] text-white h-screen w-72 peer-checked:w-0 overflow-hidden">
             <div
                 class="py-3 px-6  flex gap-3 border-b border-gray-700 border-r border-gray-700 bg-gradient-to-r from-[#172032] to-[#202c42]">
                 <div>
@@ -23,7 +24,8 @@
                     <p class="text-[#9aa8b9] text-[11px] font-bold">ADMIN SUITE</p>
                 </div>
             </div>
-            <div class="p-6 flex flex-col gap-5 bg-gradient-to-b from-[#161e2f] to-[#0d1119]">
+            <div
+                class="sidebar-scroll p-6 flex flex-col gap-5 bg-gradient-to-b from-[#161e2f] to-[#0d1119]  h-[calc(100vh-70px)] overflow-y-auto">
                 <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="layout-dashboard" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
@@ -79,12 +81,13 @@
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Reset Password</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Email Verification</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Two Factor Auth</p>
-                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Lock Screen
-                        <p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Lock Screen</p>
                     </div>
                 </div>
                 <div class="mt-3">
-                    <P class="apps-aft">APPS <span style="display: inline-block;height: 1px;width: 180px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                    <P class="apps-aft">APPS <span
+                            style="display: inline-block;height: 1px;width: 180px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span>
+                    </P>
                 </div>
                 <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
@@ -135,7 +138,9 @@
                     <p class="text-[#f3f6f9] font-bold text-sm">Support Center</p>
                 </div>
                 <div class="mt-3">
-                    <P class="apps-aft">UI ELEMENTS  <span style="display: inline-block;height: 1px;width: 130px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                    <P class="apps-aft">UI ELEMENTS <span
+                            style="display: inline-block;height: 1px;width: 130px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span>
+                    </P>
                 </div>
                 <div class="flex flex-col">
                     <input type="checkbox" id="Components" class="peer hidden">
@@ -152,16 +157,14 @@
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Breadcrumbs</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Popovers</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Buttons</p>
-                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Cards
-                        <p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Cards</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Carousel</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Dropdowns</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── List Groups</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Modal</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Navs & Tabs</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Offcanvas</p>
-                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Pagination
-                        <p>
+                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Pagination</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Progress</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Spinners</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Toasts</p>
@@ -248,9 +251,11 @@
                     </div>
                 </div>
                 <div class="mt-3">
-                    <P class="apps-aft">Pages<span style="display: inline-block;height: 1px;width: 160px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span></P>
+                    <P class="apps-aft">Pages<span
+                            style="display: inline-block;height: 1px;width: 160px;background: #253347;margin-left: 15px;margin-bottom: 3px;"></span>
+                    </P>
                 </div>
-                   <div class="flex gap-3 items-center">
+                <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="mail" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
                     </div>
@@ -297,19 +302,19 @@
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Coming Soon</p>
                     </div>
                 </div>
-                 <div class="flex gap-3 items-center">
+                <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="clock" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
                     </div>
                     <p class="text-[#f3f6f9] font-bold text-sm">Timeline</p>
                 </div>
-                 <div class="flex gap-3 items-center">
+                <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="search" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
                     </div>
                     <p class="text-[#f3f6f9] font-bold text-sm">Search Results</p>
                 </div>
-                 <div class="flex gap-3 items-center">
+                <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="file-check-corner" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
                     </div>
@@ -318,145 +323,322 @@
             </div>
         </nav>
 
-        <main class="bg-[#0e1423] h-[2000px] flex-1">
-            <header class=" flex gap-4 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700">
+        <main class="bg-[#0e1423] flex-1 overflow-y-auto">
+            <header
+                class="flex justify-between gap-12 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700 sticky top-0">
                 <div class="flex gap-3">
-                <div class="bg-[#182235] rounded-xl h-[42px] w-[42px] border border-[#2b3a50]">
-                        <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-[10px]"></i>
+                    <label for="sidebar-toggle">
+                        <div class="bg-[#182235] rounded-xl h-[42px] w-[42px] border border-[#2b3a50]">
+                            <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-[10px]"></i>
+                        </div>
+                    </label>
+                    <div class="h-[45px] bg-[#2b3a50] w-[1px]"></div>
+                    <div class="header-heading flex flex-col w-[120px]">
+                        <p class="text-[#9aa8b9] text-[11px] font-bold">WORKSPACE</p>
+                        <p class="text-[#f3f6f9] text-[13px] font-bold">Command Center</p>
+                    </div>
                 </div>
-                <div class="h-[45px] bg-[#2b3a50] w-[1px]"></div>
-                <div class="header-heading flex flex-col w-[120px]">
-                <p class="text-[#9aa8b9] text-[11px] font-bold">WORKSPACE</p>
-                <p class="text-[#f3f6f9] text-[13px] font-bold">Command Center</p>
-                </div>
-                </div>
-                <div class="flex gap-10">
-                <div>
-                    <input id="search" type="text" class=" px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[40px] w-[440px]" placeholder="search workspace...">
+
+                <div class="flex-1">
+                    <input id="search" type="text"
+                        class=" px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[40px] w-full"
+                        placeholder="search workspace...">
                     <!-- <i data-lucide="search" class="h-[18px] w-[18px] text-[#8e9bac] "></i> -->
                 </div>
                 <div class="flex bg-[#141d2e] rounded-full border border-[#1d2739] h-[45px] w-[280px]">
                     <div class=" flex gap-6 m-3">
-                    <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
-                    <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
-                    <i data-lucide="bell-ring" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        <i data-lucide="bell-ring" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
                     </div>
-                    <div class="m-[3px] p-[2px] flex gap-3 border border-[#202b3d] h-[38px] w-[135px] rounded-full items-center">
-                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp" class="h-[33px] w-[33px] rounded-full">
+                    <div
+                        class="m-[3px] p-[2px] flex gap-3 border border-[#202b3d] h-[38px] w-[135px] rounded-full items-center">
+                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp"
+                            class="h-[33px] w-[33px] rounded-full">
                         <div>
-                        <p class="text-[#f3f6f9] font-bold text-[13px]">John Doe</p>
-                        <p class="text-[#818e9f] font-bold text-[11px]">Administrator</p>
+                            <p class="text-[#f3f6f9] font-bold text-[13px]">John Doe</p>
+                            <p class="text-[#818e9f] font-bold text-[11px]">Administrator</p>
                         </div>
                     </div>
-                </div>
                 </div>
             </header>
 
-            <div class="flex-1 h-[390px] m-10 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-xl border border-[#28365b]">
-                <div class="flex">
-                <div>
-                <p class="text-[#6d88ff] font-extrabold text-[12px]">COMMAND CENTER</p>
-                <div class="flex flex-col gap-4">
-                <h1 class="text-5xl font-bold text-[#eef1f5]">Operating Dashboard</h1>
-                <p class="text-[#9AA8B9] text-[17px] max-w-[600px]">Monitor revenue, orders, customer movement, and priority workflow signals from one focused workspace.</p>
-                </div>
-                </div>
-                <div>
-                    <button class=" text-white bg-[#0E1524] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
-                        <div class="py-2 px-6 flex gap-1 text-[15px]">
-                        <i data-lucide="file-text" class="h-[20px] w-[15px]"></i>
-                        <p class="text-[15px]">Invoices</p>
+            <div
+                class="flex-1 h-[390px] mx-10 mt-10 mb-5 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-xl border border-[#28365b]">
+                <div class="flex justify-between">
+                    <div>
+                        <p class="text-[#6d88ff] font-extrabold text-[12px]">COMMAND CENTER</p>
+                        <div class="flex flex-col gap-4">
+                            <h1 class="text-5xl font-bold text-[#eef1f5]">Operating Dashboard</h1>
+                            <p class="text-[#9AA8B9] text-[17px] max-w-[600px]">Monitor revenue, orders, customer
+                                movement, and priority workflow signals from one focused workspace.</p>
                         </div>
-                    </button>
-                    <button class=" text-white bg-[#6D88FF] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
-                        <div class="py-2 px-6 flex gap-1 text-[15px]">
-                        <i data-lucide="user-round" class="h-[20px] w-[15px]"></i>
-                        <p class="text-[15px]">Add user</p>
-                        </div>
-                    </button>
-                </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class=" text-white bg-[#0E1524] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
+                            <div class="py-2 px-6 flex gap-1 text-[15px]">
+                                <i data-lucide="file-text" class="h-[20px] w-[15px]"></i>
+                                <p class="text-[15px]">Invoices</p>
+                            </div>
+                        </button>
+                        <button class=" text-white bg-[#627ae6] border border-[#28365b] rounded-lg w-[130px] h-[45px]">
+                            <div class="py-2 px-5 flex gap-1 text-[15px]">
+                                <i data-lucide="user-round-plus" class="h-[20px] w-[15px]"></i>
+                                <p class="text-[15px]">Add user</p>
+                            </div>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="flex">
-                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
-                    <div class="bg-[#222E4E] h-[45px] w-[45px] p-3 rounded-lg">
-                        <i data-lucide="shopping-cart" class="text-[#6D88FF] h-[20px] w-[20px]"></i>
+                    <div
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        <div class="bg-[#222E4E] h-[45px] w-[45px] p-3 rounded-lg">
+                            <i data-lucide="shopping-cart" class="text-[#6D88FF] h-[20px] w-[20px]"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-[#9AA8B9] font-bold text-[14px]">Total Sales</p>
+                            <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$12,426</p>
+                            <div class="flex gap-1">
+                                <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                                <p class="text-[#34D399] font-bold text-[13px]">12.5% vs last month</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col">
-                      <p class="text-[#9AA8B9] font-bold text-[14px]">Total Sales</p>
-                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$12,426</p>
-                      <div class="flex gap-1">
-                        <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
-                      <p class="text-[#34D399] font-bold text-[13px]">12.5% vs last month</p>  
-                      </div>
+                    <div
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        <div class="bg-[#1C3B43] h-[45px] w-[45px] p-3 rounded-lg">
+                            <i data-lucide="dollar-sign" class="text-[#34D399] h-[20px] w-[20px]"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-[#9AA8B9] font-bold text-[14px]">Revenue</p>
+                            <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$8,234</p>
+                            <div class="flex gap-1">
+                                <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                                <p class="text-[#34D399] font-bold text-[13px]">8.2% vs last month</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-              <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
-                    <div class="bg-[#1C3B43] h-[45px] w-[45px] p-3 rounded-lg">
-                        <i data-lucide="dollar-sign" class="text-[#34D399] h-[20px] w-[20px]"></i>
+                    <div
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        <div class="bg-[#39393B] h-[45px] w-[45px] p-3 rounded-lg">
+                            <i data-lucide="shopping-cart" class="text-[#E2B15A] h-[20px] w-[20px]"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-[#9AA8B9] font-bold text-[14px]">Orders</p>
+                            <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">1,248</p>
+                            <div class="flex gap-1">
+                                <i data-lucide="arrow-up" class="h-[40px] text-[#D73E35]"></i>
+                                <p class="text-[#D73E35] font-bold text-[13px]">3.1% vs last month</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col">
-                      <p class="text-[#9AA8B9] font-bold text-[14px]">Revenue</p>
-                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">$8,234</p>
-                      <div class="flex gap-1">
-                       <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
-                      <p class="text-[#34D399] font-bold text-[13px]">8.2% vs last month</p>  
-                     </div>
+                    <div
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        <div class="bg-[#1A3B4F] h-[45px] w-[45px] p-3 rounded-lg">
+                            <i data-lucide="shopping-cart" class="text-[#22D3EE] h-[20px] w-[20px]"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-[#9AA8B9] font-bold text-[14px]">Customers</p>
+                            <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">5,432</p>
+                            <div class="flex gap-1">
+                                <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
+                                <p class="text-[#34D399] font-bold text-[13px]">5.8% vs last month</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
-                    <div class="bg-[#39393B] h-[45px] w-[45px] p-3 rounded-lg">
-                        <i data-lucide="shopping-cart" class="text-[#E2B15A] h-[20px] w-[20px]"></i>
-                    </div>
-                    <div class="flex flex-col">
-                      <p class="text-[#9AA8B9] font-bold text-[14px]">Orders</p>
-                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">1,248</p>
-                    <div class="flex gap-1">
-                     <i data-lucide="arrow-up" class="h-[40px] text-[#D73E35]"></i>
-                      <p class="text-[#D73E35] font-bold text-[13px]">3.1% vs last month</p>  
-                    </div>
-                    </div>
-                </div>
-                <div class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
-                    <div class="bg-[#1A3B4F] h-[45px] w-[45px] p-3 rounded-lg">
-                        <i data-lucide="shopping-cart" class="text-[#22D3EE] h-[20px] w-[20px]"></i>
-                    </div>
-                    <div class="flex flex-col">
-                      <p class="text-[#9AA8B9] font-bold text-[14px]">Customers</p>
-                      <p class="text-[#F3F6F9] font-bold text-[24px] mb-3">5,432</p>
-                    <div class="flex gap-1">
-                     <i data-lucide="arrow-up" class="h-[40px] text-[#34D399]"></i>
-                      <p class="text-[#34D399] font-bold text-[13px]">5.8% vs last month</p>  
-                    </div>
-                    </div>
-                </div>
-                
                 </div>
             </div>
-            <div class="flex">
-                <div class="mx-10 rounded-xl border border-[#28365b] h-[750px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6">
-                <div>
-                    <p class="text-[#547EFE] font-bold text-[12px]">FINANCIAL PULSE</p>
-                    <p class="text-[#F3F6F9] font-bold text-[17px]">Revenue Overview</p>
+            <div class="flex px-10 py-5 gap-10">
+                <div
+                    class="rounded-xl border border-[#28365b] h-[750px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6 flex-1">
+                    <div class="flex justify-between mb-5">
+                        <div>
+                            <p class="text-[#547EFE] font-bold text-[12px]">FINANCIAL PULSE</p>
+                            <p class="text-[#F3F6F9] font-bold text-[17px]">Revenue Overview</p>
+                        </div>
+                        <div class="bg-[#0e1524] rounded-full h-[40px] p-1 border border-[#202b3d] inline-flex gap-1">
+                            <button
+                                class="w-[40px] bg-[#6d88ff] rounded-full text-white font-extrabold text-xs h-[30px] min-w-[42px]">12M</button>
+                            <button
+                                class="w-[40px] active:bg-[#6d88ff] rounded-full text-[#94a2b3] active:text-white font-extrabold text-xs h-[30px] min-w-[42px]">6M</button>
+                            <button
+                                class="w-[40px] active:bg-[#6d88ff] rounded-full text-[#94a2b3] active:text-white font-extrabold text-xs h-[30px] min-w-[42px]">30D</button>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#263142] pt-4">
+                        <div class="flex gap-3">
+                            <div class="flex-1 p-4 bg-[#131b2c] border border-[#202b3d] rounded-lg">
+                                <p class="text-[#9aa8b9] text-[13px] font-bold">Revenue</p>
+                                <P class="text-[#f3f6f9] text-[19.2] font-semibold">$10.2k</P>
+                            </div>
+                            <div class="flex-1 p-4 bg-[#131b2c] border border-[#202b3d] rounded-lg">
+                                <p class="text-[#9aa8b9] text-[13px] font-bold">Expenses</p>
+                                <P class="text-[#f3f6f9] text-[19.2] font-semibold">$5.1k</P>
+                            </div>
+                            <div class="flex-1 p-4 bg-[#131b2c] border border-[#202b3d] rounded-lg">
+                                <p class="text-[#9aa8b9] text-[13px] font-bold">Customers</p>
+                                <P class="text-[#f3f6f9] text-[19.2] font-semibold">3.8k</P>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./asset/screenshot-2026-08-20_16-58-16.png" class="w-full h-[350px] my-4">
                 </div>
-                <div class="flex">
-                    <div class="">
 
+                <div class="flex flex-col gap-5">
+                    <div class="rounded-xl border border-[#28365b] h-[500px] w-[350px]  bg-[#182235] p-6">
+                        <div class="flex justify-between mb-5">
+                            <div>
+                                <p class="text-[#547EFE] font-bold text-[12px]">LIVE QUEUE</p>
+                                <p class="text-[#F3F6F9] font-bold text-[17px]">Recent Activity</p>
+                            </div>
+                            <div>
+                                <button class="text-[#617ae2] font-extrabold text-xs">View all</button>
+                            </div>
+                        </div>
+                        <div class="border-t border-[#263142] flex flex-col gap-2 pt-4">
+                            <div class="p-3 flex gap-[10px] border-b border-[#202b3d]">
+                                <div
+                                    class="bg-[#34d39924] h-[34px] w-[34px] rounded-lg inline-flex items-center justify-center">
+                                    <i data-lucide="check" class="text-[#34d399] h-5 w-5"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#f3f6f9] text-[14px] font-semibold">New order received<span
+                                            class="text-[#576dcc]"> #ORD-001</span></p>
+                                    <p class="text-[#4c586d] text-xs">5 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="p-3 flex gap-[10px] border-b border-[#202b3d]">
+                                <div
+                                    class="bg-[#222e4e] h-[34px] w-[34px] rounded-lg inline-flex items-center justify-center">
+                                    <i data-lucide="user-plus" class="text-[#6d88ff] h-5 w-5"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#f3f6f9] text-[14px] font-semibold">New user registered<span
+                                            class="text-[#576dcc]"> John Doe</span></p>
+                                    <p class="text-[#4c586d] text-xs">15 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="p-3 flex gap-[10px] border-b border-[#202b3d]">
+                                <div
+                                    class="bg-[#38393b] h-[34px] w-[34px] rounded-lg inline-flex items-center justify-center">
+                                    <i data-lucide="triangle-alert" class="text-[#f4b95b] h-5 w-5"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#f3f6f9] text-[14px] font-semibold">Server CPU usage at 85%</p>
+                                    <p class="text-[#4c586d] text-xs">1 hour ago</p>
+                                </div>
+                            </div>
+                            <div class="p-3 flex gap-[10px] border-b border-[#202b3d]">
+                                <div
+                                    class="bg-[#1a3b50] h-[34px] w-[34px] rounded-lg inline-flex items-center justify-center">
+                                    <i data-lucide="message-circle-more" class="text-[#21c1db] h-5 w-5"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#f3f6f9] text-[14px] font-semibold">New comment on<span
+                                            class="text-[#576dcc]"> blog post</span></p>
+                                    <p class="text-[#4c586d] text-xs">2 hour ago</p>
+                                </div>
+                            </div>
+                            <div class="p-3 flex gap-[10px]">
+                                <div
+                                    class="bg-[#392e41] h-[34px] w-[34px] rounded-lg inline-flex items-center justify-center">
+                                    <i data-lucide="circle-x" class="text-[#f06d81] h-5 w-5"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#f3f6f9] text-[14px] font-semibold">Order<span
+                                            class="text-[#576dcc]"> #ORD-004 </span>cancelled</p>
+                                    <p class="text-[#4c586d] text-xs">3 hour ago</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#28365b] h-[230px] w-[350px]  bg-[#182235] p-6">
+                        <div class="mb-5">
+                            <div>
+                                <p class="text-[#547EFE] font-bold text-[12px]">SHORTCUTS</p>
+                                <p class="text-[#F3F6F9] font-bold text-[17px]">Quick Actions</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-[#202b3d] pt-3 px-1 flex flex-wrap gap-3">
+                            <button
+                                class="p-[10px] text-[#d8e0e7] bg-[#0e1524] border border-[#202b3d] rounded-lg flex flex-1 gap-2 h-[52px] items-center">
+                                <i data-lucide="circle-plus" class="h-[18px] w-[18px] text-[#6d88ff]"></i>
+                                <p class="text-[15px] font-extrabold text-[#d8e0e7]">New Order</p>
+                            </button>
+                            <button
+                                class="p-[10px] text-[#d8e0e7] bg-[#0e1524] border border-[#202b3d] rounded-lg flex flex-1 gap-2 h-[52px] items-center">
+                                <i data-lucide="user-round-plus" class="h-[18px] w-[18px] text-[#6d88ff]"></i>
+                                <p class="text-[15px] font-extrabold text-[#d8e0e7]">Add User</p>
+                            </button>
+                            <button
+                                class="p-[10px] text-[#d8e0e7] bg-[#0e1524] border border-[#202b3d] rounded-lg flex flex-1 gap-2 h-[52px] items-center">
+                                <i data-lucide="file-text" class="h-[19px] w-[19px] text-[#6d88ff]"></i>
+                                <p class="text-[15px] font-extrabold text-[#d8e0e7]">report</p>
+                            </button>
+                            <button
+                                class="p-[10px] text-[#d8e0e7] bg-[#0e1524] border border-[#202b3d] rounded-lg flex flex-1 gap-2 h-[52px] items-center">
+                                <i data-lucide="settings" class="h-[18px] w-[18px] text-[#6d88ff]"></i>
+                                <p class="text-[15px] font-extrabold text-[#d8e0e7]">Settings</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-10 justify-between mx-10 my-5">
+
+                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[450px] flex-1">
+                    <div class="flex justify-between mb-5">
+                        <div>
+                            <p class="text-[#547EFE] font-bold text-[12px]">Pipeline</p>
+                            <p class="text-[#F3F6F9] font-bold text-[17px]">Conversion Funnel</p>
+                        </div>
+                        <div>
+                            <button class="text-[#9aa8b9] font-extrabold text-xs">7 days</button>
+                        </div>
                     </div>
                 </div>
 
+                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[450px] flex-1">
+                    <div class="flex justify-between mb-5">
+                        <div>
+                            <p class="text-[#547EFE] font-bold text-[12px]">Revenue mix</p>
+                            <p class="text-[#F3F6F9] font-bold text-[17px]">Top Products</p>
+                        </div>
+                        <div>
+                            <button class="text-[#547EFE] font-extrabold text-xs">Details</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="rounded-xl border border-[#28365b] h-[750px] w-[350px]">
-
+                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[450px] flex-1">
+                    <div class="flex justify-between mb-5">
+                        <div>
+                            <p class="text-[#547EFE] font-bold text-[12px]">Reliability</p>
+                            <p class="text-[#F3F6F9] font-bold text-[17px]">System Status</p>
+                        </div>
+                        <div>
+                            <button class="text-[#32c692] bg-[#1c3b44] font-extrabold text-xs">Operational</button>
+                        </div>
+                    </div>
                 </div>
-
             </div>
+
+            <div class="flex px-10 py-5 gap-10">
+                <div
+                    class="rounded-xl border border-[#28365b] h-[450px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6 flex-1">
+                </div>
+                <div class="rounded-xl border border-[#28365b] h-[450px] w-[350px] bg-[#182235] p-6"></div>
+            </div>
+
 
         </main>
     </div>
 
 
-
+    </div>
 
 
 
