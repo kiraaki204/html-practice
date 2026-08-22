@@ -12,7 +12,7 @@
 <body>
     <div class="h-screen flex">
         <input id="sidebar-toggle" type="checkbox" class="peer hidden">
-        <nav class="bg-[#172032] text-white h-screen w-72 peer-checked:w-0 ">
+        <nav class="bg-[#172032] text-white h-screen w-72 peer-checked:w-0 transition-all ">
             <div
                 class="py-3 px-6  flex gap-3 border-b border-gray-700 border-r border-gray-700 bg-gradient-to-r from-[#172032] to-[#202c42]">
                 <div>
@@ -783,12 +783,13 @@
                 </div>
             </div>
 
-            <div class="flex px-10 py-5 gap-10">
+            <div class="flex px-10 pt-5 mb-16 gap-10 ">
+
                 <div
-                    class="rounded-xl border border-[#28365b] h-[450px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6 flex-1">
-                    <div class="flex justify-between mb-5">
+                    class="rounded-xl border border-[#28365b] h-[450px] w-[530px] bg-[#182235] border border-[#2B3A50] flex-1">
+                    <div class="flex justify-between mb-5 m-6 ">
                         <div>
-                            <p class="text-[#547EFE] font-bold text-[12px]">Commerce stream</p>
+                            <p class="text-[#547EFE] font-bold text-[12px]">COMMERECE STREAM</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">Recent Orders</p>
                         </div>
                         <div>
@@ -797,16 +798,198 @@
                                 All</button>
                         </div>
                     </div>
+                    <div class="w-full overflow-x-auto">
+    <table class="w-full">
+        
+        <!-- Table Header -->
+        <thead>
+            <tr class="text-[#8794a5] bg-[#151b26] text-[12px] font-semibold border-y border-[#202b3d]">
+                <th class="p-3">ORDER</th>
+                <th class="p-3">CUSTOMER</th>
+                <th class="p-3">PRODUCT</th>
+                <th class="p-3">AMOUNT</th>
+                <th class="p-3">STATUS</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+
+            <!-- Row 1 -->
+            <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                <td class="p-3 text-[#6d88ff]">#ORD-001</td>
+
+                <td class="p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="" alt="">
+                        <div>
+                            <p>John Doe</p>
+                            <p class="text-[#9aa8b9] text-[12px]">john@example.com</p>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="p-3 text-[#b7bfc8]">Premium Plan</td>
+
+                <td class="p-3 text-[#b7bfc8]">$299.00</td>
+
+                <td class="p-3">
+                    <button class="text-[#31c290] bg-[#1b3641] p-[3px] rounded-[6px] text-[12px] font-semibold"">Completed</button>
+                </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                <td class="p-3 text-[#6d88ff]">#ORD-002</td>
+
+                <td class="p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="" alt="">
+                        <div>
+                            <p>Jane Smith</p>
+                            <p class="text-[#9aa8b9] text-[12px]">jane@example.com</p>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="p-3 text-[#b7bfc8]">Basic Plan</td>
+
+                <td class="p-3 text-[#b7bfc8]">$99.00</td>
+
+                <td class="p-3">
+                    <button class="text-[#f4b95b] bg-[#38393b] p-[3px] rounded-[6px] text-[12px] font-semibold"">Pending</button>
+                </td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                <td class="p-3 text-[#6d88ff]">#ORD-003</td>
+
+                <td class="p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="" alt="">
+                        <div>
+                            <p>Mike Johnson</p>
+                            <p class="text-[#9aa8b9] text-[12px]">mike@example.com</p>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="p-3 text-[#b7bfc8]">Enterprise Plan</td>
+
+                <td class="p-3 text-[#b7bfc8]">$999.00</td>
+
+                <td class="p-3">
+                    <button class="text-[#34d399] bg-[#1c3b44] p-[3px] rounded-[6px] text-[12px] font-semibold"">Completed</button>
+                </td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                <td class="p-3 text-[#6d88ff]">#ORD-004</td>
+
+                <td class="p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="" alt="">
+                        <div>
+                            <p>Sarah Wilson</p>
+                            <p class="text-[#9aa8b9] text-[12px]">sarah@example.com</p>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="p-3 text-[#b7bfc8]">Basic Plan</td>
+
+                <td class="p-3 text-[#b7bfc8]">$99.00</td>
+
+                <td class="p-3">
+                    <button class="text-[#fb7185] bg-[#392e41] p-[3px] rounded-[6px] text-[12px] font-semibold">Cancelled</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
                 </div>
+
+
                 <div class="rounded-xl border border-[#28365b] h-[450px] w-[350px] bg-[#182235] p-6">
                     <div class="mb-5">
                         <div>
-                            <p class="text-[#547EFE] font-bold text-[12px]">Plan </p>
-                            <p class="text-[#F3F6F9] font-bold text-[17px]">Recent Orders</p>
+                            <p class="text-[#547EFE] font-bold text-[12px]">PLAN HEALTH </p>
+                            <p class="text-[#F3F6F9] font-bold text-[17px]">Sales Targets</p>
                         </div>
                     </div>
-
+                    <div class="border-t border-[#263142] flex flex-col gap-2 pt-1">
+                        <div class="py-3 flex flex-col gap-[10px] border-b border-[#202b3d]">
+                            <div class="flex justify-between">
+                                <p class="text-[#9aa8b9] font-bold text-[13px]">Product Sales</p>
+                                <p class="text-[#9aa8b9] font-bold text-[12px]">75%</p>
+                            </div>
+                            <div class="bg-[#1F2A45] h-[10px] w-full rounded-full">
+                                <div class="bg-[#6d88ff] h-[8px] w-64 rounded-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#263142] flex flex-col gap-2 pt-1">
+                        <div class="py-3 flex flex-col gap-[10px] border-b border-[#202b3d]">
+                            <div class="flex justify-between">
+                                <p class="text-[#9aa8b9] font-bold text-[13px]">Service Revenue</p>
+                                <p class="text-[#9aa8b9] font-bold text-[12px]">60%</p>
+                            </div>
+                            <div class="bg-[#1F2A45] h-[10px] w-full rounded-full">
+                                <div class="bg-[#34d399] h-[8px] w-40 rounded-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#263142] flex flex-col gap-2 pt-1">
+                        <div class="py-3 flex flex-col gap-[10px] border-b border-[#202b3d]">
+                            <div class="flex justify-between">
+                                <p class="text-[#9aa8b9] font-bold text-[13px]">New Customers</p>
+                                <p class="text-[#9aa8b9] font-bold text-[12px]">85%</p>
+                            </div>
+                            <div class="bg-[#1F2A45] h-[10px] w-full rounded-full">
+                                <div class="bg-[#f4b95b] h-[8px] w-72 rounded-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="bg-[#172134] border border-[#2b3a50] p-5 flex justify-between">
+                <div class="p-3 mx-2 flex gap-3 w-64">
+                    <div>
+                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
+                            class="h-[35px] w-[35px]">
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#f3f6f9] tex-[13px]">AppDashboard</p>
+                        <p class="text-[#9aa8b9] text-[12px] font-bold">Operational admin workspace</p>
+                    </div>
+                </div>
+                <div class="bg-[#0e1524] rounded-full h-[40px] px-3 py-1 my-2 border border-[#202b3d] flex justify-between w-96">
+                            <button
+                                class="text-[#9aa8b9]  font-extrabold text-[13px]">About</button>
+                            <button
+                                class="text-[#9aa8b9]  font-extrabold text-[13px]">Privacy Policy</button>
+                            <button
+                               class="text-[#9aa8b9]  font-extrabold text-[13px]">Terms of Service</button>
+                             <button
+                                class="text-[#9aa8b9]  font-extrabold text-[13px] ">Contact</button>            
+                </div> 
+                <div class="flex gap-2">
+                    <div class="flex flex-col">
+                    <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">©2026 <span class="text-[#6d88ff]"> AppDashboard.</span> All Rights Reserved.</p>
+                    <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">Designed by <span class="text-[#6d88ff]"> BootstrapMade </span></p>
+                    </div>
+                    <div class="bg-[#6d88ff] h-[40px] w-[40px] rounded-lg flex justify-center items-center">
+                        <i data-lucide="move-up" class="h-[17px] w-[17px] text-white"></i>
+                    </div>
+                </div>
+
+
             </div>
 
 
