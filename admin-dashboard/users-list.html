@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./asset/style.css">
 </head>
+
 <body>
     <div class="h-screen flex">
         <input id="sidebar-toggle" type="checkbox" class="peer hidden">
@@ -28,7 +30,7 @@
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="layout-dashboard" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
                     </div>
-                    <p class="text-[#f3f6f9] font-bold text-sm">Dashboard</p>
+                    <a href="./dashboard-page.html" class="text-[#f3f6f9] font-bold text-sm">Dashboard</a>
                 </div>
                 <div class="flex flex-col">
                     <input id="Dashboard" type="checkbox" class="peer hidden">
@@ -58,7 +60,7 @@
                                 data-lucide="chevron-down" class="text-[#65707f] h-[15x] w-[15px]"></i></label>
                     </div>
                     <div class="ml-4 mt-4 flex flex-col gap-4  border-l border-[#263142] hidden peer-checked:flex">
-                        <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Users List</p>
+                        <a href="./users-list.html" class="text-[#9aa8b9] text-[13px] font-bold"> ── Users List</a>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── User View</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── User Edit</p>
                         <p class="text-[#9aa8b9] text-[13px] font-bold"> ── Profile</p>
@@ -321,7 +323,7 @@
                 <div class="flex gap-3 items-center">
                     <div class="bg-[#172235] p-2 rounded-lg h-[31px] w-[31px]">
                         <i data-lucide="search" class="text-[#9aa8b9] w-[17px] h-[17px]"></i>
-                    </div>
+                    </div>overflow
                     <p class="text-[#f3f6f9] font-bold text-sm">Search Results</p>
                 </div>
                 <div class="flex gap-3 items-center">
@@ -372,15 +374,16 @@
                     </div>
                 </div>
             </header>
-
+            <!--First user wla box-->
             <div
                 class="flex-1 mx-10 mt-10 mb-5 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-lg border border-[#28365b]">
                 <div class="flex justify-between">
                     <div>
                         <div class="flex flex-col gap-21">
-                        <p class="text-[#6d88ff] font-extrabold text-[12px]">IDENTITY DIRECTORY</p>
+                            <p class="text-[#6d88ff] font-extrabold text-[12px]">IDENTITY DIRECTORY</p>
                             <p class="text-[38.5px] font-bold text-[#eef1f5]">Users</p>
-                            <p class="text-[#9AA8B9] text-[15px]">Manage access, monitor account health, and keep the workspace directory organized.</p>
+                            <p class="text-[#9AA8B9] text-[15px]">Manage access, monitor account health, and keep the
+                                workspace directory organized.</p>
                         </div>
                     </div>
                     <div class="flex gap-3">
@@ -399,14 +402,352 @@
                     </div>
                 </div>
             </div>
+            <!-- four boxes -->
+            <div class="flex justify-between gap-5 m-10 ">
+                <div class="p-5 border border-[#2b3a50] flex-1 h-[150px] bg-[#182235] rounded-lg">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-[#9aa8b9] font-bold text-[13px]">Total Users</p>
+                        <p class="text-[#F3F6F9] font-bold text-[27.2px] mb-3">248</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <i data-lucide="arrow-up" class="h-[20px] w-[15px] text-[#34D399]"></i>
+                        <p class="text-[#34D399] font-extrabold text-[14px]">12 added this month</p>
+                    </div>
 
+                </div>
+                <div class="p-5 border border-[#2b3a50] flex-1 h-[150px] bg-[#182235] rounded-lg">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-[#9aa8b9] font-bold text-[13px]">Active now</p>
+                        <p class="text-[#F3F6F9] font-bold text-[27.2px] mb-3">186</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <i data-lucide="circle-check" class="h-[20px] w-[15px] text-[#34D399]"></i>
+                        <p class="text-[#34D399] font-extrabold text-[14px]">75% active rate</p>
+                    </div>
 
-            
+                </div>
 
+                <div class="p-5 border border-[#2b3a50] flex-1 h-[150px] bg-[#182235] rounded-lg">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-[#9aa8b9] font-bold text-[13px]">Pending invites</p>
+                        <p class="text-[#F3F6F9] font-bold text-[27.2px] mb-3">18</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <i data-lucide="clock" class="h-[20px] w-[15px] text-[#f4b95b]"></i>
+                        <p class="text-[#f4b95b] font-extrabold text-[14px]">4 expiring soon</p>
+                    </div>
 
+                </div>
+                <div class="p-5 border border-[#2b3a50] flex-1 h-[150px] bg-[#182235] rounded-lg">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-[#9aa8b9] font-bold text-[13px]">Pending invites</p>
+                        <p class="text-[#F3F6F9] font-bold text-[27.2px] mb-3">18</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <i data-lucide="shield-check" class="h-[20px] w-[15px] text-[#9aa8b9]"></i>
+                        <p class="text-[#9aa8b9] font-extrabold text-[14px]">Full access</p>
+                    </div>
 
+                </div>
+            </div>
+            <!-- table user wala -->
+            <div class="rounded-xl border border-[#28365b] bg-[#182235] border border-[#2B3A50] m-10">
+                <div class="flex justify-between mb-5 m-6 ">
+                    <div>
+                        <p class="text-[#547EFE] font-bold text-[12px]">DIRECTORY</p>
+                        <p class="text-[#F3F6F9] font-bold text-[17px]">All Users</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="relative">
+                            <input id="search" type="text"
+                                class="bg-[#121a2b] border border-[#2b3a50] rounded-full h-[42px] w-[300px] pl-9"
+                                placeholder="search workspace...">
+                            <i data-lucide="search"
+                                class="absolute left-3 top-3  h-[18px] w-[18px] text-[#8e9bac] "></i>
+                        </div>
+                        <button class="text-white bg-[#182235] border border-[#929fb0] rounded-lg  h-[45px] w-[125px]">
+                            <div class="py-2 px-5 flex gap-1 text-[15px]">
+                                <i data-lucide="funnel" class="h-[20px] w-[15px] text-[#7b8899]"></i>
+                                <p class="text-[15px] text-[#98a6b7]">Filter</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <table class="w-full">
 
+                    <thead>
+                        <tr
+                            class="text-[#8794a5] bg-[#151b26] text-[12px] font-semibold border-y border-[#202b3d] text-left">
+                            <th class="p-3"><input type="checkbox"
+                                    class="accent-[#2b3a50] bg-[#151b26] border border-[#2b3a50] rounded-[5px]"></th>
+                            <th class="p-5">USER</th>
+                            <th class="p-5">ROLE</th>
+                            <th class="p-5">STATUS</th>
+                            <th class="p-5">LAST ACTIVE</th>
+                            <th class="p-5">JOINED</th>
+                            <th class="p-5">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
 
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-1.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Sarah Johnson</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">sarah.johnson@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#fb7185] bg-[#392e41] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">Admin</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Just now</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Jan 15, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-2.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Michael Chen</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">m.chen@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#f4b95b] bg-[#38393b] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">Manager</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">5 min ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Feb 3, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-3.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Emily Rodriguez</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">emily.r@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#21c0da] bg-[#1a3b50] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">User</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">2 hours ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Mar 12, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-4.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">David Kim</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">d.kim@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#21c0da] bg-[#1a3b50] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">User</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#9aa8b9] bg-[#2d384a] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Inactive</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">3 days ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Jan 28, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-5.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Jessica Taylor</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">j.taylor@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#f4b95b] bg-[#38393b] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">Manager</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">1 hour ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Dec 5, 2023</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                            <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-6.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Robert Martinez</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">r.martinez@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#21c0da] bg-[#1a3b50] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">User</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">30 min ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Apr 18, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-7.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Amanda Wilson</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">a.wilson@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#22cbe6] bg-[#1a3b50] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">User</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#f0b65a] bg-[#38393b] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Pending</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Never</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">May 2, 2024</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+
+                        </tr>
+                                                <tr class="border-b border-[#202b3d] text-white text-[14px]">
+                            <td class="px-3 py-4 text-[#6d88ff]"><input type="checkbox"></td>
+
+                            <td class="px-3 py-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="./asset/avatar-8.webp" class="h-[42px] w-[42px] rounded-[10px]"
+                                        alt="image">
+                                    <div>
+                                        <p class="font-bold text-[#f3f6f9]">Chris Thompson</p>
+                                        <p class="text-[#9aa8b9] text-[12.48px]">c.thompson@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-3 py-4">
+                                <button
+                                    class="text-[#fb7185] bg-[#392e41] px-[10px] items-center text-[12px] font-extrabold h-[26px] rounded-full">Admin</button>
+                            </td>
+                            <td class="px-3 py-4"><button
+                                    class="text-[#31c290] bg-[#1b3641] px-[10px] rounded-full items-center text-[12px] font-extrabold h-[26px]">Active</button>
+                            </td>
+
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">15 min ago</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">Nov 20, 2023</td>
+                            <td class="px-3 py-4 text-[#ced6de] text-[14px] ">...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="p-[16px] flex justify-between">
+                    <p class="text-[#9aa8b9] text-[13px] font-bold">Showing 1 to 8 of 248 users</p>
+                    <div class="flex gap-1">
+                    <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#222e43] rounded-lg"><i data-lucide="chevron-left" class="text-[#394559] h-[15px] w-[15px]"></i></button>
+                    <button class="w-[28px] h-[28px] flex justify-center items-center bg-[#6d88ff]  text-[white] border border-[#6d88ff] text-[12px] rounded-lg">1</button>
+                    <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#2b3a50] text-[#d8e0e7] text-[12px] rounded-lg hover:bg-[#6d88ff] hover:text-[white]">2</button>
+                    <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#2b3a50] text-[#d8e0e7] text-[12px] rounded-lg hover:bg-[#6d88ff] hover:text-[white]">3</button>
+                    <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#2b3a50] text-[#d8e0e7] text-[12px] rounded-lg hover:bg-[#6d88ff] hover:text-[white]">31</button>
+                    <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#222e43] rounded-lg hover:bg-[#0e1524]"><i data-lucide="chevron-right" class="text-[#aab3bc] h-[15px] w-[15px] hover:text-[#546ac5]"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#172134] border border-[#2b3a50] p-5 flex justify-between">
+                <div class="p-3 mx-2 flex gap-3 w-64">
+                    <div>
+                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
+                            class="h-[35px] w-[35px]">
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#f3f6f9] tex-[13px]">AppDashboard</p>
+                        <p class="text-[#9aa8b9] text-[12px] font-bold">Operational admin workspace</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#0e1524] rounded-full h-[40px] px-3 py-1 my-2 border border-[#202b3d] flex justify-between w-96">
+                    <button class="text-[#9aa8b9]  font-extrabold text-[13px]">About</button>
+                    <button class="text-[#9aa8b9]  font-extrabold text-[13px]">Privacy Policy</button>
+                    <button class="text-[#9aa8b9]  font-extrabold text-[13px]">Terms of Service</button>
+                    <button class="text-[#9aa8b9]  font-extrabold text-[13px] ">Contact</button>
+                </div>
+                <div class="flex gap-2">
+                    <div class="flex flex-col">
+                        <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">©2026 <span
+                                class="text-[#6d88ff]"> AppDashboard.</span> All Rights Reserved.</p>
+                        <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">Designed by <span
+                                class="text-[#6d88ff]"> BootstrapMade </span></p>
+                    </div>
+                    <div class="bg-[#6d88ff] h-[40px] w-[40px] rounded-lg flex justify-center items-center">
+                        <i data-lucide="move-up" class="h-[17px] w-[17px] text-white"></i>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     </div>
@@ -418,6 +759,7 @@
         lucide.createIcons();
     </script>
 
-    
+
 </body>
+
 </html>
