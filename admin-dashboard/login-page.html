@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./asset/style.css">
 </head>
 
-<body class="p-10 bg-gradient-to-r from-[#1b294b] to-[#0d1526] h-full w-full">
+<body class="sm:p-10 sm:bg-gradient-to-r from-[#1b294b] to-[#0d1526] sm:h-full sm:w-full">
     <div class="flex">
         <!-- pehla div -->
         <div
-            class="w-[47%] bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.16),transparent_28%),radial-gradient(circle_at_90%_90%,rgba(45,190,210,0.18),transparent_35%),linear-gradient(145deg,#5d83df,#4d9bd5,#2eabc5)] p-[52px] rounded-l-xl">
+            class="hidden sm:block w-[47%] bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.16),transparent_28%),radial-gradient(circle_at_90%_90%,rgba(45,190,210,0.18),transparent_35%),linear-gradient(145deg,#5d83df,#4d9bd5,#2eabc5)] p-[52px] rounded-l-xl">
             <div class="flex items-center gap-3">
                 <img src="./asset/logo.webp" class="h-[40px] w-[40px]">
                 <p class="text-white text-[16.8px] font-black">AppDashboard</p>
@@ -56,8 +56,13 @@
             </div>
         </div>
         <!-- dusra div -->
-        <div class="flex flex-col bg-[#182235] w-[53%] p-[52px] flex items-center justify-center rounded-r-xl border border-[#2b3a50]">
-            <div class="bg-[#182235] p-[52px] rounded-lg border border-[#2b3a50]">
+        <div class="flex flex-col bg-[#182235] sm:w-[53%] px-5  sm:p-[52px] flex items-center justify-center sm:rounded-r-xl border border-[#2b3a50]">
+            <div class="flex py-10 items-center w-full sm:hidden">
+                <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
+                        class="h-[43px] w-[43px]">
+                 <p class="font-semibold text-[#f3f6f9] text-[20px]">AppDashboard</p>                        
+            </div>
+            <div class="bg-[#182235] mb-10 sm:mb-0 p-8 sm:p-[52px] rounded-lg border border-[#2b3a50]">
                 <div>
                     <p class="text-[#6d88ff] text-[11.52px] font-black">SECURE SIGN IN</p>
                     <p class="text-[#f3f6f9] text-[32px] font-semibold">Welcome Back</p>
@@ -81,11 +86,11 @@
                     </div>
                     <div class="flex w-full h-[48px] relative">
                     <input id="email" type="email" placeholder="Enter your password" class="w-full h-[48px] px-[12px] py-[15.2px] bg-[#161E2C] border border-[#2b3a50] text-[15px] rounded-xl">
-                    <i data-lucide="eye" class="h-4 w-4 text-[#9aa8b9] absolute left-[390px] top-[15px] "></i>
+                    <i data-lucide="eye" class="h-4 w-4 text-[#9aa8b9] absolute left-[250px] sm:left-[390px] top-[15px] "></i>
                     </div>              
                 </div>
                 </div>
-                <div class="flex gap-1 mx-5 my-5">
+                <div class="flex gap-1  my-5">
                     <input type="checkbox">
                     <label class="text-white">Keep this device trusted for 30 days</label>
                 </div>
@@ -94,9 +99,9 @@
                     <p class="font-bold">Sign In </p>
                 </button>
                 <div class="flex gap-1 items-center my-8">
-                    <div class="h-[0.2px] w-[30%] bg-[#202B3D]"></div>
+                    <div class="h-[0.2px] flex-1 sm:w-[30%] bg-[#202B3D]"></div>
                     <p class="text-[#9aa8b9] text-[12px] font-bold tracking-wider">OR CONTINUE WITH</p>
-                    <div class="h-[0.2px] w-[30%] bg-[#202B3D]"></div>
+                    <div class="h-[0.2px] flex-1 sm:w-[30%] bg-[#202B3D]"></div>
                 </div>
                 <div class="flex gap-4">
                     <button class="h-[48px] text-[#9aa8b9] border border-[#9aa8b9] rounded-lg flex gap-1 items-center justify-center w-full">
@@ -112,7 +117,7 @@
                 <p class="text-[#9aa8b9] text-[14px]">New to AppDashboard?<span class="text-[15px] text-[#6d88ff] font-bold">Create an account</span></p>
                 </div>
             </div>
-            <div class="flex flex-col mt-6 gap-4 justify-center">
+            <div class="hidden sm:flex flex-col mt-6 gap-4 justify-center">
             <div>
             <p class="text-[#9aa8b9] font-extrabold text-[12px]">© 2026<span class="font-extrabold tracking-wider text-white text-[13px] font-extrabold "> AppDashboard.</span> All Rights Reserved.</p>
             </div>
