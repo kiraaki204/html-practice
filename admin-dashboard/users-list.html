@@ -12,7 +12,7 @@
 <body>
     <div class="h-screen flex">
         <input id="sidebar-toggle" type="checkbox" class="peer hidden">
-        <input id="sidebar-toggle" type="checkbox" class="peer hidden">
+<!--navbar  -->
         <nav class="bg-[#172032] text-white h-screen fixed top-0 left-0 w-0 peer-checked:w-72 max-sm:peer-checked:shadow-[0_0_30px_rgba(255,255,255,0.25)] sm:static sm:w-72 sm:peer-checked:w-0 overflow-hidden transition-all">
             <div
                 class="py-3 px-6  flex gap-3 border-b border-gray-700 border-r border-gray-700 bg-gradient-to-r from-[#172032] to-[#202c42]">
@@ -335,8 +335,9 @@
                 </div>
             </div>
         </nav>
-
+<!-- main-content -->
         <main class="bg-[#0e1423] flex-1 overflow-y-auto">
+<!--header  -->
           <header
                 class="flex justify-between gap-12 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700 sticky top-0">
                 <div class="flex gap-3">
@@ -417,10 +418,10 @@
                     </div>
                 </div>
             </header>
-            <!--First user wla box-->
+<!--First user wla box-->
             <div
-                class="flex-1 mx-10 mt-10 mb-5 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-lg border border-[#28365b]">
-                <div class="flex justify-between">
+                class="flex-1 mx-4 my-4 sm:mx-10 sm:mt-10 sm:mb-5 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-lg border border-[#28365b]">
+                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between">
                     <div>
                         <div class="flex flex-col gap-21">
                             <p class="text-[#6d88ff] font-extrabold text-[12px]">IDENTITY DIRECTORY</p>
@@ -445,8 +446,8 @@
                     </div>
                 </div>
             </div>
-            <!-- four boxes -->
-            <div class="flex justify-between gap-5 m-10 ">
+<!-- four boxes -->
+            <div class="flex flex-col gap-4 mx-4 sm:flex-row sm:justify-between sm:gap-5 sm:m-10 ">
                 <div class="p-5 border border-[#2b3a50] flex-1 h-[150px] bg-[#182235] rounded-lg">
                     <div class="flex flex-col gap-2">
                         <p class="text-[#9aa8b9] font-bold text-[13px]">Total Users</p>
@@ -493,14 +494,14 @@
 
                 </div>
             </div>
-            <!-- table user wala -->
-            <div class="rounded-xl border border-[#28365b] bg-[#182235] border border-[#2B3A50] m-10">
-                <div class="flex justify-between mb-5 m-6 ">
+<!-- table user wala -->
+            <div class="rounded-xl border border-[#28365b] bg-[#182235] border border-[#2B3A50] sm:m-10 m-4">
+                <div class="flex flex-col gap-3 sm:flex-row sm:justify-between mb-5 m-6 ">
                     <div>
                         <p class="text-[#547EFE] font-bold text-[12px]">DIRECTORY</p>
                         <p class="text-[#F3F6F9] font-bold text-[17px]">All Users</p>
                     </div>
-                    <div class="flex gap-3">
+                    <div class="flex flex-col sm:flex-row gap-3">
                         <div class="relative">
                             <input id="search" type="text"
                                 class="bg-[#121a2b] border border-[#2b3a50] rounded-full h-[42px] w-[300px] pl-9"
@@ -517,6 +518,7 @@
                         </button>
                     </div>
                 </div>
+                <div class="overflow-x-auto">
                 <table class="w-full">
 
                     <thead>
@@ -750,7 +752,8 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="p-[16px] flex justify-between">
+                </div>
+                <div class="p-[16px] flex flex-col gap-5 sm:flex-row sm:justify-between">
                     <p class="text-[#9aa8b9] text-[13px] font-bold">Showing 1 to 8 of 248 users</p>
                     <div class="flex gap-1">
                     <button class="w-[28px] h-[28px] flex justify-center items-center border border-[#222e43] rounded-lg"><i data-lucide="chevron-left" class="text-[#394559] h-[15px] w-[15px]"></i></button>
@@ -762,7 +765,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-[#172134] border border-[#2b3a50] p-5 flex justify-between">
+<!--footer  -->
+              <div class="bg-[#172134] border border-[#2b3a50] p-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between">
                 <div class="p-3 mx-2 flex gap-3 w-64">
                     <div>
                         <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
@@ -785,12 +789,14 @@
                         <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">©2026 <span
                                 class="text-[#6d88ff]"> AppDashboard.</span> All Rights Reserved.</p>
                         <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">Designed by <span
-                                class="text-[#6d88ff]"> BootstrapMade </span></p>
+                                class="text-[#6d88ff]"> Emaan </span></p>
                     </div>
                     <div class="bg-[#6d88ff] h-[40px] w-[40px] rounded-lg flex justify-center items-center">
                         <i data-lucide="move-up" class="h-[17px] w-[17px] text-white"></i>
                     </div>
                 </div>
+
+
             </div>
         </main>
     </div>
