@@ -11,8 +11,9 @@
 
 <body>
     <div class="h-screen flex">
+ <!--nac div -->
         <input id="sidebar-toggle" type="checkbox" class="peer hidden">
-        <nav class="bg-[#172032] text-white h-screen w-72 peer-checked:w-0 transition-all ">
+        <nav class="bg-[#172032] text-white h-screen fixed top-0 left-0 w-0 peer-checked:w-72 max-sm:peer-checked:shadow-[0_0_30px_rgba(255,255,255,0.25)] sm:static sm:w-72 sm:peer-checked:w-0 overflow-hidden transition-all">
             <div
                 class="py-3 px-6  flex gap-3 border-b border-gray-700 border-r border-gray-700 bg-gradient-to-r from-[#172032] to-[#202c42]">
                 <div>
@@ -334,30 +335,35 @@
                 </div>
             </div>
         </nav>
-
+<!-- main div -->
         <main class="bg-[#0e1423] flex-1 overflow-y-auto">
+<!--header div  -->
             <header
                 class="flex justify-between gap-12 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700 sticky top-0">
                 <div class="flex gap-3">
+                    <div class="sm:hidden">
+                    <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
+                        class="h-[43px] w-[43px]">
+                    </div>
                     <label for="sidebar-toggle">
                         <div class="bg-[#182235] rounded-xl h-[42px] w-[42px] border border-[#2b3a50]">
                             <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-[10px]"></i>
                         </div>
                     </label>
-                    <div class="h-[45px] bg-[#2b3a50] w-[1px]"></div>
-                    <div class="header-heading flex flex-col w-[120px]">
+                    <div class="hidden sm:block h-[45px] bg-[#2b3a50] w-[1px]"></div>
+                    <div class="hidden sm:flex flex-col w-[120px]">
                         <p class="text-[#9aa8b9] text-[11px] font-bold">WORKSPACE</p>
                         <p class="text-[#f3f6f9] text-[13px] font-bold">Command Center</p>
                     </div>
                 </div>
 
-                <div class="flex-1 relative">
+                <div class="hidden sm:block flex-1 relative">
                     <input id="search" type="text"
-                        class=" px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[40px] w-full pl-4"
+                        class="px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[40px] w-full pl-4"
                         placeholder="     search workspace...">
-                    <i data-lucide="search" class="absolute left-3 top-3  h-[18px] w-[18px] text-[#8e9bac] "></i>
+                    <i data-lucide="search" class="text-[#8e9bac] absolute left-3 top-3 h-[18px] w-[18px]"></i>
                 </div>
-                <div class="flex bg-[#141d2e] rounded-full border border-[#1d2739] h-[45px] w-[280px]">
+                <div class="hidden sm:flex bg-[#141d2e] rounded-full border border-[#1d2739] h-[45px] w-[280px]">
                     <div class=" flex gap-6 m-3">
                         <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
                         <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
@@ -373,11 +379,49 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex mt-2 gap-3 sm:hidden">
+                    <label for="search-toggle"><i data-lucide="search" class="text-[#8e9bac]"></i></label>
+                    <label for="opts"><i data-lucide="ellipsis-vertical" class="text-[#8e9bac]"></i></label>
+                </div>
+                <input type="checkbox" id="search-toggle" class="peer/search hidden">
+                <div class="hidden peer-checked/search:block py-4 px-5 bg-[#141d2c] h-[80px] w-full absolute top-[68px] left-0 border-b border-[#2b3a50] sm:hidden">
+                    <input id="search" type="text"
+                        class="px-4 bg-[#121a2b] border border-[#2b3a50] rounded-full h-[46px] w-full"
+                        placeholder="     search workspace...">
+                    <i data-lucide="search" class="text-[#8e9bac] absolute left-8 top-8 h-[18px] w-[18px]"></i>
+                </div>
+                <input type="checkbox" id="opts" class="peer/opt hidden">
+                <div class="hidden peer-checked/opt:flex p-2 w-full bg-[#141d2c] h-[210px] absolute top-[68px] left-0 border-b border-[#2b3a50] flex-wrap gap-2 sm:hidden">
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="sun" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">THEME</p>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="scan" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">FULLSCREEN</p>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="bell" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">NOTIFICATIONS</p>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="user-round" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">PROFILE</p>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="settings" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">SETTINGS</p>
+                    </div>
+                    <div class="flex flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-[120px] h-[90px]">
+                        <i data-lucide="log-in" class="text-[#99a7b8]"></i>
+                        <p class="text-[#99a7b8] font-semibold text-[14px]">SIGN OUT</p>
+                    </div>
+                </div>
             </header>
-
+<!-- oprating dashboard div -->
             <div
-                class="flex-1 h-[390px] mx-10 mt-10 mb-5 p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-xl border border-[#28365b]">
-                <div class="flex justify-between">
+                class="m-4 p-5 sm:flex-1 sm:h-[390px] sm:mx-10 sm:mt-10 sm:mb-5 sm:p-8 bg-gradient-to-r from-[#212d4a] via-[#1c283f] to-[#182235] rounded-xl border border-[#28365b]">
+                <div class="flex flex-col gap-5 sm:flex-row sm:justify-between">
                     <div>
                         <p class="text-[#6d88ff] font-extrabold text-[12px]">COMMAND CENTER</p>
                         <div class="flex flex-col gap-4">
@@ -402,9 +446,9 @@
                     </div>
                 </div>
 
-                <div class="flex">
+                <div class="mt-8 flex flex-col gap-5 sm:flex-row sm:gap-0 sm:mt-0">
                     <div
-                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] sm:my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
                         <div class="bg-[#222E4E] h-[45px] w-[45px] p-3 rounded-lg">
                             <i data-lucide="shopping-cart" class="text-[#6D88FF] h-[20px] w-[20px]"></i>
                         </div>
@@ -418,7 +462,7 @@
                         </div>
                     </div>
                     <div
-                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] sm:my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
                         <div class="bg-[#1C3B43] h-[45px] w-[45px] p-3 rounded-lg">
                             <i data-lucide="dollar-sign" class="text-[#34D399] h-[20px] w-[20px]"></i>
                         </div>
@@ -432,7 +476,7 @@
                         </div>
                     </div>
                     <div
-                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] sm:my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
                         <div class="bg-[#39393B] h-[45px] w-[45px] p-3 rounded-lg">
                             <i data-lucide="shopping-cart" class="text-[#E2B15A] h-[20px] w-[20px]"></i>
                         </div>
@@ -446,7 +490,7 @@
                         </div>
                     </div>
                     <div
-                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
+                        class="p-5 border border-[#28365b] flex gap-4 flex-1 h-[150px] sm:my-10 mr-5 bg-gradient-to-b from-[#1d2842] to-[#182235] rounded-lg">
                         <div class="bg-[#1A3B4F] h-[45px] w-[45px] p-3 rounded-lg">
                             <i data-lucide="shopping-cart" class="text-[#22D3EE] h-[20px] w-[20px]"></i>
                         </div>
@@ -461,15 +505,17 @@
                     </div>
                 </div>
             </div>
-            <div class="flex px-10 py-5 gap-10">
+<!--financial-pulse + livequeue + shortcuts div  -->
+            <div class="flex flex-col gap-5 sm:flex-row sm:px-10 sm:py-5 sm:gap-10">
+<!--financial pulse div  -->
                 <div
-                    class="rounded-xl border border-[#28365b] h-[750px] w-[530px] bg-[#182235] border border-[#2B3A50] p-6 flex-1">
-                    <div class="flex justify-between mb-5">
+                    class="p-5 m-4 rounded-xl border border-[#28365b] sm:h-[750px] sm:w-[530px] bg-[#182235] border border-[#2B3A50] sm:p-6 flex-1">
+                    <div class="flex flex-col gap-5 sm:flex-row sm:justify-between sm:mb-5">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">FINANCIAL PULSE</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">Revenue Overview</p>
                         </div>
-                        <div class="bg-[#0e1524] rounded-full h-[40px] p-1 border border-[#202b3d] inline-flex gap-1">
+                        <div class="w-[150px] bg-[#0e1524] rounded-full h-[40px] p-1 border border-[#202b3d] inline-flex gap-1">
                             <button
                                 class="w-[40px] bg-[#6d88ff] rounded-full text-white font-extrabold text-xs h-[30px] min-w-[42px]">12M</button>
                             <button
@@ -479,7 +525,7 @@
                         </div>
                     </div>
                     <div class="border-t border-[#263142] pt-4">
-                        <div class="flex gap-3">
+                        <div class="flex flex-col gap-3 sm:flex-row">
                             <div class="flex-1 p-4 bg-[#131b2c] border border-[#202b3d] rounded-lg">
                                 <p class="text-[#9aa8b9] text-[13px] font-bold">Revenue</p>
                                 <P class="text-[#f3f6f9] text-[19.2] font-semibold">$10.2k</P>
@@ -494,12 +540,14 @@
                             </div>
                         </div>
                     </div>
-                    <img src="./asset/screenshot-2026-08-20_16-58-16.png" class="w-full h-[350px] my-4">
+                    <img src="./asset/screenshot-2026-08-20_16-58-16.png" class="hidden sm:block w-full h-[350px] my-4">
+                    <img src="./asset/screenshot-2026-08-25_15-00-36.png" class="my-4 w-full h-[300px] sm:hidden">
                 </div>
-
-                <div class="flex flex-col gap-5">
-                    <div class="rounded-xl border border-[#28365b] h-[500px] w-[350px]  bg-[#182235] p-6">
-                        <div class="flex justify-between mb-5">
+<!-- live queue + shortcuts div -->
+                <div class="flex flex-col sm:gap-5 gap-8 sm:my-4">
+<!-- live queue div -->
+                    <div class="rounded-xl border border-[#28365b] h-[500px] mx-4 sm:mx-0 flex-1 sm:w-[350px]  bg-[#182235] p-4 sm:p-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between mb-5">
                             <div>
                                 <p class="text-[#547EFE] font-bold text-[12px]">LIVE QUEUE</p>
                                 <p class="text-[#F3F6F9] font-bold text-[17px]">Recent Activity</p>
@@ -566,16 +614,15 @@
 
                         </div>
                     </div>
-
-
-                    <div class="rounded-xl border border-[#28365b] h-[230px] w-[350px]  bg-[#182235] p-6">
+<!-- shortcuts div -->
+                    <div class="rounded-xl border border-[#28365b] h-[320px] sm:h-[230px] flex-1 sm:w-[350px] bg-[#182235] p-4 sm:p-6 mx-4 sm:mx-0">
                         <div class="mb-5">
                             <div>
                                 <p class="text-[#547EFE] font-bold text-[12px]">SHORTCUTS</p>
                                 <p class="text-[#F3F6F9] font-bold text-[17px]">Quick Actions</p>
                             </div>
                         </div>
-                        <div class="border-t border-[#202b3d] pt-3 px-1 flex flex-wrap gap-4">
+                        <div class="border-t border-[#202b3d] pt-3 px-2 sm:px-1 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-4">
                             <button
                                 class="p-[10px] text-[#d8e0e7] bg-[#0e1524] border border-[#202b3d] rounded-lg flex flex-1 gap-2 h-[52px] items-center">
                                 <i data-lucide="circle-plus" class="h-[18px] w-[18px] text-[#6d88ff]"></i>
@@ -600,10 +647,12 @@
                     </div>
                 </div>
             </div>
-            <div class="flex gap-10 justify-between mx-10 my-5">
-
-                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[480px] flex-1">
-                    <div class="flex justify-between mb-5">
+<!--pipelin + revenue + reliability div-->
+            <div class="flex flex-col gap-6 sm:flex-row sm:gap-10 sm:justify-between sm:mx-10 my-5">
+<!-- pipleline conversion div -->
+                <div class="bg-[#182235] border border-[#202b3d] p-4 sm:p-6 rounded-lg h-[480px]
+                mx-4 sm:mx-0 flex-1">
+                    <div class="flex flex-col gap-3 sm:flex-row sm:justify-between mb-5">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">Pipeline</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">Conversion Funnel</p>
@@ -665,9 +714,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[480px] flex-1">
-                    <div class="flex justify-between mb-5 pb-5 border-b border-[#202B3D]">
+<!-- revenue mix div -->
+                <div class="bg-[#182235] border border-[#202b3d] p-4 sm:p-6 rounded-lg h-[480px] mx-4 sm:mx-0 flex-1">
+                    <div class="flex flex-col gap-2 sm:flex-row sm:justify-between mb-5 pb-5 border-b border-[#202B3D]">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">Revenue mix</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">Top Products</p>
@@ -736,8 +785,10 @@
 
                     </div>
                 </div>
-                <div class="bg-[#182235] border border-[#202b3d] p-6 rounded-lg h-[480px] flex-1">
-                    <div class="flex justify-between mb-5 pb-5 border-b border-[#202B3D]">
+<!--reliability div -->
+                <div class="bg-[#182235] border border-[#202b3d] p-4 sm:p-6 rounded-lg h-[480px] 
+                mx-4 sm:mx-0 flex-1">
+                    <div class="flex flex-col gap-2 sm:flex sm:justify-between mb-5 pb-5 border-b border-[#202B3D]">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">Reliability</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">System Status</p>
@@ -746,7 +797,7 @@
                             <button class="text-[#32c692] bg-[#1c3b44] font-extrabold text-xs">Operational</button>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-[10px]">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
                         <div
                             class="bg-[#131C2D] p-[16px] rounded-lg border border-[#202b3d] flex gap-[10px] items-center flex-1">
                             <div class="rounded-full bg-[#163b3b] flex items-center justify-center">
@@ -794,12 +845,12 @@
                     </div>
                 </div>
             </div>
-
-            <div class="flex px-10 pt-5 mb-16 gap-10 ">
-
+<!-- table + plan healthdiv -->
+            <div class="flex flex-col sm:flex-row sm:px-10 pt-5 mb-16 gap-10 ">
+<!-- table div -->
                 <div
-                    class="rounded-xl border border-[#28365b] h-[450px] w-[530px] bg-[#182235] border border-[#2B3A50] flex-1">
-                    <div class="flex justify-between mb-5 m-6 ">
+                    class="overflow-x-auto rounded-xl border border-[#28365b] h-[520px] sm:h-[450px]  mx-4 sm:mx-0 sm:w-[530px] bg-[#182235] border border-[#2B3A50] flex-1">
+                    <div class="flex flex-col gap-3 sm:flex-row sm:justify-between mb-5 m-6 ">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">COMMERECE STREAM</p>
                             <p class="text-[#F3F6F9] font-bold text-[17px]">Recent Orders</p>
@@ -811,8 +862,7 @@
                         </div>
                     </div>
 
-                    <table class="w-full">
-
+                    <table class="sm:w-full">
                         <thead>
                             <tr
                                 class="text-[#8794a5] bg-[#151b26] text-[12px] font-semibold border-y border-[#202b3d] text-left">
@@ -921,9 +971,8 @@
                     </table>
 
                 </div>
-
-
-                <div class="rounded-xl border border-[#28365b] h-[450px] w-[350px] bg-[#182235] p-6">
+<!-- health plan  -->
+                <div class="rounded-xl border border-[#28365b] h-[340px] sm:h-[450px] sm:w-[350px] flex-1 sm:flex-none mx-4 sm:mx-0 bg-[#182235] p-4 sm:p-6">
                     <div class="mb-5">
                         <div>
                             <p class="text-[#547EFE] font-bold text-[12px]">PLAN HEALTH </p>
@@ -968,7 +1017,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-[#172134] border border-[#2b3a50] p-5 flex justify-between">
+<!--footer div  -->
+            <div class="bg-[#172134] border border-[#2b3a50] p-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between">
                 <div class="p-3 mx-2 flex gap-3 w-64">
                     <div>
                         <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/logo.webp"
@@ -991,7 +1041,7 @@
                         <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">©2026 <span
                                 class="text-[#6d88ff]"> AppDashboard.</span> All Rights Reserved.</p>
                         <p class="text-right text-[text-right] text-[13px] font-bold text-[#96a4b5]">Designed by <span
-                                class="text-[#6d88ff]"> BootstrapMade </span></p>
+                                class="text-[#6d88ff]"> Emaan </span></p>
                     </div>
                     <div class="bg-[#6d88ff] h-[40px] w-[40px] rounded-lg flex justify-center items-center">
                         <i data-lucide="move-up" class="h-[17px] w-[17px] text-white"></i>
