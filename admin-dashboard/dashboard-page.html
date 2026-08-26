@@ -367,7 +367,58 @@
                     <div class=" flex gap-6 m-3">
                         <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
                         <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        <input id="noti" type="checkbox" class="peer hidden">
+                        <label for="noti">
                         <i data-lucide="bell-ring" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        </label>
+                        <div class="bg-[#131b2c] w-[350px] h-[430px] absolute right-[160px] top-16 rounded-xl border border-[#2b3a50] hidden peer-checked:block">
+                            <div class="flex justify-between p-4">
+                                <div>
+                                    <p class="text-[11px] text-[#9aa8b9] font-extrabold">TODAY</p>
+                                    <p class="text-[#f3f6f9] text-[16px] font-bold">Notifications</p>
+                                </div>
+                                <div>
+                                    <p class="text-[12px] text-[#6d88ff] font-extrabold">Mark all read</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#1e2841] w-full p-4 flex flex-col gap-7">
+                                <div class="flex gap-3">
+                                    <div class="bg-[#21404e] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="circle-check" class="text-[#32c391] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">Order Completed</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">Your order  has been delivered</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px] font- ">5 min ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="bg-[#3e3e45] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="triangle-alert" class="text-[#f4b95b] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">Low Storage</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">server storage is runnning low (85% used)</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px] font- ">1 hour ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-[#182235] hover:bg-[#111828] transition-all">
+                                <div class="flex gap-3">
+                                    <div class="bg-[#143344] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="circle-alert" class="text-[#22d3ee] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">New Feature</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">Dark mode is now available</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px]">2 hour ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-[#131c2d] flex justify-center rounded-b-xl">
+                                <p class="text-[13px] text-[#6d88ff] font-extrabold">View all notifications</p>
+                            </div>
+                        </div>
                     </div>
                     <input type="checkbox" id="profile" class="peer hidden">
                     <label for="profile"><div
