@@ -338,7 +338,7 @@
 <!-- main-content -->
         <main class="bg-[#0e1423] flex-1 overflow-y-auto">
 <!--header  -->
-          <header
+           <header
                 class="flex justify-between gap-12 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700 sticky top-0">
                 <div class="flex gap-3">
                     <div class="sm:hidden">
@@ -347,7 +347,7 @@
                     </div>
                     <label for="sidebar-toggle">
                         <div class="bg-[#182235] rounded-xl h-[42px] w-[42px] border border-[#2b3a50]">
-                            <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-[10px]"></i>
+                            <i data-lucide="menu" class="text-[#d8e0e7] w-[21px] h-[21px] m-2.5"></i>
                         </div>
                     </label>
                     <div class="hidden sm:block h-[45px] bg-[#2b3a50] w-[1px]"></div>
@@ -367,17 +367,96 @@
                     <div class=" flex gap-6 m-3">
                         <i data-lucide="sun" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
                         <i data-lucide="scan" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        <input id="noti" type="checkbox" class="peer hidden">
+                        <label for="noti">
                         <i data-lucide="bell-ring" class="h-[21px] w-[21px] text-[#95a3b4]"></i>
+                        </label>
+                        <div class="bg-[#131b2c] w-[350px] h-[430px] absolute right-[160px] top-16 rounded-xl border border-[#2b3a50] hidden peer-checked:block">
+                            <div class="flex justify-between p-4">
+                                <div>
+                                    <p class="text-[11px] text-[#9aa8b9] font-extrabold">TODAY</p>
+                                    <p class="text-[#f3f6f9] text-[16px] font-bold">Notifications</p>
+                                </div>
+                                <div>
+                                    <p class="text-[12px] text-[#6d88ff] font-extrabold">Mark all read</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#1e2841] w-full p-4 flex flex-col gap-7">
+                                <div class="flex gap-3">
+                                    <div class="bg-[#21404e] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="circle-check" class="text-[#32c391] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">Order Completed</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">Your order  has been delivered</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px] font- ">5 min ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="bg-[#3e3e45] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="triangle-alert" class="text-[#f4b95b] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">Low Storage</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">server storage is runnning low (85% used)</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px] font- ">1 hour ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-[#182235] hover:bg-[#111828] transition-all">
+                                <div class="flex gap-3">
+                                    <div class="bg-[#143344] rounded-xl w-10 h-10 flex justify-center items-center">
+                                        <i data-lucide="circle-alert" class="text-[#22d3ee] h-5 w-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[14px] text-[#f3f6f9] font-extrabold">New Feature</p>
+                                        <p class="text-[13px] text-[#9aa8b9] mt-[5px]">Dark mode is now available</p>
+                                        <p class="text-[12px] text-[#728196] mt-[5px]">2 hour ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-[#131c2d] flex justify-center rounded-b-xl">
+                                <p class="text-[13px] text-[#6d88ff] font-extrabold">View all notifications</p>
+                            </div>
+                        </div>
                     </div>
-                    <div
+                    <input type="checkbox" id="profile" class="peer hidden">
+                    <label for="profile"><div
                         class="m-[3px] p-[2px] flex gap-3 border border-[#202b3d] h-[38px] w-[135px] rounded-full items-center">
-                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp"
-                            class="h-[33px] w-[33px] rounded-full">
+                        <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp" class="h-[33px] w-[33px] rounded-full">
                         <div>
                             <p class="text-[#f3f6f9] font-bold text-[13px]">John Doe</p>
                             <p class="text-[#818e9f] font-bold text-[11px]">Administrator</p>
                         </div>
+
                     </div>
+                    </label>
+                        <div class="hidden peer-checked:block w-[230px] h-[325px] absolute top-16 right-16 border border-[#2b3a50] rounded-xl bg-[#1e2841]">
+                            <div class="m-4 flex flex-col gap-1 justify-center items-center">
+                                <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp" class="rounded-md h-12 w-12 ">
+                                <p class="text-[16px] text-[#f3f6f9] font-semibold">JOHN DOE</p>
+                                <p class="text-[12px] text-[#9aa8b9] font-extrabold tracking-wider">ADMINISTRATOR</p>
+                            </div>
+                            <div class="bg-[#182235] w-full h-[192px] py-3 rounded-b-xl">
+                                <div class="flex gap-5 m-4 group">
+                                    <i data-lucide="user-round" class="h-4 w-4 text-[#9aa8b9] group-hover:text-[#6d88ff]"></i>
+                                    <p class="text-[#d8e0e7] text-[14px] font-bold group-hover:text-[#6d88ff]">My Profile</p>
+                                </div>
+                                <div class="flex gap-5 m-4 group">
+                                    <i data-lucide="settings" class="h-4 w-4 text-[#9aa8b9] group-hover:text-[#6d88ff]"></i>
+                                    <p class="text-[#d8e0e7] text-[14px] font-bold group-hover:text-[#6d88ff]">Settings</p>
+                                </div>
+                                <div class="flex gap-5 m-4 group">
+                                    <i data-lucide="activity" class="h-4 w-4 text-[#9aa8b9] group-hover:text-[#6d88ff]"></i>
+                                    <p class="text-[#d8e0e7] text-[14px] font-bold group-hover:text-[#6d88ff]">Activity Log</p>
+                                </div>
+                               <div class="flex gap-5 m-4 border-t border-[#2b3a50] pt-3 group">
+                                    <i data-lucide="log-in" class="h-4 w-4 text-[#9aa8b9] group-hover:text-[#6d88ff]"></i>
+                                    <p class="text-[#d8e0e7] text-[14px] font-bold group-hover:text-[#6d88ff]">Sign Out</p>
+                                </div>
+
+                            </div>
+                        </div>
                 </div>
                 <div class="flex mt-2 gap-3 sm:hidden">
                     <label for="search-toggle"><i data-lucide="search" class="text-[#8e9bac]"></i></label>
@@ -393,29 +472,29 @@
                 <input type="checkbox" id="opts" class="peer/opt hidden">
                 <div class="hidden peer-checked/opt:flex flex-col p-2 w-full bg-[#141d2c] h-[210px] absolute top-[68px] left-0 border-b border-[#2b3a50] gap-2 sm:hidden">
                     <div class="flex gap-2">
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="sun" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">THEME</p>
                     </div>
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="scan" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">FULLSCREEN</p>
                     </div>
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="bell" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">NOTIFICATIONS</p>
                     </div>
                     </div>
                     <div class="flex gap-2">
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    <a href="./Profile.html" class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="user-round" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">PROFILE</p>
-                    </div>
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    </a>
+                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="settings" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">SETTINGS</p>
                     </div>
-                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] w-30 h-[90px]">
+                    <div class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                         <i data-lucide="log-in" class="text-[#99a7b8]"></i>
                         <p class="text-[#99a7b8] font-semibold text-sm">SIGN OUT</p>
                     </div>
