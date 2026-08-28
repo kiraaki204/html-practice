@@ -347,7 +347,6 @@
             </div>
         </nav>
         <main class="bg-[#0e1423] flex-1 overflow-y-auto">
-            <!--header div  -->
             <header
                 class="flex justify-between gap-12 bg-[#141c2d] h-[68px] py-3 px-6 border-b border-gray-700 sticky top-0">
                 <div class="flex gap-3">
@@ -507,7 +506,7 @@
                             class="flex flex-1 flex-col gap-2 justify-center items-center rounded-xl border border-[#1d2636] h-[90px]">
                             <i data-lucide="bell" class="text-[#99a7b8]"></i>
                             <p class="text-[#99a7b8] font-semibold text-sm">NOTIFICATIONS</p>
-                    </a>
+                        </a>
                     </div>
                     <div class="flex gap-2">
                         <a href="./Profile.html"
@@ -528,148 +527,299 @@
                     </div>
                 </div>
             </header>
-            <div class="border border-[#28364a] bg-[#182336] flex flex-col gap-5 m-5 p-12 rounded-xl flex-1 h-[620px]">
-                <img src="https://bootstrapmade.com/content/demo/AppDashboard/assets/img/profile-img.webp"
-                    class="h-[140px] w-[140px] rounded-xl">
-                <div class="flex flex-col gap-1">
-                    <p class="text-[#6d88ff] font-black tracking-wider text-[15px]">MY PROFILE</p>
-                    <p class="text-[#f3f6f9] font-bold text-[48px]">Kevin Anderson</p>
-                    <p class="text-[#9aa8b9] text-[19px]">Web Designer at Lueilwitz, Wisoky and Leuschke</p>
-                </div>
-                <div class="flex gap-2">
-                    <img src="./asset/screenshot-2026-08-28_00-19-45.png" class="h-[60px] w-[220px]">
-                </div>
-                <div class="flex gap-3">
+            <div class="border border-[#28364a] bg-[#182336] flex flex-col m-5 p-10 rounded-xl flex-1 h-[300px]">
+                <div class="flex flex-col gap-3 pb-5">
+                    <p class="text-[#6d88ff] text-[12px] font-extrabold tracking-wider">MESSAGE CENTER</p>
+                    <p class="text-[#f3f6f9] text-[40px] font-semibold">Notifications</p>
+                    <p class="text-[#9aa8b9] text-[15px]">Review operational alerts, team updates, billing notices, and
+                        security events.</p>
                     <button
-                        class="text-white bg-[#0E1524] border border-[#2b3a50] rounded-lg w-[150px] h-[60px] rounded-xl">
-                        <div class="flex items-center justify-center gap-3 text-[15px]">
-                            <i data-lucide="upload" class="h-5 w-5"></i>
-                            <p class="text-[18px]">Upload</p>
+                        class="rounded-lg w-[180px] bg-[#627ae6] flex gap-2 items-center justify-center text-white p-3 ">
+                        <i data-lucide="check-check" class="h-5 w-5"></i>
+                        <p>Mark all read</p>
+                    </button>
+                </div>
+            </div>
+            <div class="border border-[#28364a] bg-[#182336] flex flex-col rounded-xl m-5 flex-1">
+                <div class="border-b border-[#273549] flex flex-col gap-2 p-5">
+                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">INBOX</p>
+                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">All Notifications</p>
+                    <button class="text-white bg-[#182235] border border-[#929fb0] rounded-lg  h-[45px] w-[125px]">
+                        <div class="py-2 px-5 flex gap-1 text-[15px]">
+                            <i data-lucide="funnel" class="h-[20px] w-[15px] text-[#7b8899]"></i>
+                            <p class="text-[15px] text-[#98a6b7]">Filter</p>
+                            <i data-lucide="chevron-down" class="h-[20px] w-[15px] text-[#7b8899]"></i>
                         </div>
                     </button>
-                    <button
-                        class=" text-white bg-[#6d88ff] border border-[#28365b] rounded-lg w-[180px] h-[60px] rounded-xl">
-                        <div class="flex items-center justify-center gap-3 text-[15px]">
-                            <i data-lucide="check" class="h-5 w-5"></i>
-                            <p class="text-[18px]">Save Profile</p>
+                </div>
+                <div class="bg-[#131c2d] p-4">
+                    <p class="text-[#9aa8b9] text-[14px] tracking-wider font-bold">TODAY</p>
+                </div>
+                <div class="p-5 flex flex-col gap-16">
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#1f3f4c] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="circle-check" class="text-[#33ca94] h-5 w-5"></i>
                         </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">Order #12345 Completed</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Your order has been delivered
+                                successfully. Thank you for shopping with us!</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">5 minutes ago</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Orders</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#3c3d44] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="triangle-alert" class="text-[#f3b85b] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">Storage Warning</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Server storage is running low (85%
+                                used). Consider removing unused files.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">1 hour ago</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Systems</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#1d3f58] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="circle-alert" class="text-[#22cae5] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">New Feature Available</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Dark mode is now available from the
+                                header controls.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">2 hour ago</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Updates</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#131c2d] p-4">
+                    <p class="text-[#9aa8b9] text-[14px] tracking-wider font-bold">YESTERDAY</p>
+                </div>
+                <div class="p-5 flex flex-col gap-16">
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#222e4e] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="user-plus" class="text-[#6d87fe] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">New Team Member</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Sarah Johnson has joined your team as a
+                                Developer.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold"> Yesterday at 4:30 PM</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Team</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#392e41] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="shield-alert" class="text-[#f77083] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">Security Alert</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">A new login was detected from San
+                                Francisco, USA.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold"> Yesterday at 11:15 AM</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Security</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#131c2d] p-4">
+                    <p class="text-[#9aa8b9] text-[14px] tracking-wider font-bold">This Week</p>
+                </div>
+                <div class="p-5 flex flex-col gap-16">
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#1c3b44] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="wallet" class="text-[#34d298] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">Payment Received</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Payment of $299.00 for Invoice
+                                #INV-2024-001 has been received.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold"> Monday at 2:45 PM</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Billing</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#1a3b50] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="circle-arrow-up" class="text-[#22cae5] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">System Update</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Version 2.5.0 has been deployed with
+                                performance improvements.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold"> Sunday at 3:00 AM</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Updates</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-[#38393b] h-12 w-12 rounded-xl flex justify-center items-center">
+                            <i data-lucide="wallet-minimal" class="text-[#f3b85b] h-5 w-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#f3f6f9] text-[15px] font-extrabold">Subscription Reminder</p>
+                        </div>
+                        <div>
+                            <p class="text-[14px] font-semibold text-[#b2bbc5]">Your Pro subscription will renew in 7
+                                days.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="clock" class="text-[#9aa8b9] h-3 w-3 mt-1"></i>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold"> Saturday at 10:00 AM</p>
+                            <p class="text-[#9aa8b9] text-[13px] font-semibold">Billing</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i data-lucide="check" class="text-[#9aa8b9] h-4 w-4"></i>
+                            <i data-lucide="trash-2" class="text-[#9aa8b9] h-4 w-4"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-5 pt-5 border-t border-[#202b3d]">
+                    <button
+                        class="border border-[#6d88ff] w-[240px] h-[50px] rounded-lg flex justify-center items-center gap-2 bg-[#182235]">
+                        <i data-lucide="rotate-cw" class="text-[#6d88ff] h-4 w-4"></i>
+                        <p class="text-[#6d88ff] text-[14px] font-semibold">Load More Notificatiosn</p>
                     </button>
                 </div>
             </div>
-            <div class="border border-[#28364a] bg-[#182336] flex flex-col gap-5 m-5 p-6 rounded-xl flex-1 h-[1150px]">
-                <div class="border-b border-[#273549] flex flex-col gap-2 pb-5">
-                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">OVERVIEW</p>
-                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">Profile Details</p>
+
+            <div class="border border-[#28364a] bg-[#182336] flex flex-col rounded-xl m-5 flex-1">
+                <div class="border-b border-[#273549] flex flex-col gap-2 p-5">
+                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">Preferences</p>
+                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">Delivery</p>
                 </div>
-                <div class="border-b border-[#1d283a] pb-5">
-                    <P class="text-[#9aa8b9] text-[17px] font-[400]">Sunt est soluta temporibus accusantium neque nam
-                        maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor.</P>
-                </div>
-                <div class="flex flex-col gap-5">
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Full Name</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">Kevin Anderson</p>
+                <div>
+                    <div class="p-5 ">
+                        <div class="flex flex-col">
+                            <p class="text-[#f3f6f9] text-[16px] font-bold">Email Notifications</p>
+                            <p class="text-[#8c99ab] text-[13px]">Receive notifications via email</p>
+                        </div>
                     </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Company</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">Lueilwitz, Wisoky and Leuschke</p>
+                    <div class="p-5 ">
+                        <div class="flex flex-col">
+                            <p class="text-[#f3f6f9] text-[16px] font-bold">Push Notifications</p>
+                            <p class="text-[#8c99ab] text-[13px]">Receive browser push notifications</p>
+                        </div>
                     </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Job</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">Web Designer</p>
+                    <div class="p-5 ">
+                        <div class="flex flex-col">
+                            <p class="text-[#f3f6f9] text-[16px] font-bold">Order Updates</p>
+                            <p class="text-[#8c99ab] text-[13px]">Get notified about order status</p>
+                        </div>
                     </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Country</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">USA</p>
+                    <div class="p-5 ">
+                        <div class="flex flex-col">
+                            <p class="text-[#f3f6f9] text-[16px] font-bold">Security Alerts</p>
+                            <p class="text-[#8c99ab] text-[13px]">Get notified about security events</p>
+                        </div>
                     </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Address</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">A108 Adam Street, New York, NY 535022</p>
-                    </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Phone</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">(436) 486-3538 x29071</p>
-                    </div>
-                    <div class="bg-[#131c2d] p-5 rounded-xl border border-[#202b3d] flex flex-col gap-2">
-                        <p class="text-[#9aa8b9] text-[16px] font-bold">Email</p>
-                        <p class="text-[#f3f6f9] text-[18px] font-extrabold">k.anderson@example.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="border border-[#2b3a4f] bg-[#182336] flex flex-col gap-5 m-5 p-6 rounded-xl flex-1 h-[1150px]">
-                <div class="border-b border-[#273549] flex flex-col gap-2 pb-5">
-                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">EDIT</p>
-                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">Profile Information</p>
-                </div>
-                <div class="flex flex-col gap-10">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Full Name</p>
-                        <input value="Kevin Anderson" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Email</p>
-                        <input value="k.anderson@example.com" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">About</p>
-                        <textarea
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 pb-8 text-[#d8e0e7] text-[15px]">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus</textarea>
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Company</p>
-                        <input value="Lueilwitz, Wisoky and Leuschke" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Job</p>
-                        <input value="Web Designer" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Country</p>
-                        <input value="USA" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Phone</p>
-                        <input value="(436) 486-3538 x29071" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Address</p>
-                        <input value="A108 Adam Street, New York, NY 535022" type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
+                    <div class="p-5 ">
+                        <div class="flex flex-col">
+                            <p class="text-[#f3f6f9] text-[16px] font-bold">Marketing</p>
+                            <p class="text-[#8c99ab] text-[13px]">Receive promotional offers</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="border border-[#28364a] bg-[#182336] flex flex-col gap-5 m-5 p-6 rounded-xl flex-1 h-[550px]">
-                <div class="border-b border-[#2b3a4f] flex flex-col gap-2 pb-5">
-                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">SECURITY</p>
-                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">Change Password</p>
+            <div class="border border-[#28364a] bg-[#182336] flex flex-col rounded-xl m-5 flex-1">
+                <div class="border-b border-[#273549] flex flex-col gap-2 p-5">
+                    <p class="text-[#6d88ff] text-[11.52px] font-extrabold tracking-wider">SUMMARY</p>
+                    <p class="text-[#f3f6f9] text-[17.6px] font-semibold">Volume</p>
                 </div>
-                <div class="flex flex-col gap-10">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Current Password</p>
-                        <input type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
+                <div>
+                    <div class="p-5 gap-2 flex flex-col gap-3">
+                        <div class="flex gap-3">
+                            <div class="bg-[#131C2D] p-5 rounded-xl border border-[#202b3d] flex-1 h-[100px]">
+                                <div>
+                                    <p class="text-[#f2f5f8] font-semibold text-[25px]">3</p>
+                                    <p class="text-[#9aa8b9] text-[13px]">Unread</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#131C2D] p-4 rounded-xl border border-[#202b3d] flex-1 h-[100px]">
+                                <div>
+                                    <p class="text-[#f2f5f8] font-semibold text-[25px]">24</p>
+                                    <p class="text-[#9aa8b9] text-[13px] ">This Week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="bg-[#131C2D] p-4 rounded-xl border border-[#202b3d] flex-1 h-[100px]">
+                                <div>
+                                    <p class="text-[#f2f5f8] font-semibold text-[25px]">156</p>
+                                    <p class="text-[#9aa8b9] text-[13px]">This Month</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#131C2D] p-4 rounded-xl border border-[#202b3d] flex-1 h-[100px]">
+                                <div>
+                                    <p class="text-[#f2f5f8] font-semibold text-[25px]">2</p>
+                                    <p class="text-[#9aa8b9] text-[13px]">Alerts</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">New Password</p>
-                        <input type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-[#f3f6f9] text-[17px]">Re-enter New Password</p>
-                        <input type="text"
-                            class="bg-[#151b26] border border-[#2b3a50] rounded-lg p-3 text-[#d8e0e7] text-[15px]">
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <button class="rounded-lg w-[200px] bg-[#6d88ff] flex items-center justify-center text-white p-3 ">
-                        Chnage Password
-                    </button>
                 </div>
             </div>
             <div
@@ -704,7 +854,9 @@
                 </div>
             </div>
         </main>
+
     </div>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
