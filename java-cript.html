@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
     <script>
 
 //ARITHMETIC OPERATORS
@@ -141,15 +140,15 @@
 
     /*{
         let a=null;
-        let result= a ?? "a is null so im writing this sentence instead";
+        let result= a ?? "a is null so im writing this sentence instead"; 
         document.write(result)
     }*/
         
 
-//ARRAY
+//ARRAY (1D + 2D)
 
 
-    let students=["Arslan","ahmed","usama","javed"]
+    /*{let students=["Arslan","ahmed","usama","javed"]
     console.log(students[3])
 
     let students_2=[
@@ -159,7 +158,151 @@
     ["javed","11th",57,400] 
     ]
     document.write("<h1>Student-1</h1>"+"Name:"+students_2[0][0]+"<br>"+"Class:"+students_2[0][1]+"<br>"+"roll_no:"+students_2[0][2]+"<br>"+"marks:"+students_2[0][3])
+    }*/
+
+/*{    
+//if statement
+    let age=15;
+    if(age>=15){
+        document.write("u are a teenager"+"<br>")
+    }
+
+//if-else statement
+    let age_2=12;
+    if(age_2<=10)
+    {
+        document.write("your age is less or equal to 10"+"<br>")
+    }
+    else{
+        document.write("your age is greater than 10"+"<br>")
+    }
+
+//if-else-if statement
+    let age_3=10;
+    if(age_3>10){
+        document.write("A"+"<br>")
+    }
+    else if(age_3>=10){
+        document.write("B"+"<br>")
+    }
+    else{
+        document.write("C"+"<br>")
+    }
+
+//Nested-if statement
+   let age_4=20;
+   let age_5=30;
+
+   if(age_4==20)
+   {
+    if(age_5<40){
+        document.write("this statement is xecuted after checking the if part first")
+    }
+   }
+}*/ 
+
+//FUNCTIONS
+
+/*{
+
+//NORMAL MULTIPLICATION FUNCTION
+    function multiply(a,b)
+    {
+        document.write(a*b+"<br>");
+    }
+//NORMAL SUBRACTION FUNCTION
+    function subract(x,y)
+    {
+        document.write(x-y+"<br>");
+    }
+//NORMAL DIVISION FUNCTION
+    function divide(c,d)
+    {
+        document.write(c/d+"<br>");
+    }
+//NORMAL MOD FUNCTION
+    function mod(a,b)
+    {
+        document.write(a%b+"<br>")
+    } 
+//NORMAL GREETING FUNCTION
+    function greetings(name)
+    {
+        document.write("Hello"+ name);
+    }
+
+//RETURN SUM FUNCTION
+    function sum(a,b)
+    {
+        return(a+b)
+    }
+
+//RETURN PRODUCT FUNCTION
+    function products(a,b)
+    {
+        return(a*b);
+    }
+
+//RETURN MOD FUNCTION     
+    function mod(a,b)
+    {
+        return(a%b);
+    } 
+
+//functuion calls:
+
+    let sums_result=sum(5,5);
+    document.write(sums_result+"<br>")
     
+    let products_result=products(5,5);
+    document.write(products_result+"<br>")
+
+    let mods_result=mod(10,2);
+    document.write(mods_result+"<br>")
+
+    let mods_result=mod(10,2);
+    document.write(mods_result+"<br>")
+
+    multiply(2,7);
+    subract(20,10);
+    divide(10,2);
+    mod(10,3);
+    greetings("xyz");
+
+}*/
+
+    let car = {
+        model:"toyota",
+        name:"corolla",
+        price: 4550,
+    }
+
+    document.write(car.model+"<br>")
+
+    let series= {
+    name:"xyz",
+    channel:"Neflix",
+    subscription:200,
+    }
+
+    document.write(series.channel+"<br>")
+
+    let colors= {
+    name:"red",
+    name_2:"yellow",
+    name_3: "blue",
+    }
+
+    document.write(colors.name_2+"<br>")
+    
+
+
+
+
+
+
+
+
 
     </script>
     
