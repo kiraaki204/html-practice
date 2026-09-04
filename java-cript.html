@@ -274,7 +274,9 @@
 
 }*/
 
-    let car = {
+//OBJECTS
+    /*{
+        let car = {
         model:"toyota",
         name:"corolla",
         price: 4550,
@@ -301,7 +303,89 @@
     let heading=document.getElementByTitle("title");
     document.write(heading.textContent);
     heading.textContent="Hello xyz";
-    
+}*/
+
+//ARROW FUNCTIONS
+{
+    function multiply(a,b){
+        return a*b ;
+    }
+    function multiply=(a,b)=>a*b
+
+    function double(number){
+        return number+number;
+    }
+    const double=number=>number+number
+
+    let names=["ali","ahmed","hamza"]
+    names.forEach((name)=>{
+        console.log("Hello"+name)
+    }
+    )
+
+    let numbers=[1,2,3];
+    let tripled=numbers.map((number)=>{
+        return number*3;
+    })
+
+    let numbers=[2,4,6];
+    let tenadded=numbers.map((number)=>{
+        return number+10;
+    }
+    )
+
+    let names=["ALI","AHMED","HAMZA"]
+    let lowercase=names.map((name)=>{
+        return name.toLowerCase();
+    }
+    )
+
+    let numbers=[1,2,3,4,5,6,7,8,9,10]
+    let evennumbers=numbers.filter((number)=>{
+        return number%2==0;
+    }
+    )
+
+    let numbers=[1,2,3,4,5,6,7,8,9,10]
+    let evennumber=numbers.find((number)=>{
+        return number%2==0;
+    }
+    )
+   
+    switch(apple)
+    {
+        case "apple":
+            console.log("you chose an apple");
+            break;
+        case "banana":
+            console.log("you have chosen a banana");
+            break;
+        case "mango":
+            console.log("you chose a mango");
+            break;
+        default:
+            console.log("unknown fruint");
+    }
+
+    let role="admin";
+    switch(role)
+    {
+        case "admin":
+            console.log("you have full access");
+            break;
+        case "editor":
+            console.log("you cna edit content");
+            break;
+        case "viewer":
+            console.log("you can only view content");
+            break;
+        case "guest":
+            console.log("you have limited access");
+            break;
+        default:
+            console.log("unknown role");
+    }
+}
 
 
 
