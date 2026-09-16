@@ -1,510 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
 
-//ARITHMETIC OPERATORS
+        //ARITHMETIC OPERATORS
 
-    /*{let a=10;
-        let b=4;
-        let isAdmin=true;
-        a++;
-        a--;
-
-        document.write(!isAdmin)
-        document.write("<br>")
-
-        document.write(typeof isAdmin)
-        document.write("<br>")
-
-        document.write(a+b)
-        document.write("<br>")
-       
-        document.write(a-b)
-        document.write("<br>")
-
-        document.write(a/b)
-        document.write("<br>")
-
-        console.log(a*b)
-        console.log("<br>")
+        /*{let a=10;
+            let b=4;
+            let isAdmin=true;
+            a++;
+            a--;
     
-        document.write(a%b)
-        document.write("<br>")
-    }*/
-        
-// COMPOUND ASSIGNMENT OPERATORS
-
-    /*{let a=15;
-         
-        a+=5;
-        a*=2;
-        a-=5;
-        a/=5;
-        a%=5;
-        document.write(a)
-    }*/
-
-//RELATIONAL OPERATORS
-
-    /*{
-        let a=2;
-        let b=5;
-
-        document.write(a>b)
-        document.write("<br>")
-        document.write(a<b)
-        document.write("<br>")
-        document.write(a>=b)
-        document.write("<br>")
-        document.write(a<=b)
-        document.write("<br>")
-        document.write(a==b)
-        document.write("<br>")
-        document.write(a===b)
-        document.write("<br>")
-        document.write(a!=b)
-        document.write("<br>")
-    }*/
-
-// AND (&&) operator
-
-    /*{
-        let a=5;
-        let b=10;
-        
-        //true+true=true
-        document.write(a<b && b>a)
-        document.write("<br>")
-        //false+true=false
-        document.write(a>b && b>a)
-        document.write("<br>")
-        //false+false=false
-        document.write(a>b && b<a)
-        document.write("<br>")
-        //true+false=false
-        document.write(a<b && b<a)
-    }*/
-
-// OR (||) operator
-
-    /*{
-        let a=5;
-        let b=10;
-        //true+true=true
-        document.write(a<b || b>a)
-        document.write("<br>")
-        //false+true=false
-        document.write(a>b || b>a)
-        document.write("<br>")
-        //false+false=false
-        document.write(a>b || b<a)
-        document.write("<br>")
-        //true+false=false
-        document.write(a<b || b<a)
-    }*/
-
-// NOT (!) operator
-
-    /*{
-        let a=true;
-        let b=false;
-
-        document.write(!a)
-        document.write("<br>")
-        document.write(!b)
-        document.write("<br>")
-    }*/
-
-// TERNARY OPERATORS
-
-    /*{
-        let a=5;
-        let b=10;
-         
-        let result=a<b ? "a is less than b": "a is greater than b";
-        document.write(result)
-        document.write("<br>")
-        let sentence=b>a ? "b is greater than a":"b is less than a";
-        document.write(sentence)
-        document.write("<br>")
-    }*/
-
-//NULLISH COALESCING OPERATOR (??)
-
-    /*{
-        let a=null;
-        let result= a ?? "a is null so im writing this sentence instead"; 
-        document.write(result)
-    }*/
-        
-
-//ARRAY (1D + 2D)
-
-
-    /*{let students=["Arslan","ahmed","usama","javed"]
-    console.log(students[3])
-
-    let students_2=[
-    ["arslan","10th",54,100],
-    ["ahmed","8th",55,200],
-    ["usama","9th",56,300],
-    ["javed","11th",57,400] 
-    ]
-    document.write("<h1>Student-1</h1>"+"Name:"+students_2[0][0]+"<br>"+"Class:"+students_2[0][1]+"<br>"+"roll_no:"+students_2[0][2]+"<br>"+"marks:"+students_2[0][3])
-    }*/
-
-/*{    
-//if statement
-    let age=15;
-    if(age>=15){
-        document.write("u are a teenager"+"<br>")
-    }
-
-//if-else statement
-    let age_2=12;
-    if(age_2<=10)
-    {
-        document.write("your age is less or equal to 10"+"<br>")
-    }
-    else{
-        document.write("your age is greater than 10"+"<br>")
-    }
-
-//if-else-if statement
-    let age_3=10;
-    if(age_3>10){
-        document.write("A"+"<br>")
-    }
-    else if(age_3>=10){
-        document.write("B"+"<br>")
-    }
-    else{
-        document.write("C"+"<br>")
-    }
-
-//Nested-if statement
-   let age_4=20;
-   let age_5=30;
-
-   if(age_4==20)
-   {
-    if(age_5<40){
-        document.write("this statement is xecuted after checking the if part first")
-    }
-   }
-}*/ 
-
-//FUNCTIONS
-
-/*{
-
-//NORMAL MULTIPLICATION FUNCTION
-    function multiply(a,b)
-    {
-        document.write(a*b+"<br>");
-    }
-//NORMAL SUBRACTION FUNCTION
-    function subract(x,y)
-    {
-        document.write(x-y+"<br>");
-    }
-//NORMAL DIVISION FUNCTION
-    function divide(c,d)
-    {
-        document.write(c/d+"<br>");
-    }
-//NORMAL MOD FUNCTION
-    function mod(a,b)
-    {
-        document.write(a%b+"<br>")
-    } 
-//NORMAL GREETING FUNCTION
-    function greetings(name)
-    {
-        document.write("Hello"+ name);
-    }
-
-//RETURN SUM FUNCTION
-    function sum(a,b)
-    {
-        return(a+b)
-    }
-
-//RETURN PRODUCT FUNCTION
-    function products(a,b)
-    {
-        return(a*b);
-    }
-
-//RETURN MOD FUNCTION     
-    function mod(a,b)
-    {
-        return(a%b);
-    } 
-
-//functuion calls:
-
-    let sums_result=sum(5,5);
-    document.write(sums_result+"<br>")
+            document.write(!isAdmin)
+            document.write("<br>")
     
-    let products_result=products(5,5);
-    document.write(products_result+"<br>")
+            document.write(typeof isAdmin)
+            document.write("<br>")
+    
+            document.write(a+b)
+            document.write("<br>")
+           
+            document.write(a-b)
+            document.write("<br>")
+    
+            document.write(a/b)
+            document.write("<br>")
+    
+            console.log(a*b)
+            console.log("<br>")
+        
+            document.write(a%b)
+            document.write("<br>")
+        }*/
 
-    let mods_result=mod(10,2);
-    document.write(mods_result+"<br>")
+        // COMPOUND ASSIGNMENT OPERATORS
 
-    let mods_result=mod(10,2);
-    document.write(mods_result+"<br>")
+        /*{let a=15;
+             
+            a+=5;
+            a*=2;
+            a-=5;
+            a/=5;
+            a%=5;
+            document.write(a)
+        }*/
 
-    multiply(2,7);
-    subract(20,10);
-    divide(10,2);
-    mod(10,3);
-    greetings("xyz");
+        //RELATIONAL OPERATORS
 
-}*/
+        /*{
+            let a=2;
+            let b=5;
+    
+            document.write(a>b)
+            document.write("<br>")
+            document.write(a<b)
+            document.write("<br>")
+            document.write(a>=b)
+            document.write("<br>")
+            document.write(a<=b)
+            document.write("<br>")
+            document.write(a==b)
+            document.write("<br>")
+            document.write(a===b)
+            document.write("<br>")
+            document.write(a!=b)
+            document.write("<br>")
+        }*/
 
-//OBJECTS
-    /*{
-        let car = {
-        model:"toyota",
-        name:"corolla",
-        price: 4550,
-    }
+        // AND (&&) operator
 
-    document.write(car.model+"<br>")
+        /*{
+            let a=5;
+            let b=10;
+            
+            //true+true=true
+            document.write(a<b && b>a)
+            document.write("<br>")
+            //false+true=false
+            document.write(a>b && b>a)
+            document.write("<br>")
+            //false+false=false
+            document.write(a>b && b<a)
+            document.write("<br>")
+            //true+false=false
+            document.write(a<b && b<a)
+        }*/
 
-    let series= {
-    name:"xyz",
-    channel:"Neflix",
-    subscription:200,
-    }
+        // OR (||) operator
 
-    document.write(series.channel+"<br>")
+        /*{
+            let a=5;
+            let b=10;
+            //true+true=true
+            document.write(a<b || b>a)
+            document.write("<br>")
+            //false+true=false
+            document.write(a>b || b>a)
+            document.write("<br>")
+            //false+false=false
+            document.write(a>b || b<a)
+            document.write("<br>")
+            //true+false=false
+            document.write(a<b || b<a)
+        }*/
 
-    let colors= {
-    name:"red",
-    name_2:"yellow",
-    name_3: "blue",
-    }
+        // NOT (!) operator
 
-    document.write(colors.name_2+"<br>")
+        /*{
+            let a=true;
+            let b=false;
+    
+            document.write(!a)
+            document.write("<br>")
+            document.write(!b)
+            document.write("<br>")
+        }*/
 
-    let heading=document.getElementByTitle("title");
-    document.write(heading.textContent);
-    heading.textContent="Hello xyz";
-}*/
+        // TERNARY OPERATORS
 
-//ARROW FUNCTIONS
-/*{
-    function multiply(a,b){
-        return a*b ;
-    }
-    function multiply=(a,b)=>a*b
+        /*{
+            let a=5;
+            let b=10;
+             
+            let result=a<b ? "a is less than b": "a is greater than b";
+            document.write(result)
+            document.write("<br>")
+            let sentence=b>a ? "b is greater than a":"b is less than a";
+            document.write(sentence)
+            document.write("<br>")
+        }*/
 
-    function double(number){
-        return number+number;
-    }
-    const double=number=>number+number
+        //NULLISH COALESCING OPERATOR (??)
 
-    let names=["ali","ahmed","hamza"]
-    names.forEach((name)=>{
-        console.log("Hello"+name)
-    }
-    )
-
-    let numbers=[1,2,3];
-    let tripled=numbers.map((number)=>{
-        return number*3;
-    })
-
-    let numbers=[2,4,6];
-    let tenadded=numbers.map((number)=>{
-        return number+10;
-    }
-    )
-
-    let names=["ALI","AHMED","HAMZA"]
-    let lowercase=names.map((name)=>{
-        return name.toLowerCase();
-    }
-    )
-
-    let numbers=[1,2,3,4,5,6,7,8,9,10]
-    let evennumbers=numbers.filter((number)=>{
-        return number%2==0;
-    }
-    )
-
-    let numbers=[1,2,3,4,5,6,7,8,9,10]
-    let evennumber=numbers.find((number)=>{
-        return number%2==0;
-    }
-    )
-   
-    switch(apple)
-    {
-        case "apple":
-            console.log("you chose an apple");
-            break;
-        case "banana":
-            console.log("you have chosen a banana");
-            break;
-        case "mango":
-            console.log("you chose a mango");
-            break;
-        default:
-            console.log("unknown fruint");
-    }
-
-    let role="admin";
-    switch(role)
-    {
-        case "admin":
-            console.log("you have full access");
-            break;
-        case "editor":
-            console.log("you cna edit content");
-            break;
-        case "viewer":
-            console.log("you can only view content");
-            break;
-        case "guest":
-            console.log("you have limited access");
-            break;
-        default:
-            console.log("unknown role");
-    }
-}*/
-/*
- let number=10;
- if (number>0){
-    document.write("the numbe is positive"+"<br>");
- }
- else{
-    document.write("the number is negative"+"<br>");
- }
-
-  let nmbr=10;
- if (number%2==0){
-    document.write("the numbe is even"+"<br>");
- }
- else{
-    document.write("the number is odd"+"<br>");
- }
-
-  let marks=10;
- if (marks>=40){
-    document.write("you have passed"+"<br>");
- }
- else{
-    document.write("you have failed"+"<br>");
- }
- 
-
-  let nUMBER=10;
- if (number%5==0){
-    document.write("this number is divisible by 5"+"<br>");
- }
- else{
-    document.write("this number isnt divisible by 5"+"<br>");
- }
+        /*{
+            let a=null;
+            let result= a ?? "a is null so im writing this sentence instead"; 
+            document.write(result)
+        }*/
 
 
-   let password="admin124";
- if (password=="admin123"){
-    document.write("access granted"+"<br>");
- }
- else{
-    document.write("access denied"+"<br>");
- }*/
-
-/*
- let marks=99;
-  
- if(marks>=90){
-    document.write("The grade is a");
- }
- else if(marks>=80){
-    document.write("the grade is b");
- }
- else if(marks>=70){
-    document.write("the grade is c");
- }
- else{
-    document.write("you have failed");
- }
-    */
-/*{
-    for(i=1 ; i<=10 ; i++){
-        document.write(i+"<br>");
-    }
-
-    document.write("<br>")
-
-    for(i=10 ; i>=1 ; i--){
-        document.write(i+"<br>")
-    }
-
-    document.write("<br>")
-
-    for(i=1 ; i<=10 ;i++){
-        let a=(i*5);
-        document.write(5 + "x" + i + "=" + a + "<br>")
-    }
- 
-    document.write("<br>")
-
-    for(i=1 ; i<=100 ;i++){
-        if(i%3==0 && i%5==0){
-        document.write(i+"<br>");
-    }    
-    }
-
-    document.write("<br>")
+        //ARRAY (1D + 2D)
 
 
-    let x="Hello";
-    for (let i=x.length-1 ; i>=0 ;i--){
-        document.write(x[i])
-    }
+        /*{let students=["Arslan","ahmed","usama","javed"]
+        console.log(students[3])
+    
+        let students_2=[
+        ["arslan","10th",54,100],
+        ["ahmed","8th",55,200],
+        ["usama","9th",56,300],
+        ["javed","11th",57,400] 
+        ]
+        document.write("<h1>Student-1</h1>"+"Name:"+students_2[0][0]+"<br>"+"Class:"+students_2[0][1]+"<br>"+"roll_no:"+students_2[0][2]+"<br>"+"marks:"+students_2[0][3])
+        }*/
 
-}*/
-/*{
-    let students=[
-    ["ali","ali@gmail.com","6th","01"],
-    ["sarah","sarah@gmail.com","8th","02"],
-    ["ahmed","ahmed@gmail.com","9th","03"],
-    ["fatima","fatiam@gmail.com","5th","04"],
-    ["khalid","khalid@gmail.com","10th","05"]
-    ]
+        /*{    
+        //if statement
+            let age=15;
+            if(age>=15){
+                document.write("u are a teenager"+"<br>")
+            }
+        
+        //if-else statement
+            let age_2=12;
+            if(age_2<=10)
+            {
+                document.write("your age is less or equal to 10"+"<br>")
+            }
+            else{
+                document.write("your age is greater than 10"+"<br>")
+            }
+        
+        //if-else-if statement
+            let age_3=10;
+            if(age_3>10){
+                document.write("A"+"<br>")
+            }
+            else if(age_3>=10){
+                document.write("B"+"<br>")
+            }
+            else{
+                document.write("C"+"<br>")
+            }
+        
+        //Nested-if statement
+           let age_4=20;
+           let age_5=30;
+        
+           if(age_4==20)
+           {
+            if(age_5<40){
+                document.write("this statement is xecuted after checking the if part first")
+            }
+           }
+        }*/
 
-    let labels=["Name","Email","classclass","rollno"]
+        //FUNCTIONS
 
-    for(let i=0 ; i<students.length ; i++){
-        document.write("Student No."+(i+1)+":"+"<br>")
+        /*{
+        
+        //NORMAL MULTIPLICATION FUNCTION
+            function multiply(a,b)
+            {
+                document.write(a*b+"<br>");
+            }
+        //NORMAL SUBRACTION FUNCTION
+            function subract(x,y)
+            {
+                document.write(x-y+"<br>");
+            }
+        //NORMAL DIVISION FUNCTION
+            function divide(c,d)
+            {
+                document.write(c/d+"<br>");
+            }
+        //NORMAL MOD FUNCTION
+            function mod(a,b)
+            {
+                document.write(a%b+"<br>")
+            } 
+        //NORMAL GREETING FUNCTION
+            function greetings(name)
+            {
+                document.write("Hello"+ name);
+            }
+        
+        //RETURN SUM FUNCTION
+            function sum(a,b)
+            {
+                return(a+b)
+            }
+        
+        //RETURN PRODUCT FUNCTION
+            function products(a,b)
+            {
+                return(a*b);
+            }
+        
+        //RETURN MOD FUNCTION     
+            function mod(a,b)
+            {
+                return(a%b);
+            } 
+        
+        //functuion calls:
+        
+            let sums_result=sum(5,5);
+            document.write(sums_result+"<br>")
+            
+            let products_result=products(5,5);
+            document.write(products_result+"<br>")
+        
+            let mods_result=mod(10,2);
+            document.write(mods_result+"<br>")
+        
+            let mods_result=mod(10,2);
+            document.write(mods_result+"<br>")
+        
+            multiply(2,7);
+            subract(20,10);
+            divide(10,2);
+            mod(10,3);
+            greetings("xyz");
+        
+        }*/
 
-        for(let j=0 ; j<students[i].length ; j++){
-            document.write(labels[j]+":"+students[i][j]+"<br>")
+        //OBJECTS
+        /*{
+            let car = {
+            model:"toyota",
+            name:"corolla",
+            price: 4550,
         }
-    }
-*/
-    let password;
-    while (password !== "1234"){
-        password=(prompt("enter your password:"));
-    }
-
     
+        document.write(car.model+"<br>")
+    
+        let series= {
+        name:"xyz",
+        channel:"Neflix",
+        subscription:200,
+        }
+    
+        document.write(series.channel+"<br>")
+    
+        let colors= {
+        name:"red",
+        name_2:"yellow",
+        name_3: "blue",
+        }
+    
+        document.write(colors.name_2+"<br>")
+    
+        let heading=document.getElementByTitle("title");
+        document.write(heading.textContent);
+        heading.textContent="Hello xyz";
+    }*/
+
+        //ARROW FUNCTIONS
+        /*{
+            function multiply(a,b){
+                return a*b ;
+            }
+            function multiply=(a,b)=>a*b
+        
+            function double(number){
+                return number+number;
+            }
+            const double=number=>number+number
+        
+            let names=["ali","ahmed","hamza"]
+            names.forEach((name)=>{
+                console.log("Hello"+name)
+            }
+            )
+        
+            let numbers=[1,2,3];
+            let tripled=numbers.map((number)=>{
+                return number*3;
+            })
+        
+            let numbers=[2,4,6];
+            let tenadded=numbers.map((number)=>{
+                return number+10;
+            }
+            )
+        
+            let names=["ALI","AHMED","HAMZA"]
+            let lowercase=names.map((name)=>{
+                return name.toLowerCase();
+            }
+            )
+        
+            let numbers=[1,2,3,4,5,6,7,8,9,10]
+            let evennumbers=numbers.filter((number)=>{
+                return number%2==0;
+            }
+            )
+        
+            let numbers=[1,2,3,4,5,6,7,8,9,10]
+            let evennumber=numbers.find((number)=>{
+                return number%2==0;
+            }
+            )
+           
+            switch(apple)
+            {
+                case "apple":
+                    console.log("you chose an apple");
+                    break;
+                case "banana":
+                    console.log("you have chosen a banana");
+                    break;
+                case "mango":
+                    console.log("you chose a mango");
+                    break;
+                default:
+                    console.log("unknown fruint");
+            }
+        
+            let role="admin";
+            switch(role)
+            {
+                case "admin":
+                    console.log("you have full access");
+                    break;
+                case "editor":
+                    console.log("you cna edit content");
+                    break;
+                case "viewer":
+                    console.log("you can only view content");
+                    break;
+                case "guest":
+                    console.log("you have limited access");
+                    break;
+                default:
+                    console.log("unknown role");
+            }
+        }*/
+        /*
+         let number=10;
+         if (number>0){
+            document.write("the numbe is positive"+"<br>");
+         }
+         else{
+            document.write("the number is negative"+"<br>");
+         }
+        
+          let nmbr=10;
+         if (number%2==0){
+            document.write("the numbe is even"+"<br>");
+         }
+         else{
+            document.write("the number is odd"+"<br>");
+         }
+        
+          let marks=10;
+         if (marks>=40){
+            document.write("you have passed"+"<br>");
+         }
+         else{
+            document.write("you have failed"+"<br>");
+         }
+         
+        
+          let nUMBER=10;
+         if (number%5==0){
+            document.write("this number is divisible by 5"+"<br>");
+         }
+         else{
+            document.write("this number isnt divisible by 5"+"<br>");
+         }
+        
+        
+           let password="admin124";
+         if (password=="admin123"){
+            document.write("access granted"+"<br>");
+         }
+         else{
+            document.write("access denied"+"<br>");
+         }*/
+
+        /*
+         let marks=99;
+          
+         if(marks>=90){
+            document.write("The grade is a");
+         }
+         else if(marks>=80){
+            document.write("the grade is b");
+         }
+         else if(marks>=70){
+            document.write("the grade is c");
+         }
+         else{
+            document.write("you have failed");
+         }
+            */
+        /*{
+            for(i=1 ; i<=10 ; i++){
+                document.write(i+"<br>");
+            }
+        
+            document.write("<br>")
+        
+            for(i=10 ; i>=1 ; i--){
+                document.write(i+"<br>")
+            }
+        
+            document.write("<br>")
+        
+            for(i=1 ; i<=10 ;i++){
+                let a=(i*5);
+                document.write(5 + "x" + i + "=" + a + "<br>")
+            }
+         
+            document.write("<br>")
+        
+            for(i=1 ; i<=100 ;i++){
+                if(i%3==0 && i%5==0){
+                document.write(i+"<br>");
+            }    
+            }
+        
+            document.write("<br>")
+        
+        
+            let x="Hello";
+            for (let i=x.length-1 ; i>=0 ;i--){
+                document.write(x[i])
+            }
+        
+        }*/
+        /*{
+            let students=[
+            ["ali","ali@gmail.com","6th","01"],
+            ["sarah","sarah@gmail.com","8th","02"],
+            ["ahmed","ahmed@gmail.com","9th","03"],
+            ["fatima","fatiam@gmail.com","5th","04"],
+            ["khalid","khalid@gmail.com","10th","05"]
+            ]
+        
+            let labels=["Name","Email","classclass","rollno"]
+        
+            for(let i=0 ; i<students.length ; i++){
+                document.write("Student No."+(i+1)+":"+"<br>")
+        
+                for(let j=0 ; j<students[i].length ; j++){
+                    document.write(labels[j]+":"+students[i][j]+"<br>")
+                }
+            }
+        */
+        /*{    let password;
+            while (password !== "1234"){
+                password=(prompt("enter your password:"));
+            }
+        }*/
+
+        /*{
+            let number;
+            do{
+                number=prompt("enter a number greater than 10")
+            } 
+            while(number<=10);
+            document.write(number);
+        }
+        */
+
+        /*{        let marks = [
+                    ["ali", 80, 70, 90],
+                    ["hamza", 60, 40, 10],
+                    ["farhan", 30, 20, 10],
+                ]
+                let sum = 0;
+                for (let i = 0; i < marks.length; i++) {
+                    document.write("<br>"+"Marks of " + marks[i][0] + " are:")
+                    for (let j =1 ; j<marks[i].length ; j++) {
+                        sum = sum + marks[i][j];
+                    }
+                    document.write(sum);
+                }
+        }*/
+        /*       {
+       
+                   let numbers = [
+                       [12, 15, 16, 20, 7, 3],
+                       [6, 31, 17, 19, 1, 4],
+                       [4, 2, 7, 9, 7, 3],
+                   ]
+       
+                   let amount = 0;
+                   for (i = 0; i < numbers.length; i++) {
+                       for (j = 0; j < numbers[i].length; j++) {
+                           if (numbers[i][j] % 2 == 0) {
+                               amount = amount+1;
+                           }
+                       }
+                       document.write("the amount of even numbers in array" + (i + 1) + "is" + amount +"<br>");
+                   }
+               }*/
+
+        {
+            let numbers = [
+                [12, 15, 16, 20, 7, 3],
+                [6, 31, 17, 19, 49, 4],
+                [4, 2, 7, 9, 7, 29]
+            ]
+            let highest_number=0;
+            for(i=0 ; i<numbers.length ;i++){
+            
+                for(j=0 ; j<numbers[i].length ; j++)
+                {
+                    if(numbers[i][j]>highest_number){
+                        highest_number=numbers[i][j];
+                    }
+                }
+            }
+            document.write("the highestnumber in the whole array is"+highest_number);
+            
+        }
+
+
+
+
+
+
 
 
     </script>
-    
+
 </body>
+
 </html>
