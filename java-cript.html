@@ -314,8 +314,8 @@
             function double(number){
                 return number+number;
             }
-            const double=number=>number+number
-        
+            function double=number=>number+number
+        //ARRAY METHODS
             let names=["ali","ahmed","hamza"]
             names.forEach((name)=>{
                 console.log("Hello"+name)
@@ -350,7 +350,9 @@
                 return number%2==0;
             }
             )
-           
+
+           //SWITCH CASE STRUCTURE
+
             switch(apple)
             {
                 case "apple":
@@ -385,7 +387,10 @@
                     console.log("unknown role");
             }
         }*/
-        /*
+
+        // IF ELSE STATEMENTS
+
+        /*{
          let number=10;
          if (number>0){
             document.write("the numbe is positive"+"<br>");
@@ -443,7 +448,9 @@
          else{
             document.write("you have failed");
          }
-            */
+            }*/
+
+        //LOOPS      
         /*{
             for(i=1 ; i<=10 ; i++){
                 document.write(i+"<br>");
@@ -498,11 +505,16 @@
                 }
             }
         */
+
+        //WHILE LOOP
+
         /*{    let password;
             while (password !== "1234"){
                 password=(prompt("enter your password:"));
             }
         }*/
+        
+        //DO-WHILE LOOP 
 
         /*{
             let number;
@@ -512,15 +524,17 @@
             while(number<=10);
             document.write(number);
         }*/
-        {
+        /*{
             let password;
             do{
                 password=prompt("enter the correct password to be granted the access")
             }
             while(password !=="1234");
             document.write("access granted");
-        }
+        }*/
         
+        //LOOPS EXERCISE
+
         /*{        let marks = [
                     ["ali", 80, 70, 90],
                     ["hamza", 60, 40, 10],
@@ -563,7 +577,7 @@
             let highest_number=0;
             for(i=0 ; i<numbers.length ;i++){
             
-                for(j=0 ; j<numbers[i].length ; j++)
+/                for(j=0 ; j<numbers[i].length ; j++)
                 {
                     if(numbers[i][j]>highest_number){
                         highest_number=numbers[i][j];
@@ -573,6 +587,24 @@
             document.write("the highestnumber in the whole array is"+highest_number);   
         }*/
 
+        
+            /*function Age(a){
+                if(a<20){
+                    document.write("you are a teenager")
+                }
+                else("you are not a teenager")
+            }
+
+            Age(18);
+            */
+
+            function Discount(originalprice){
+                let discount=originalprice*0.10;
+                let final_price=originalprice-discount;
+                document.write(final_price)
+            }
+            Discount(2000);
+        
 
 
 
