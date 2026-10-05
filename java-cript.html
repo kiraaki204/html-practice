@@ -5,9 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="./asset/vendor/bootstrap-5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <h3 id="message">
+        write something in the input box below and press enter to display it
+    </h3>
+    <input id="inpt" class="fo" type="text">
+    <hr>
+    <button id="openbtn">
+        open menu
+    </button>
+    <div id="menu" style="display: none;">
+        <p>about us</p>
+        <p>home</p>
+        <p>contact us</p>
+        <p>Products</p>
+    </div>
+    <hr>
+    <input id="t-input" class="form-control mx-3">
+    <table id="myTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+   
+  <script>
+
+    const inputBox = document.getElementById('t-input')
+    inputBox.addEventListener('keyup', function(){
+        let searchText = inputBox.value.toLowerCase()
+        const table = document.getElementById('myTable')
+        let trows = table.getElementsByTagName('tr')
+        
+        for(let row=1; row < trows.length; row++){
+            let tdata = trows[row].getElementsByTagName('td')[0]
+            let cellValue = tdata.innerText.toLocaleLowerCase()
+
+            if(cellValue.indexOf(searchText) > -1){
+                trows[row].style.display = 'table-row';
+            }else{
+                trows[row].style.display = 'none';
+            }
+        }
+    })
+
+
+    const inputBoxOld = document.getElementById('tt-input')
+    inputBoxOld.addEventListener('keyup', function(){
+        let searchText = inputBox.value.toLowerCase()
+        const table = document.getElementById('myTable')
+        let trows = table.getElementsByTagName('tr')
+        
+        for(let row=1; row < trows.length; row++){
+            let tdata = trows[row].getElementsByTagName('td')[0]
+            let cellValue = tdata.innerText.toLocaleLowerCase()
+
+            if(cellValue.indexOf(searchText) > -1){
+                trows[row].style.display = 'table-row';
+            }else{
+                trows[row].style.display = 'none';
+            }
+        }
+    })
+  </script>
 
     <script>
 
@@ -513,7 +597,7 @@
                 password=(prompt("enter your password:"));
             }
         }*/
-        
+
         //DO-WHILE LOOP 
 
         /*{
@@ -532,7 +616,7 @@
             while(password !=="1234");
             document.write("access granted");
         }*/
-        
+
         //LOOPS EXERCISE
 
         /*{        let marks = [
@@ -566,45 +650,170 @@
                        }
                        document.write("the amount of even numbers in array" + (i + 1) + "is" + amount +"<br>");
                    }
-               }*/
+}*/
 
         /*{
-            let numbers = [
-                [12, 15, 16, 20, 7, 3],
-                [6, 31, 17, 19, 49, 4],
-                [4, 2, 7, 9, 7, 29]
-            ]
-            let highest_number=0;
-            for(i=0 ; i<numbers.length ;i++){
-            
-/                for(j=0 ; j<numbers[i].length ; j++)
-                {
-                    if(numbers[i][j]>highest_number){
-                        highest_number=numbers[i][j];
+                    let numbers = [
+                        [12, 15, 16, 20, 7, 3],
+                        [6, 31, 17, 19, 49, 4],
+                        [4, 2, 7, 9, 7, 29]
+                    ]
+                    let highest_number=0;
+                    for(i=0 ; i<numbers.length ;i++){
+                    
+                      for(j=0 ; j<numbers[i].length ; j++)
+                        {
+                            if(numbers[i][j]>highest_number){
+                                highest_number=numbers[i][j];
+                            }
+                        }
                     }
-                }
-            }
-            document.write("the highestnumber in the whole array is"+highest_number);   
+                    document.write("the highestnumber in the whole array is"+highest_number);   
+        }*/
+        /*{        
+                    /*function Age(a){
+                        if(a<20){
+                            document.write("you are a teenager")
+                        }
+                        else("you are not a teenager")
+                    }
+        
+                    Age(18);
+                    */
+
+        /*{function Discount(originalprice){
+            let discount=originalprice*0.10;
+            let final_price=originalprice-discount;
+            document.write(final_price)
+        }
+        Discount(2000);
+}*/
+        /*{
+        //function expression                 
+                        const add =function(){
+                            return document.write("hello world")
+                        }
+        //IIfe function
+                        (
+                        function (){
+                                return document.write("hello world")
+                            }
+                        )()
+        //arrow functions
+                        const add = (a,b)=>a+b;
+        //anonymouse functions
+                        setInterval(function(a,b){
+                            return a+b;
+                       },2000)
         }*/
 
+        /*{
+                    function Double (number){
+                    return number*2
+                    }
         
-            /*function Age(a){
-                if(a<20){
-                    document.write("you are a teenager")
-                }
-                else("you are not a teenager")
+                    function processNumber( a, anyfunc ){
+                        return anyfunc(a)
+                    }
+                     let num= parseInt(prompt("enter a number"))
+                     let test = processNumber(num,Double)
+                     document.write(test);
+        }*/
+        /*{
+        function add (a,b) {
+        return a+b
             }
+        function square(number) {
+            return number * number;
 
-            Age(18);
-            */
+        }
+        function ProcessNumber(num,num_2, wtvfunc) {
+            return wtvfunc(num, num_2)
+        }
+        let Test = ProcessNumber(10, add)
+        document.write(Test)
+        }*/
 
-            function Discount(originalprice){
-                let discount=originalprice*0.10;
-                let final_price=originalprice-discount;
-                document.write(final_price)
+        /*{    function multiply(a, b) {
+                return a * b
             }
-            Discount(2000);
+            function add(a, b) {
+                return a + b
+            }
+            function subtract(a,b){
+                return (a>b) ? a-b : b-a 
+            }
+            function divide(a,b){
+                return a / bt
+            }
+    
+            function Calculate(num1, num2, operator) {
+                return operator(num1, num2)
+            }
+                    
+            let result= Calculate(20,50,subtract)
+            document.write(result)
+        }*/
+
+        /*{
         
+            function sendEmail() {
+                 document.write("sending Email....."+"<br>")
+                 return "..mail send"
+            }
+            function sendSms (){
+                 document.write("sending sms....."+"<br>")
+                 return "..sms send"
+            }
+            function Main(name,mail,callback){
+                return callback()
+            }
+        
+            let result = Main("Emaan","email",sendSms)
+            document.write(result)
+        
+            function percentage(obtmarks,t_marks){
+                let percentage=(obtmarks/t_marks)*100
+                return percentage
+            }
+        
+            function main (obt_marks, totalmarks,callback){
+                return callback(obt_marks,totalmarks)
+            }
+             let result_2 =main(400,500,percentage)
+             document.write("<br>"+result_2+"%")
+        }*/
+
+        /*{
+        document.querySelector("#btn").addEventListener("click" , function(event){
+        document.write(event.type);
+      });
+                  }*/
+        let message = document.querySelector("#message");
+        let input = document.querySelector("#inpt")
+        let button = document.querySelector("#btn");
+
+        input.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                message.textContent = input.value;
+            }
+        });
+
+        let bUtton = document.querySelector("#openbtn")
+        let menu = document.querySelector("#menu")
+
+        bUtton.addEventListener("click", function () {
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            }    else {
+                menu.style.display = "none";
+            }
+        });
+
+
+
+
+
 
 
 
