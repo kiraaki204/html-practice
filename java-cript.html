@@ -55,38 +55,33 @@
 
     <script>
 
-        // const inputBox = document.getElementById('t-input')
+        const inputBox = document.getElementById('t-input')
 
-        //    inputBox.addEventListener('keyup', function() {
+           inputBox.addEventListener('keyup', function() {
             
-        //     let searchText = inputBox.value.toLowerCase()
+            let searchText = inputBox.value.toLowerCase()
             
-        //     const table = document.getElementById('myTable')
+            const table = document.getElementById('myTable')
 
-        //     let trows = table.getElementsByTagName('tr')
+            let trows = table.getElementsByTagName('tr')
 
-        //     for (let row = 1; row < trows.length; row++) {
+            for (let row = 1; row < trows.length; row++) {
 
-        //         let trow = trows[row]
-        //         let tdatas = trow.getElementsByTagName('td')
+                let trow = trows[row]
+                let tdatas = trow.getElementsByTagName('td')
 
-        //         let filteredTDatas = Array.from(tdatas).filter(tdata => {
-        //             return tdata.innerText.toLowerCase().includes(searchText)
-        //         })
+                let filteredTDatas = Array.from(tdatas).filter(tdata => {
+                    return tdata.innerText.toLowerCase().includes(searchText)
+                })
 
-        //         if(filteredTDatas.length > 0){
-        //             trow.style.display = 'table-row';
-        //                         } else {
-        //             trow.style.display = 'none';
-        //         }
+                if(filteredTDatas.length > 0){
+                    trow.style.display = 'table-row';
+                                } else {
+                    trow.style.display = 'none';
+                }
 
-        //     }
-        // })
-
-
-
-
-
+            }
+        })
 
     //     const inputBoxOld = document.getElementById('tt-input')
     //     inputBoxOld.addEventListener('keyup', function () {
