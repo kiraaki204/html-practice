@@ -11,20 +11,34 @@
 <body>
 
     <h3 id="message">
-        write something in the input box below and press enter to display it
-    </h3>
-    <input id="inpt" class="fo" type="text">
+        write something in the input box below and press enter to display it</h3>
+
+    <input id="inpt" onkeyup="applyStyling()" class="fo" type="text">
     <hr>
-    <button id="openbtn">
-        open menu
-    </button>
-    <div id="menu" style="display: none;">
-        <p>about us</p>
-        <p>home</p>
-        <p>contact us</p>
-        <p>Products</p>
+
+    <div class="d-flex gap-3 flex-wrap">
+    <input type="text" onkeyup="applyStyling()" id="color">
+    <h4>color</h4>
+    <input type="number" onkeyup="applyStyling()" id="fontSize" style="width: 100px;">
+    <h4>font-size</h4>
+    <input type="checkbox" onchange="applyStyling()" id="underline"> 
+    <h4>Underline</h4>
+    <input type="checkbox" onchange="applyStyling()" id="bold">
+    <h4>Bold</h4>
+    <input type="checkbox" onchange="applyStyling()" id="italic">
+    <h4>italic</h4>
+    <input type="text" onkeyup="applyStyling()" id="u-color">
+    <h4>underline-color</h4>
     </div>
-    <hr>
+    <label for="country">Select Country:</label>
+
+<select id="country">
+    <option value="">underline</option>
+    <option value="pakistan">wavy</option>
+    <option value="india">dotted</option>
+    <option value="usa">dashed</option>
+    <option value="uk">double</option>
+</select>
     <input id="t-input" class="form-control mx-3">
     <table id="myTable" class="table table-striped">
         <thead>
@@ -54,34 +68,66 @@
     </table>
 
     <script>
+        // coloR.addEventListener("keyup",function(){
+        //        message.style.color = coloR.value;
+        // })
+        // fontSize.addEventListener("keyup",function(){
+        //     message.style.fontSize="40px";
+                            
+        // })
+        // input.addEventListener("keyup", function (event) {
+        //     if (event.key === "Enter") {
+        //         message.textContent = input.value;
+        //     }
+        // });
 
-        const inputBox = document.getElementById('t-input')
+        function applyStyling(){
+            let message = document.querySelector("#message");
+            let input = document.querySelector("#inpt")
+            let color = document.querySelector("#color")
+            let fontSize = document.querySelector("#fontSize")
+            let bold =document.querySelector("#bold")
+            let underline =document.querySelector("#underline")
+            let italic =document.querySelector("#italic")
+            let uUnderline=document.querySelector("#u-color")
 
-           inputBox.addEventListener('keyup', function() {
-            
-            let searchText = inputBox.value.toLowerCase()
-            
-            const table = document.getElementById('myTable')
-
-            let trows = table.getElementsByTagName('tr')
-
-            for (let row = 1; row < trows.length; row++) {
-
-                let trow = trows[row]
-                let tdatas = trow.getElementsByTagName('td')
-
-                let filteredTDatas = Array.from(tdatas).filter(tdata => {
-                    return tdata.innerText.toLowerCase().includes(searchText)
-                })
-
-                if(filteredTDatas.length > 0){
-                    trow.style.display = 'table-row';
-                                } else {
-                    trow.style.display = 'none';
-                }
+            message.innerText = input.value
+            message.style.color = color.value
+            message.style.fontSize = fontSize.value+"px";
+            message.style.textDecoration = (underline.checked)  ? "underline" : "none";
+            message.style.fontWeight =(bold.checked) ? "700" : "normal";
+            message.style.fontStyle =(italic.checked) ? "italic" : "normal";
+            message.style.textDecorationColor = uUnderline.value
 
             }
-        })
+            
+
+        // const inputBox = document.getElementById('t-input')
+        //    inputBox.addEventListener('keyup', function() {
+            
+        //     let searchText = inputBox.value.toLowerCase()
+            
+        //     const table = document.getElementById('myTable')
+
+        //     let trows = table.getElementsByTagName('tr')
+
+        //     for (let row = 1; row < trows.length; row++) {
+
+        //         let trow = trows[row]
+        //         let tdatas = trow.getElementsByTagName('td')
+
+        //         let filteredTDatas = Array.from(tdatas).filter(tdata => {
+        //             return tdata.innerText.toLowerCase().includes(searchText)
+        //         })
+
+        //         if(filteredTDatas.length > 0){
+        //             trow.style.display = 'table-row';
+        //                         } else {
+        //             trow.style.display = 'none';
+        //         }
+
+        //     }
+        // })
 
     //     const inputBoxOld = document.getElementById('tt-input')
     //     inputBoxOld.addEventListener('keyup', function () {
@@ -90,7 +136,7 @@
     //         let trows = table.getElementsByTagName('tr')
 
     //         for (let row = 1; row < trows.length; row++) {                
-    //                 let tdata = trows[row].getElementsByTagName('td')[col]
+    //                 let tdata = trows[row].getElementsByTagName('td')[0]
     //                 let cellValue = tdata.innerText.toLocaleLowerCase()
                 
     //             if (cellValue.indexOf(searchText) > -1) {
@@ -794,44 +840,10 @@
         }*/
 
         /*{
-        document.querySelector("#btn").addEventListener("click" , function(event){
-        document.write(event.type);
-      });
+    
                   }*/
-        let message = document.querySelector("#message");
-        let input = document.querySelector("#inpt")
-        let button = document.querySelector("#btn");
-
-        input.addEventListener("keyup", function (event) {
-            if (event.key === "Enter") {
-                message.textContent = input.value;
-            }
-        });
-
-        let bUtton = document.querySelector("#openbtn")
-        let menu = document.querySelector("#menu")
-
-        bUtton.addEventListener("click", function () {
-            if (menu.style.display === "none") {
-                menu.style.display = "block";
-            } else {
-                menu.style.display = "none";
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
-
+    
     </script>
-
 </body>
 
 </html>
