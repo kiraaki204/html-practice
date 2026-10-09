@@ -27,71 +27,85 @@
     <hr>
     <input id="t-input" class="form-control mx-3">
     <table id="myTable" class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-   
-  <script>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+        </tbody>
+    </table>
 
-    const inputBox = document.getElementById('t-input')
-    inputBox.addEventListener('keyup', function(){
-        let searchText = inputBox.value.toLowerCase()
-        const table = document.getElementById('myTable')
-        let trows = table.getElementsByTagName('tr')
-        
-        for(let row=1; row < trows.length; row++){
-            let tdata = trows[row].getElementsByTagName('td')[0]
-            let cellValue = tdata.innerText.toLocaleLowerCase()
+    <script>
 
-            if(cellValue.indexOf(searchText) > -1){
-                trows[row].style.display = 'table-row';
-            }else{
-                trows[row].style.display = 'none';
-            }
-        }
-    })
+        // const inputBox = document.getElementById('t-input')
+
+        //    inputBox.addEventListener('keyup', function() {
+            
+        //     let searchText = inputBox.value.toLowerCase()
+            
+        //     const table = document.getElementById('myTable')
+
+        //     let trows = table.getElementsByTagName('tr')
+
+        //     for (let row = 1; row < trows.length; row++) {
+
+        //         let trow = trows[row]
+        //         let tdatas = trow.getElementsByTagName('td')
+
+        //         let filteredTDatas = Array.from(tdatas).filter(tdata => {
+        //             return tdata.innerText.toLowerCase().includes(searchText)
+        //         })
+
+        //         if(filteredTDatas.length > 0){
+        //             trow.style.display = 'table-row';
+        //                         } else {
+        //             trow.style.display = 'none';
+        //         }
+
+        //     }
+        // })
 
 
-    const inputBoxOld = document.getElementById('tt-input')
-    inputBoxOld.addEventListener('keyup', function(){
-        let searchText = inputBox.value.toLowerCase()
-        const table = document.getElementById('myTable')
-        let trows = table.getElementsByTagName('tr')
-        
-        for(let row=1; row < trows.length; row++){
-            let tdata = trows[row].getElementsByTagName('td')[0]
-            let cellValue = tdata.innerText.toLocaleLowerCase()
 
-            if(cellValue.indexOf(searchText) > -1){
-                trows[row].style.display = 'table-row';
-            }else{
-                trows[row].style.display = 'none';
-            }
-        }
-    })
-  </script>
+
+
+
+    //     const inputBoxOld = document.getElementById('tt-input')
+    //     inputBoxOld.addEventListener('keyup', function () {
+    //         let searchText = inputBox.value.toLowerCase()
+    //         const table = document.getElementById('myTable')
+    //         let trows = table.getElementsByTagName('tr')
+
+    //         for (let row = 1; row < trows.length; row++) {                
+    //                 let tdata = trows[row].getElementsByTagName('td')[col]
+    //                 let cellValue = tdata.innerText.toLocaleLowerCase()
+                
+    //             if (cellValue.indexOf(searchText) > -1) {
+    //                 trows[row].style.display = 'table-row';
+    //             } else {
+    //                 trows[row].style.display = 'none';
+    //             }
+    //         }
+    //     })
+    // </script>
 
     <script>
 
@@ -805,7 +819,7 @@
         bUtton.addEventListener("click", function () {
             if (menu.style.display === "none") {
                 menu.style.display = "block";
-            }    else {
+            } else {
                 menu.style.display = "none";
             }
         });
