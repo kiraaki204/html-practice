@@ -12,32 +12,29 @@
 
     <h3 id="message">
         write something in the input box below and press enter to display it</h3>
-
     <input id="inpt" onkeyup="applyStyling()" class="fo" type="text">
     <hr>
-
     <div class="d-flex gap-3 flex-wrap">
     <input type="text" onkeyup="applyStyling()" id="color">
     <h4>color</h4>
     <input type="number" onkeyup="applyStyling()" id="fontSize" style="width: 100px;">
     <h4>font-size</h4>
-    <input type="checkbox" onchange="applyStyling()" id="underline"> 
-    <h4>Underline</h4>
     <input type="checkbox" onchange="applyStyling()" id="bold">
     <h4>Bold</h4>
     <input type="checkbox" onchange="applyStyling()" id="italic">
     <h4>italic</h4>
+    <input type="checkbox" onchange="applyStyling()" id="underunderline">
+    <h4>underline</h4>
     <input type="text" onkeyup="applyStyling()" id="u-color">
     <h4>underline-color</h4>
     </div>
-    <label for="country">Select Country:</label>
+    <label for="underline">Select underline style:</label>
 
-<select id="country">
-    <option value="">underline</option>
-    <option value="pakistan">wavy</option>
-    <option value="india">dotted</option>
-    <option value="usa">dashed</option>
-    <option value="uk">double</option>
+<select id="underline" onchange="applyStyling()">
+    <option value="wavy" id="wavy">wavy</option>
+    <option value="dotted" id="dotted">dotted</option>
+    <option value="dashed" id="dashed">dashed</option>
+    <option value="double" id="double">double</option>
 </select>
     <input id="t-input" class="form-control mx-3">
     <table id="myTable" class="table table-striped">
@@ -87,19 +84,19 @@
             let color = document.querySelector("#color")
             let fontSize = document.querySelector("#fontSize")
             let bold =document.querySelector("#bold")
-            let underline =document.querySelector("#underline")
             let italic =document.querySelector("#italic")
             let uUnderline=document.querySelector("#u-color")
+            let underline =document.querySelector("#underunderline")
+            let underlineStyle = document.querySelector("#underline");
 
-            message.innerText = input.value
-            message.style.color = color.value
+            message.innerText = input.value;
+            message.style.color = color.value;
             message.style.fontSize = fontSize.value+"px";
             message.style.textDecoration = (underline.checked)  ? "underline" : "none";
             message.style.fontWeight =(bold.checked) ? "700" : "normal";
             message.style.fontStyle =(italic.checked) ? "italic" : "normal";
-            message.style.textDecorationColor = uUnderline.value
-
-            }
+            message.style.textDecorationColor = uUnderline.value;
+            message.style.textDecorationStyle = underlineStyle.value;            }
             
 
         // const inputBox = document.getElementById('t-input')
