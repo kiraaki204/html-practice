@@ -56,16 +56,46 @@
           <td>John</td>
           <td>Doe</td>
           <td>john@example.com</td>
+          <td>
+            <button class="btn btn-primary">
+                update
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger">
+               delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Mary</td>
           <td>Moe</td>
           <td>mary@example.com</td>
+          <td>
+            <button class="btn btn-primary" id="update1">
+                update
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" id="delete1">
+               delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>July</td>
           <td>Dooley</td>
           <td>july@example.com</td>
+          <td>
+            <button class="btn btn-primary" id="update2">
+                update
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" id="delete2">
+               delete
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -170,6 +200,15 @@
 
         tbody.appendChild(row);
         myform.reset()
+        })
+
+        let delete1 = document.querySelector('#delete1')
+        let delete2 = document.querySelector('#delete2')
+        let update1 = document.querySelector('#update1')
+        let update2 = document.querySelector('#update2')
+
+        delete1.addEventListener("click",function(){
+            
         })
 
       const inputBox = document.getElementById('t-input')
