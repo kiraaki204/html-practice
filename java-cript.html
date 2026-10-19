@@ -49,6 +49,8 @@
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Email</th>
+          <th>update</th>
+          <th>delete</th>
         </tr>
       </thead>
       <tbody id="tbody">
@@ -57,12 +59,14 @@
           <td>Doe</td>
           <td>john@example.com</td>
           <td>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary updbtn"
+            data-bs-toggle="modal"
+            data-bs-target="#myeditModal">
                 update
             </button>
           </td>
           <td>
-            <button class="btn btn-danger">
+            <button class="btn btn-danger delbtn">
                delete
             </button>
           </td>
@@ -72,12 +76,14 @@
           <td>Moe</td>
           <td>mary@example.com</td>
           <td>
-            <button class="btn btn-primary" id="update1">
+            <button class="btn btn-primary updbtn"
+            data-bs-toggle="modal"
+            data-bs-target="#myeditModal">
                 update
             </button>
           </td>
           <td>
-            <button class="btn btn-danger" id="delete1">
+            <button class="btn btn-danger delbtn">
                delete
             </button>
           </td>
@@ -87,26 +93,55 @@
           <td>Dooley</td>
           <td>july@example.com</td>
           <td>
-            <button class="btn btn-primary" id="update2">
+            <button 
+            class="btn btn-primary updbtn" 
+            data-bs-toggle="modal"
+            data-bs-target="#myeditModal">
                 update
             </button>
           </td>
           <td>
-            <button class="btn btn-danger" id="delete2">
+            <button class="btn btn-danger delbtn">
                delete
             </button>
           </td>
         </tr>
       </tbody>
     </table>
-
+ <div class="modal fade" id="myeditModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">edit type your info to be added in the table</h5>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex flex-column gap-4" id="myeditform">
+            <div>
+            <Label>Firstname</Label>
+            <input type="text" id="firstname">
+            </div>
+            <div>
+            <Label>Lastname</Label>
+            <input type="text" id="lastname">
+            </div>
+            <div>
+            <Label>Email</Label>
+            <input type="email" id="email">
+            </div>
+            <button type="submit" id="submitbtn">
+                submit 
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <button
       class="btn btn-primary"
       data-bs-toggle="modal"
       data-bs-target="#myModal">
       Open Modal
-    </button>
-
+    </button> 
     <div class="modal fade" id="myModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -122,15 +157,15 @@
             <form class="d-flex flex-column gap-4" id="myform">
             <div>
             <Label>Firstname</Label>
-            <input type="text" id="firstname">
+            <input type="text" id="addfirstname">
             </div>
             <div>
             <Label>Lastname</Label>
-            <input type="text" id="lastname">
+            <input type="text" id="addlastname">
             </div>
             <div>
             <Label>Email</Label>
-            <input type="email" id="email">
+            <input type="email" id="addemail">
             </div>
             <button type="button" id="submitbtn">
                 submit 
@@ -176,11 +211,11 @@
         message.style.textDecorationStyle = underlineStyle.value;
       }
 
-        let submit =document.querySelector("#submitbtn")
+        let submit = document.querySelector("#submitbtn")
         submit.addEventListener("click",function(){
 
-        let first =document.querySelector("#firstname").value;
-        let last =document.querySelector("#lastname").value;
+        let first =document.querySelector("#addfirstname").value;
+        let last =document.querySelector("#addlastname").value;
         let email =document.querySelector("#email").value;
         let tbody = document.querySelector("#tbody")
         let myform =document.querySelector("#myform")
@@ -201,15 +236,46 @@
         tbody.appendChild(row);
         myform.reset()
         })
+        
+        let firstInput = document.querySelector("#firstname");
+        let lastInput = document.querySelector("#lastname");
+        let emailInput = document.querySelector("#email");  
+        let updbuttons = document.querySelectorAll(".updbtn")
+        let myeditform =document.querySelector("#myeditform")
+        let selectedrows;
 
-        let delete1 = document.querySelector('#delete1')
-        let delete2 = document.querySelector('#delete2')
-        let update1 = document.querySelector('#update1')
-        let update2 = document.querySelector('#update2')
+        updbuttons.forEach((button)=>{
+        button.addEventListener("click", function(event) {
+        selectedrows = event.target.closest("tr")
+        let cells = selectedrows.querySelectorAll("td")
 
-        delete1.addEventListener("click",function(){
-            
+            firstInput.value = cells[0].textContent
+            lastInput.value = cells[1].textContent
+            emailInput.value = cells[2].textContent
+        })})
+
+        myeditform.addEventListener("submit",function(event){
+        event.preventDefault();
+
+        let cells = selectedrows.querySelectorAll("td")
+            cells[0].textContent =firstInput.value 
+            cells[1].textContent = lastInput.value 
+            cells[2].textContent = emailInput.value
+
+            myeditform.reset();
+            bootstrap.Modal.getOrCreateInstance(
+            document.querySelector("#myeditModal")
+            ).hide();
         })
+
+
+        
+      let delbuttons = document.querySelectorAll(".delbtn")
+       delbuttons.forEach((button)=>{
+            button.addEventListener("click",function(event){
+            event.target.closest("tr").remove();
+        })
+      })
 
       const inputBox = document.getElementById('t-input')
          inputBox.addEventListener('keyup', function() {
