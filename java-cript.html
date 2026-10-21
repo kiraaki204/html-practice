@@ -128,7 +128,7 @@
             <Label>Email</Label>
             <input type="email" id="email">
             </div>
-            <button type="submit" id="submitbtn">
+            <button type="submit" id="editsubmitbtn">
                 submit 
             </button>
           </form>
@@ -167,7 +167,7 @@
             <Label>Email</Label>
             <input type="email" id="addemail">
             </div>
-            <button type="button" id="submitbtn">
+            <button type="button" id="addsubmitbtn">
                 submit 
             </button>
           </div>
@@ -190,33 +190,35 @@
       //     }
       // });
 
-      function applyStyling() {
-        let message = document.querySelector("#message");
-        let input = document.querySelector("#inpt");
-        let color = document.querySelector("#color");
-        let fontSize = document.querySelector("#fontSize");
-        let bold = document.querySelector("#bold");
-        let italic = document.querySelector("#italic");
-        let uUnderline = document.querySelector("#u-color");
-        let underline = document.querySelector("#underunderline");
-        let underlineStyle = document.querySelector("#underline");
+    //   function applyStyling() {
+    //     let message = document.querySelector("#message");
+    //     let input = document.querySelector("#inpt");
+    //     let color = document.querySelector("#color");
+    //     let fontSize = document.querySelector("#fontSize");
+    //     let bold = document.querySelector("#bold");
+    //     let italic = document.querySelector("#italic");
+    //     let uUnderline = document.querySelector("#u-color");
+    //     let underline = document.querySelector("#underunderline");
+    //     let underlineStyle = document.querySelector("#underline");
        
-        message.innerText = input.value;
-        message.style.color = color.value;
-        message.style.fontSize = fontSize.value + "px";
-        message.style.textDecoration = underline.checked ? "underline" : "none";
-        message.style.fontWeight = bold.checked ? "700" : "normal";
-        message.style.fontStyle = italic.checked ? "italic" : "normal";
-        message.style.textDecorationColor = uUnderline.value;
-        message.style.textDecorationStyle = underlineStyle.value;
-      }
+    //     message.innerText = input.value;
+    //     message.style.color = color.value;
+    //     message.style.fontSize = fontSize.value + "px";
+    //     message.style.textDecoration = underline.checked ? "underline" : "none";
+    //     message.style.fontWeight = bold.checked ? "700" : "normal";
+    //     message.style.fontStyle = italic.checked ? "italic" : "normal";
+    //     message.style.textDecorationColor = uUnderline.value;
+    //     message.style.textDecorationStyle = underlineStyle.value;
+    //   }
 
-        let submit = document.querySelector("#submitbtn")
+
+// adding new row 
+        let submit = document.querySelector("#addsubmitbtn")
         submit.addEventListener("click",function(){
 
         let first =document.querySelector("#addfirstname").value;
         let last =document.querySelector("#addlastname").value;
-        let email =document.querySelector("#email").value;
+        let email =document.querySelector("#addemail").value;
         let tbody = document.querySelector("#tbody")
         let myform =document.querySelector("#myform")
 
@@ -227,16 +229,35 @@
         let cell2 = document.createElement("td")
         cell2.textContent=last;
         let cell3 =document.createElement("td")
-        cell3.textContent=email
+        cell3.textContent=email;
+        let cell4 = document.createElement("td");
+        let updateBtn = document.createElement("button");
+        updateBtn.textContent = "update";
+        updateBtn.className = "btn btn-primary updbtn";
+        updateBtn.setAttribute("data-bs-toggle", "modal");
+        updateBtn.setAttribute("data-bs-target", "#myeditModal");
+
+        cell4.appendChild(updateBtn);
+
+        let cell5 = document.createElement("td");
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "delete";
+        deleteBtn.className = "btn btn-danger delbtn";
+
+        cell5.appendChild(deleteBtn);
 
         row.appendChild(cell1);
         row.appendChild(cell2);
         row.appendChild(cell3);
+        row.appendChild(cell4);
+        row.appendChild(cell5);
+        
 
         tbody.appendChild(row);
         myform.reset()
         })
-        
+
+// updating a row 
         let firstInput = document.querySelector("#firstname");
         let lastInput = document.querySelector("#lastname");
         let emailInput = document.querySelector("#email");  
@@ -253,7 +274,7 @@
             lastInput.value = cells[1].textContent
             emailInput.value = cells[2].textContent
         })})
-
+        
         myeditform.addEventListener("submit",function(event){
         event.preventDefault();
 
@@ -267,9 +288,7 @@
             document.querySelector("#myeditModal")
             ).hide();
         })
-
-
-        
+//delete button  
       let delbuttons = document.querySelectorAll(".delbtn")
        delbuttons.forEach((button)=>{
             button.addEventListener("click",function(event){
@@ -277,6 +296,7 @@
         })
       })
 
+// searching one 
       const inputBox = document.getElementById('t-input')
          inputBox.addEventListener('keyup', function() {
           let searchText = inputBox.value.toLowerCase()
