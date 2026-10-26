@@ -118,15 +118,15 @@
             <form class="d-flex flex-column gap-4" id="myeditform">
             <div>
             <Label>Firstname</Label>
-            <input type="text" id="firstname">
+            <input type="text" id="firstname" required>
             </div>
             <div>
             <Label>Lastname</Label>
-            <input type="text" id="lastname">
+            <input type="text" id="lastname" required>
             </div>
             <div>
             <Label>Email</Label>
-            <input type="email" id="email">
+            <input type="email" id="email" required>
             </div>
             <button type="submit" id="editsubmitbtn">
                 submit 
@@ -157,17 +157,17 @@
             <form class="d-flex flex-column gap-4" id="myform">
             <div>
             <Label>Firstname</Label>
-            <input type="text" id="addfirstname">
+            <input type="text" id="addfirstname" required minlength="4" maxlength="15">
             </div>
             <div>
             <Label>Lastname</Label>
-            <input type="text" id="addlastname">
+            <input type="text" id="addlastname" required minlength="4" maxlength="15">
             </div>
             <div>
             <Label>Email</Label>
-            <input type="email" id="addemail">
+            <input type="email" id="addemail" required minlength="4" maxlength="15">
             </div>
-            <button type="button" id="addsubmitbtn">
+            <button type="submit" id="addsubmitbtn">
                 submit 
             </button>
           </div>
@@ -214,7 +214,7 @@
 
 // adding new row 
         let submit = document.querySelector("#addsubmitbtn")
-        submit.addEventListener("click",function(){
+        submit.addEventListener("submit",function(){
 
         let first =document.querySelector("#addfirstname").value;
         let last =document.querySelector("#addlastname").value;
@@ -230,6 +230,7 @@
         cell2.textContent=last;
         let cell3 =document.createElement("td")
         cell3.textContent=email;
+
         let cell4 = document.createElement("td");
         let updateBtn = document.createElement("button");
         updateBtn.textContent = "update";
@@ -252,7 +253,6 @@
         row.appendChild(cell4);
         row.appendChild(cell5);
         
-
         tbody.appendChild(row);
         myform.reset()
         })
@@ -293,7 +293,7 @@
        delbuttons.forEach((button)=>{
             button.addEventListener("click",function(event){
             event.target.closest("tr").remove();
-        })
+        })  
       })
 
 // searching one 
