@@ -51,11 +51,7 @@
         const input = document.querySelector("#input");
         const btns = document.querySelectorAll(".btn");
 
-        // CALCULATE FUNCTION
-
         function calculate(expression) {
-
-            // Separate numbers and operators
 
             let numbers = expression.split(/[+\-x/]/).map(Number);
             let operators = expression.match(/[+\-x/]/g);
@@ -63,8 +59,6 @@
             if (!operators || numbers.length !== operators.length + 1) {
                 throw new Error("Invalid expression");
             }
-
-            // First: multiplication and division
 
             for (let i = 0; i < operators.length; i++) {
 
@@ -91,8 +85,6 @@
                 }
             }
 
-            // Second: addition and subtraction
-
             let result = numbers[0];
 
             for (let i = 0; i < operators.length; i++) {
@@ -108,9 +100,6 @@
 
             return result;
         }
-
-
-        // BUTTON FUNCTIONALITY
 
         btns.forEach((btn) => {
 
@@ -149,9 +138,6 @@
             });
 
         });
-
-
-        // KEYBOARD FUNCTIONALITY
 
         input.addEventListener("keydown", function(event) {
 
@@ -194,16 +180,11 @@
                 input.value = "";
             }
 
-            else if (event.key === "Tab" || event.key === "ArrowLeft" || event.key === "ArrowRight") {
-                // Allow normal keyboard navigation.
-            }
-
             else {
                 event.preventDefault();
             }
 
         });
-
     </script>
 
 </body>
