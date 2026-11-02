@@ -1,92 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
+
 <body class="bg-[#394764]">
-        <div class="flex flex-col gap-5 items-center justify-center h-screen">
+
+    <div class="flex flex-col gap-5 items-center justify-center h-screen">
+
         <div class="w-[360px]">
-        <p class="font-semibold text-white text-start">calc</p>
+            <p class="font-semibold text-white text-start">calc</p>
         </div>
-        <input class="bg-[#182033] text-white text-2xl px-4 rounded-lg w-[370px] h-[80px]" id="input">
-        <div class="bg-[#242C43] w-[370px] h-100 p-3 rounded-lg flex flex-wrap gap-5">
+
+        <input class="bg-[#182033] text-white text-2xl px-4 rounded-lg w-[370px] h-[80px]" id="input" type="text">
+
+        <div class="bg-[#242C43] w-[370px] p-3 rounded-lg flex flex-wrap gap-5">
+
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">7</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">8</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">9</button>
             <button class="bg-[#637198] rounded-lg text-center w-[70px] h-[40px] text-white font-semibold text-xl btn">DEL</button>
+
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">4</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">5</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">6</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">+</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">1</button> 
+
+            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">1</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">2</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">3</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">-</button>
+
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">.</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">0</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">/</button>
             <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">x</button>
+
             <button class="bg-[#637198] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-xl btn">RESET</button>
             <button class="bg-[#D13F30] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-2xl btn">=</button>
+
         </div>
-        </div>
+    </div>
 
     <script>
-        const input = document.querySelector("#input")
-        const btns = document.querySelectorAll(".btn")
 
-        function calculate (expression){
-            if (expression.includes("+")){
-                let numbers = expression.split("+")
-                let num1 =Number(numbers[0])
-                let num2 =Number(numbers[1])
-                let result = num1+num2
-                return result;
+        const input = document.querySelector("#input");
+        const btns = document.querySelectorAll(".btn");
+
+        // CALCULATE FUNCTION
+
+        function calculate(expression) {
+
+            // Separate numbers and operators
+
+            let numbers = expression.split(/[+\-x/]/).map(Number);
+            let operators = expression.match(/[+\-x/]/g);
+
+            if (!operators || numbers.length !== operators.length + 1) {
+                throw new Error("Invalid expression");
             }
-            if (expression.includes("-")){
-                let numbers = expression.split("-")
-                let num1 =Number(numbers[0])
-                let num2 =Number(numbers[1])
-                let result = num1-num2
-                return result;
+
+            // First: multiplication and division
+
+            for (let i = 0; i < operators.length; i++) {
+
+                if (operators[i] === "x" || operators[i] === "/") {
+
+                    let result;
+
+                    if (operators[i] === "x") {
+                        result = numbers[i] * numbers[i + 1];
+                    }
+
+                    else {
+                        if (numbers[i + 1] === 0) {
+                            throw new Error("Cannot divide by zero");
+                        }
+
+                        result = numbers[i] / numbers[i + 1];
+                    }
+
+                    numbers.splice(i, 2, result);
+                    operators.splice(i, 1);
+
+                    i--;
+                }
             }
-            if (expression.includes("x")){
-                let numbers = expression.split("x")
-                let num1 =Number(numbers[0])
-                let num2 =Number(numbers[1])
-                let result = num1*num2
-                return result;
+
+            // Second: addition and subtraction
+
+            let result = numbers[0];
+
+            for (let i = 0; i < operators.length; i++) {
+
+                if (operators[i] === "+") {
+                    result += numbers[i + 1];
+                }
+
+                else if (operators[i] === "-") {
+                    result -= numbers[i + 1];
+                }
             }
-            if (expression.includes("/")){
-                let numbers = expression.split("/")
-                let num1 =Number(numbers[0])
-                let num2 =Number(numbers[1])
-                let result = num1/num2
-                return result;
-            }
+
+            return result;
         }
 
-        btns.forEach((btn)=>{
+
+        // BUTTON FUNCTIONALITY
+
+        btns.forEach((btn) => {
+
             btn.addEventListener("click", function() {
-                const value= btn.textContent;
-                if(!isNaN(value) || value==="."){
-                    input.value+=value;
-                } 
-                if(value==="+" || value==="-" || value==="x" || value==="/"){
-                    input.value+=value;
+
+                const value = btn.textContent;
+
+                if (value === "RESET") {
+                    input.value = "";
                 }
-                if(value === "="){
-                    input.value = calculate(input.value)
+
+                else if (value === "DEL") {
+                    input.value = input.value.slice(0, -1);
                 }
+
+                else if (value === "=") {
+
+                    try {
+                        input.value = calculate(input.value);
+                    }
+
+                    catch {
+                        input.value = "Error";
+                    }
+                }
+
+                else {
+
+                    if (input.value === "Error") {
+                        input.value = "";
+                    }
+
+                    input.value += value;
+                }
+
             });
+
+        });
+
+
+        // KEYBOARD FUNCTIONALITY
+
+        input.addEventListener("keydown", function(event) {
+
+            if (!isNaN(event.key) && event.key !== " ") {
+                event.preventDefault();
+                input.value += event.key;
+            }
+
+            else if (event.key === ".") {
+                event.preventDefault();
+                input.value += event.key;
+            }
+
+            else if (["+", "-", "/", "*", "x"].includes(event.key)) {
+                event.preventDefault();
+                input.value += event.key === "*" ? "x" : event.key;
+            }
+
+            else if (event.key === "Enter") {
+                event.preventDefault();
+
+                let answer = calculate(input.value);
+
+                if (answer !== null) {
+                    input.value = answer;
+                }
+            }
+
+            else if (event.key === "Escape") {
+                input.value = "";
+            }
+
+            else if (event.key === "Backspace") {
+                event.preventDefault();
+                input.value = input.value.slice(0, -1);
+            }
+
+            else if (event.key === "Delete") {
+                event.preventDefault();
+                input.value = "";
+            }
+
+            else if (event.key === "Tab" || event.key === "ArrowLeft" || event.key === "ArrowRight") {
+                // Allow normal keyboard navigation.
+            }
+
+            else {
+                event.preventDefault();
+            }
+
         });
 
     </script>
 
-    
 </body>
 </html>
