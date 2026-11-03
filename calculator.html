@@ -10,9 +10,9 @@
 
 <body class="bg-[#394764]">
 
-    <div class="flex gap-5 items-center justify-center">
+    <div class="flex gap-5 justify-center">
 
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-5 my-[150px]">
 
             <div class="w-[360px]">
                 <p class="font-semibold text-white text-start">calc</p>
@@ -84,12 +84,18 @@
 
         </div>
 
-        <div class="bg-[#283449] h-[400px] w-[290px] text-white rounded-lg p-4 mt-[45px]">
+        <div class="relative bg-[#283449] my-[195px] h-[400px] w-[290px] text-white rounded-lg p-4">
 
             <h2 class="text-3xl font-semibold text-center">History</h2>
 
             <div id="history">
 
+            </div>
+            
+            <div class="flex absolute top-[340px] left-[170px]">
+            <button class="bg-white flex justify-center items-center w-[100px] h-[35px] rounded-md text-black font-semibold text-[20px]" type="submit" id="btn.clear">
+                clear
+            </button>
             </div>
 
         </div>
@@ -102,6 +108,7 @@
         let btns = document.querySelectorAll(".btn");
         let history = [];
         let historylist = document.querySelector("#history");
+        let btnclear = document.querySelector("#btn.clear") 
 
 
         function calculate(expression) {
@@ -124,10 +131,6 @@
                     }
 
                     else {
-                        if (numbers[i + 1] === 0) {
-                            throw new Error("Cannot divide by zero");
-                        }
-
                         result = numbers[i] / numbers[i + 1];
                     }
 
@@ -169,6 +172,10 @@
                 `;
 
             });
+            
+            btnclear.addEventListener("click", function(){
+                history.innerHTML="";
+            })
 
         }
 
