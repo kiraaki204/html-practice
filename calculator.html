@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,46 +10,99 @@
 
 <body class="bg-[#394764]">
 
-    <div class="flex flex-col gap-5 items-center justify-center h-screen">
+    <div class="flex gap-5 items-center justify-center">
 
-        <div class="w-[360px]">
-            <p class="font-semibold text-white text-start">calc</p>
+        <div class="flex flex-col gap-5">
+
+            <div class="w-[360px]">
+                <p class="font-semibold text-white text-start">calc</p>
+            </div>
+
+            <input
+                class="bg-[#182033] text-white text-2xl px-4 rounded-lg w-[370px] h-[80px]"
+                id="input"
+                type="text"
+            >
+
+            <div class="bg-[#242C43] w-[370px] p-3 rounded-lg flex flex-wrap gap-5">
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">7</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">8</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">9</button>
+
+                <button
+                    class="bg-[#637198] rounded-lg text-center w-[70px] h-[40px] text-white font-semibold text-xl btn">DEL</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">4</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">5</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">6</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">+</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">1</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">2</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">3</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">-</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">.</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">0</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">/</button>
+
+                <button
+                    class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">x</button>
+
+                <button
+                    class="bg-[#637198] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-xl btn">RESET</button>
+
+                <button
+                    class="bg-[#D13F30] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-2xl btn">=</button>
+
+            </div>
+
         </div>
 
-        <input class="bg-[#182033] text-white text-2xl px-4 rounded-lg w-[370px] h-[80px]" id="input" type="text">
+        <div class="bg-[#283449] h-[400px] w-[290px] text-white rounded-lg p-4 mt-[45px]">
 
-        <div class="bg-[#242C43] w-[370px] p-3 rounded-lg flex flex-wrap gap-5">
+            <h2 class="text-3xl font-semibold text-center">History</h2>
 
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">7</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">8</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">9</button>
-            <button class="bg-[#637198] rounded-lg text-center w-[70px] h-[40px] text-white font-semibold text-xl btn">DEL</button>
+            <div id="history">
 
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">4</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">5</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">6</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">+</button>
-
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">1</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">2</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">3</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">-</button>
-
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">.</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">0</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">/</button>
-            <button class="bg-white rounded-lg text-center w-[70px] h-[40px] text-[#676974] font-bold text-2xl btn">x</button>
-
-            <button class="bg-[#637198] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-xl btn">RESET</button>
-            <button class="bg-[#D13F30] rounded-lg text-center w-[45%] h-[40px] text-white font-semibold text-2xl btn">=</button>
+            </div>
 
         </div>
+
     </div>
 
     <script>
 
-        const input = document.querySelector("#input");
-        const btns = document.querySelectorAll(".btn");
+        let input = document.querySelector("#input");
+        let btns = document.querySelectorAll(".btn");
+        let history = [];
+        let historylist = document.querySelector("#history");
+
 
         function calculate(expression) {
 
@@ -82,6 +135,7 @@
                     operators.splice(i, 1);
 
                     i--;
+
                 }
             }
 
@@ -96,14 +150,32 @@
                 else if (operators[i] === "-") {
                     result -= numbers[i + 1];
                 }
+
             }
 
             return result;
+
         }
+
+
+        function displayHistory() {
+
+            historylist.innerHTML = "";
+
+            history.forEach((calculation) => {
+
+                historylist.innerHTML += `
+                    <p class="text-white text-lg mt-3">${calculation}</p>
+                `;
+
+            });
+
+        }
+
 
         btns.forEach((btn) => {
 
-            btn.addEventListener("click", function() {
+            btn.addEventListener("click", function () {
 
                 const value = btn.textContent;
 
@@ -118,12 +190,21 @@
                 else if (value === "=") {
 
                     try {
-                        input.value = calculate(input.value);
+                        let expression = input.value;
+                        let answer = calculate(expression);
+
+                        history.unshift(`${expression} = ${answer}`);
+                        history = history.slice(0, 5);
+
+                        displayHistory();
+
+                        input.value = answer;
                     }
 
                     catch {
                         input.value = "Error";
                     }
+
                 }
 
                 else {
@@ -131,22 +212,26 @@
                     if (input.value === "Error") {
                         input.value = "";
                     }
-                    
-                    const operators =["+", "-" , "x" , "/"];
 
-                    if (operators.includes(value)){
-                        if (operators.includes(input.value.slice(-1))){
-                            input.value=input.value.replace(/[+\-/x]$/,value);
+                    const operators = ["+", "-", "x", "/"];
+
+                    if (operators.includes(value)) {
+                        if (operators.includes(input.value.slice(-1))) {
+                            input.value = input.value.replace(/[+\-/x]$/, value);
                             return;
                         }
                     }
+
                     input.value += value;
+
                 }
 
             });
+
         });
 
-        document.body.addEventListener("keydown", function(event) {
+
+        document.body.addEventListener("keydown", function (event) {
 
             if (!isNaN(event.key) && event.key !== " ") {
                 event.preventDefault();
@@ -158,15 +243,22 @@
                 input.value += event.key;
             }
 
-           
 
             else if (event.key === "Enter") {
                 event.preventDefault();
 
-                let answer = calculate(input.value);
+                try {
+                    let expression = input.value;
+                    let answer = calculate(expression);
 
-                if (answer !== null) {
+                    history.unshift(`${expression} = ${answer}`);
+                    history = history.slice(0, 5);
+
+                    displayHistory();
+
                     input.value = answer;
+                } catch {
+                    input.value = "Error";
                 }
             }
 
@@ -180,29 +272,32 @@
             }
 
             else if (event.key === "Delete") {
-                event.preventDefault();
                 input.value = "";
             }
 
-             else if (["+", "-", "/", "*", "x"].includes(event.key)) {
+            else if (["+", "-", "/", "*", "x"].includes(event.key)) {
                 event.preventDefault();
 
                 const value = event.key === "*" ? "x" : event.key;
-                 
-                    const operators = ["+", "-" , "x" , "/"];
 
-                    if (operators.includes(value)){
-                        if (operators.includes(input.value.slice(-1))){
-                            input.value=input.value.replace(/[+\-/x]$/,value);                            
-                        } 
+                const operators = ["+", "-", "x", "/"];
 
-                        else {
-                    input.value += value;
+                if (operators.includes(value)) {
+                    if (operators.includes(input.value.slice(-1))) {
+                        input.value = input.value.replace(/[+\-/x]$/, value);
+                    }
+
+                    else {
+                        input.value += value;
+                    }
+                }
+
             }
-        }
 
-        }}) ;
+        });
+
     </script>
 
 </body>
+
 </html>
