@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .pg-bar{
+            animation:widthchange 3s infinite,
+                      colorchange 3s infinite;
+        }
+
+        @keyframes widthchange{
+            from{
+                width:60px;
+            }
+            to{
+                width:290px;
+            }
+        }
+        @keyframes colorchange{
+            10%{
+                background-color:pink ;
+            }
+            20%{
+                background-color: lightgreen;
+            }
+            70%{
+                background-color: lightcoral;
+            }
+            80%{
+                background-color: lightblue;
+            }
+            100%{
+                background-color:peru;
+            }
+        }
+
+        .loader{
+            animation: loader 5s infinite;
+        }
+        
+        @keyframes{
+            from{
+                transition:rotate(90deg) 
+            }
+        }
+    </style>
+
+    </head>
+<body>
+    <div class="border-5 h-[40px] w-[300px] rounded-3xl mx-[500px] my-5">
+        <div class="pg-bar bg-pink-500 h-[30px] w-[60px] rounded-3xl">
+        </div>
+    </div>
+    <div class="loader border-[10px] border-dashed h-[200px] w-[200px] rounded-full mx-[540px] my-[50px]">
+    </div>
+    
+</body>
+</html>

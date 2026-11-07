@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+          .btn {
+            background-color: plum;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            transition: all 1s ease,
+                                                
+          }
+
+          .box{
+            background-color: palevioletred;
+            width: 100px;
+            height: 100px;
+            animation: changebg 5s infinite,
+                       changedirection 5s infinite;
+          }
+
+          @keyframes changebg{
+            0%{
+                background-color: palevioletred;
+            }
+            50% {
+                background-color: lightblue;
+            }
+            80%{
+                background-color: yellow;
+            }
+            100%{
+                background-color: palevioletred;
+            }
+          }
+
+          @keyframes changedirection{
+            0%{
+                transform: translatex(0px);
+            }
+            80%{
+                transform:translateX(200px);
+            }
+            100%{
+                transform:translateX(0px)
+            }
+            
+          }
+          .btn:hover {
+            background-color: black;
+            color: white;
+            /* transform: scale(1.1); 
+            transform: rotate(90deg);
+            transform: translateX(10px);
+            transform: skew(20deg,10deg);*/
+          }
+
+    </style>
+</head>
+<body>
+    <button class="btn">
+        hover over me 
+    </button>
+    
+    <div class="box"></div>
+    
+</body>
+</html>
