@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .loader{
+            animation:preloader 1s;
+        }
+
+        .div-vanish{
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            animation:hidepreloader 1s forwards;
+            z-index: 10;
+            visibility: visible;
+        }
+
+        @keyframes hidepreloader {
+            to{
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes preloader {
+            0% {
+                border-top-color: black;
+            }
+
+            25% {
+                border-top-color: transparent;
+                border-right-color: black;
+                
+                
+            }
+            50%{ 
+                border-right-color:transparent;
+                border-bottom-color: black;
+            }
+            75%{
+                border-bottom-color: transparent;
+                border-left-color: black;                
+            }
+            100%{
+                border-left-color: transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>    
+    <div class="div-vanish  bg-blue-500">
+    <div class="loader bg-light-500 border-[10px] border-dashed border-transparent h-[200px] w-[200px] rounded-full absolute left-[500px] top-[300px]">
+    </div>
+    </div>
+    <div class="z-0">
+    <h1 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolorLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi rationeLorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut vel natus aliquid nisi dolorum dolor beatae dolore aspernatur doloribus. Repudiandae, asperiores? Nihil quas necessitatibus quaerat, commodi porro incidunt? Debitis corrupti obcaecati possimus illo expedita excepturi commodi eaque? Dolores, voluptatibus! Accusamus pariatur impedit voluptas laborum quisquam, non maiores animi. Eum, earum quidem animi perspiciatis rem rerum aliquam consectetur nesciunt fugit! Minima, nostrum quo molestias culpa consectetur magni repellendus natus maxime saepe. Autem minima repellat, aliquam tempore facere eveniet, consectetur vero, animi ratione accusantium rem. Error sed provident recusandae possimus doloribus ex mollitia. Sequi, nemo quam? Consectetur soluta quod voluptatibus voluptas consequuntur iste. Nesciunt cupiditate magnam esse accusantium numquam dolorum ea repudiandae odit hic! Ut facilis fugiat, minima dolore mollitia totam quia! A vitae impedit, adipisci libero autem nobis sunt, eligendi quibusdam in dolores iure fugit fuga aperiam ipsam quo odit. Rem accusantium quibusdam minima similique, exercitationem fuga a quasi quae illum eius quaerat error necessitatibus deserunt, natus repellat? Delectus, similique iusto animi nemo impedit corrupti, velit eaque libero tempora quisquam quia totam cupiditate voluptatem? Alias minus maiores, fuga eius libero culpa amet. Sed optio, consequatur obcaecati porro aperiam ullam ipsa, perspiciatis, atque suscipit et qui quibusdam libero reprehenderit! Numquam, tempore.</h1>    
+    </div>
+</body>
+</html>
